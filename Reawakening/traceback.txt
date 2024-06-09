@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/chapters/prologue1.rpy", line 1659, in script
+    with dissolve(0.25)
+TypeError: 'Dissolve' object is not callable
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/chapters/prologue1.rpy", line 1659, in script
+    with dissolve(0.25)
+  File "C:\Users\Brandon Hawke\Desktop\renpy-8.1.3-sdk\renpy\ast.py", line 1678, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "C:\Users\Brandon Hawke\Desktop\renpy-8.1.3-sdk\renpy\exports.py", line 1758, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\Brandon Hawke\Desktop\renpy-8.1.3-sdk\renpy\display\core.py", line 2978, in do_with
+    return self.interact(trans_pause=True,
+  File "C:\Users\Brandon Hawke\Desktop\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Brandon Hawke\Desktop\renpy-8.1.3-sdk\renpy\display\core.py", line 3976, in interact_core
+    trans = instantiate_transition(None, old_root, layers_root)
+  File "C:\Users\Brandon Hawke\Desktop\renpy-8.1.3-sdk\renpy\display\core.py", line 3922, in instantiate_transition
+    trans = self.ongoing_transition[layer](
+TypeError: 'Dissolve' object is not callable
+
+Windows-10-10.0.22000 AMD64
+Ren'Py 8.1.3.23091805
+Reawakening 1.0
+Wed Mar 13 02:53:53 2024
