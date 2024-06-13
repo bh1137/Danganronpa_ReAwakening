@@ -1,12 +1,34 @@
 # SCENE 2-1 [WHITE WYVERN MANOR - ATRIUM] --> EVERYONE ARRIVES BACK AT THE WHITE WYVERN MANOR. THE AUDIENCE WILL THINK THEY WENT TO SEE THE HEADMASTER, BUT
 # MET WITH THE DEAN OF THE SCHOOL INSTEAD. IN THIS SCENE, EVERYONE WILL DECIDE TO THROW A PARTY TONIGHT TO CELEBRATE NEW BEGINNINGS
 label scene2_1: 
-    # COMING BACK TO THE MANOR 
+    # COMING BACK TO THE MANOR [STARTED 6/12/24 @ 8:44 PM]
+
+    # SHOW NEW BACKGROUND OF THE ATRIUM HERE 
+    show manor_atrium
+    with Dissolve(1.5)
+    play music lets_party volume 0.80 loop
+    $ renpy.pause(1.00, hard=True)
+
+    # START SHOWING KAZUHIKO HERE
+    show kazuhiko_halfbody_happy
+    with Dissolve(0.25)
     hiko "Well, that meeting went surprisingly well!"
+    show yui_halfbody_happy
+    hide kazuhiko_halfbody_happy
+    with Dissolve(0.25)
     yui "I will admit, I thought that something bad was going to happen, and I'm so glad it didn't!"
+    show yui_halfbody_genius
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     yui "However, it would make for a very compelling storyline for a thriller novel!"
     yui "Oh, Muse, you never fail to inspire me!"
+    show azumi_halfbody_neutral
+    hide yui_halfbody_genius
+    with Dissolve(0.25)
     azumi "Yeah, I wasn't expecting the Dean to be so warm and welcoming!"
+    show naganori_halfbody_neutral
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     naganori "Shouldn't that always be the bare minimum?"
     naganori "If your university becomes a place filled with hatred and hostility, no one will want to come here."
     nayoko "Aw, gee! You gotta stop overthinking and be optimistic!"
