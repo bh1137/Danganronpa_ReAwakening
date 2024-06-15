@@ -31,20 +31,58 @@ label scene2_1:
     with Dissolve(0.25)
     naganori "Shouldn't that always be the bare minimum?"
     naganori "If your university becomes a place filled with hatred and hostility, no one will want to come here."
+    show nayoko_halfbody_smug
+    hide naganori_halfbody_neutral
+    with Dissolve(0.25)
     nayoko "Aw, gee! You gotta stop overthinking and be optimistic!"
+    show nayoko_halfbody_happy
+    hide nayoko_halfbody_smug
+    with Dissolve(0.25)
     nayoko "Our Dean is a wonderfully kind person, and that is what we should focus on!"
+    show tetsunori_halfbody_surprised
+    hide nayoko_halfbody_happy
+    with Dissolve(0.25)
     tetsu "I also very surpised by how swift and orangized they are."
+    show tetsunori_halfbody_neutral
+    hide tetsunori_halfbody_surprised
+    with Dissolve(0.25)
     tetsu "They already gave us everything we needed for the start of classes next week, and it's still only the first day of Orientation Week!"
+    show yukako_halfbody_sleepy
+    hide tetsunori_halfbody_neutral
+    with Dissolve(0.25)
     yukako "With a place like this...I can see why."
     yukako "The sooner they figure out the logistics of the program, the faster they help us hone in on our {color=#efcc00}{b}Ultimate Talent{/b}{/color}..."
+    show yukako_halfbody_happy
+    hide yukako_halfbody_sleepy
+    with Dissolve(0.25)
     yukako "...and the sooner we can go out into the world and improve it."
+    show tetsunori_halfbody_thinking
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)
     tetsu "I never thought of it from that point of view."
+    show kazuhiko_halfbody_happy
+    hide tetsunori_halfbody_thinking
+    with Dissolve(0.25)
     hiko "Man, I am so pumped for classes to start!"
     hiko "I'll get to learn new concepts and ideas, see new people, make new friends, and also find ways to improve myself!"
+    show naoki_halfbody_happy
+    hide kazuhiko_halfbody_happy
+    with Dissolve(0.25)
     naoki "That's the spirit, Hiko!"
+    show nayoko_halfbody_happy
+    hide naoki_halfbody_happy
+    with Dissolve(0.25)
     nayoko "All of this positivity has me so excited! I can't wait to enjoy becoming friends with all of you!"
+    show grimaldi_halfbody_laughing
+    hide nayoko_halfbody_happy
+    with Dissolve(0.25)
     grimaldi "Yes, Grimaldi agress with Cheerleading friend!"
+    show yashimata_halfbody_neutral
+    hide grimaldi_halfbody_laughing
+    with Dissolve(0.25)
     yashimata "Hell yeah! You said it best, brother!"
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
     hkmonologue "Seeing everyone so excited for the semester to begin is quite contagious."
     hkmonologue "Although I'm still a little bit nervous, seeing everyone smile and be merry comforts any doubts I have!"
 
