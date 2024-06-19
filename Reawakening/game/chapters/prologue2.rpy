@@ -87,49 +87,157 @@ label scene2_1:
     hkmonologue "Although I'm still a little bit nervous, seeing everyone smile and be merry comforts any doubts I have!"
 
     # PARTY ANNOUNCEMENT 
+    show noburo_halfbody_happy
+    with Dissolve(0.25)
     noburo "Yo, everyone! Listen up!! I got a huge announcement to make!"
+    show fujiko_halfbody_bored
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     fujiko "Oh man, I wonder what it could be this time!"
+    show fujiko_halfbody_neutral
+    hide fujiko_halfbody_bored
+    with Dissolve(0.25)
     fujiko "Do you think he wants to make some more pot brownies again? That would pretty funny!"
+    show azumi_halfbody_bored
+    hide fujiko_halfbody_neutral
+    with Dissolve(0.25)
     azumi "Fujiko!"
+    show fujiko_halfbody_upset
+    hide azumi_halfbody_bored
+    with Dissolve(0.25)
     fujiko "Okay, I'll listen."
+    show noburo_halfbody_neutral
+    hide fujiko_halfbody_upset
+    with Dissolve(0.25)
     noburo "Let's have a party tonight! To celebrate our newfound friends and the beginning of a new era for all of us!"
+    show naganori_halfbody_bored
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
     naganori "If I recall correctly, you said you wanted to host a party at the end of Orientation. Did you not?"
+    show noburo_halfbody_happy
+    hide naganori_halfbody_bored
+    with Dissolve(0.25)
     noburo "I totally said that, but I think having a party tonight would be better for all of us!"
+    show naganori_halfbody_neutral
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     naganori "How so?"
+    show noburo_halfbody_happy
+    hide naganori_halfbody_neutral
+    with Dissolve(0.25)
     noburo "Well, first of all, we're all pretty hyped right now! I even saw the vampire over there crack a smile or two!"
     nobruo "We definitely need to keep that momentum going!"
+    show matsuko_halfbody_neutral
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     matsuko "Go on? We haven't got all day."
+    show noburo_halfbody_neutral
+    hide matsuko_halfbody_neutral
+    with Dissolve(0.25)
     noburo "Not only will we continue to have fun and be happy, but in addition, it would be an awesome way for us to get to know each other better!"
+    show azumi_halfbody_neutral
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
     azumi "Like a mixer!"
+    show noburo_halfbody_happy
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     noburo "Absolutely! Just like a mixer!"
+    show yukako_halfbody_neutral
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     yukako "I mean...we are going to be peers for the next couple of years, so...we might as well."
+    show noburo_halfbody_neutral
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
     noburo "Are we all in agreement then?"
+    show kazuhiko_halfbody_neutral
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
     hiko "Going once..."
     hiko "Going twice..."
+    show vladnot_halfbody_frustrated
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
     vladnot "I...Mmph...Mmph...Hgph..."
+    show vladnot_halfbody_upset
+    hide vladnot_halfbody_frustrated
+    with Dissolve(0.25)
+    play sfx_channel thunder_sfx volume 1.00 noloop
+    with vpunch
     vladnot "{i}*Let go...Grimaldi...*{/i}"
+    show grimaldi_halfbody_unamused
+    hide vladnot_halfbody_upset
+    with Dissolve(0.25)
     grimaldi "Grimaldi will not let go until friends all go to mixer."
+    show kazuhiko_halfbody_happy
+    hide grimaldi_halfbody_unamused
+    with Dissolve(0.25)
     hiko "And going thrice! It's settled then!"
 
     # SPLITING OFF INTO GROUPS 
+    show noburo_halfbody_confused
+    hide kazuhiko_halfbody_happy
+    with Dissolve(0.25)
     noburo "So......what now then?"
+    show nayoko_halfbody_surprised
+    hide noburo_halfbody_confused
+    with Dissolve(0.25)
     nayoko "We need to start setting up for the party, that's what!"
+    show noburo_halfbody_neutral
+    hide nayoko_halfbody_surprised
+    with Dissolve(0.25)
     noburo "Oh yeah, I usually forget that part. I was always the one fixing up grub for everyone."
+    show kazuhiko_halfbody_thinking
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
     hiko "Well then, in order for this mixer to run as smooth as possible, let's all take a task, break up into small groups, and work on it together.
     Sound good?"
+    show yashimata_halfbody_neutral
+    hide kazuhiko_halfbody_thinking
+    with Dissolve(0.25)
     yashimata "All right! This is the perfect event for me to bust out the cooking skills! Can I join you, Nobruo?"
+    show noburo_halfbody_happy
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
     noburo "Absolutely!"
+    show grimaldi_halfbody_neutral
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     grimaldi "Grimaldi would also like to join the cooking festivities! Can he cook food from homeland?"
-    noburo "Totally! The more the merrier!"
+    show noburo_halfbody_happy
+    hide grimaldi_halfbody_neutral
+    with Dissolve(0.25)
+    noburo "Totally! The more the merrier, dude!"
 
     # HISAKO AND EIZO SHOULD GO UPSTAIRS
+    show kazuhiko_halfbody_thinking
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     hiko "Before we split up, I think it would be wise for both Eizo and Hisako to rest of the time being, especially Eizo." # PAN TO EIZO 
+    show eizo_halfbody_upset
+    with Dissolve(0.25)
     eizo "... ... ... ..."
+    show naoki_halfbody_frustrated
+    hide eizo_halfbody_upset
+    with Dissolve(0.25)
     naoki "I don't think he is going to be able to do anything, let alone stand in that state!"
-    tetsu "Hisako! Would you be able to take Eizo back to his bedroom please?"
+    show tetsunori_halfbody_neutral
+    hide naoki_halfbody_frustrated
+    with Dissolve(0.25)
+    tetsu "Hisako, would you be able to take Eizo back to his bedroom please?"
     hk "No problem at all, Tetsunori!"
-    tetsu "Vladnot! Could you accompany Hisako and help her out? And while you're at it, show her where her room is located!"
+    show tetsunori_halfbody_surprised
+    hide tetsunori_halfbody_neutral
+    with Dissolve(0.25)
+    tetsu "Vladnot, could you accompany Hisako and help her out? And while you're at it, show her where her room is located!"
+    show vladnot_halfbody_frustrated
+    hide tetsunori_halfbody_surprised
+    with Dissolve(0.25)
     vladnot "Of all the people in this manor, you want me to do this task. Why is that?"
+    show ryosei_halfbody_frustrated
+    hide vladnot_halfbody_frustrated
+    with Dissolve(0.25)
     ryosei "Because we all know that you'll slink away to your room, not to help any one of us."
     ryosei "Then you'll stay there in complete darkness until Grimaldi and Nayoko barge in again and force you to attend the mixer."
     vladnot "... ..."
