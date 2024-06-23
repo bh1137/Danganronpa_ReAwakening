@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapters/prologue1.rpy", line 2371: play requires a file
-    play sfx_channel
-                    ^
+File "game/chapters/prologue2.rpy", line 332: end of line expected.
+    shinzo "Why does a lass like you have to have the mouth and language of a verteran sheriff?".
+                                                                                                ^
 
-Ren'Py Version: Ren'Py 8.1.3.23091805
-Tue May  7 01:30:42 2024
+Ren'Py Version: Ren'Py 8.2.1.24030407
+Sat Jun 22 21:17:46 2024

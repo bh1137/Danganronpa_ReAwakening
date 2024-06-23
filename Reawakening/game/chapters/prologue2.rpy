@@ -126,7 +126,7 @@ label scene2_1:
     hide naganori_halfbody_neutral
     with Dissolve(0.25)
     noburo "Well, first of all, we're all pretty hyped right now! I even saw the vampire over there crack a smile or two!"
-    nobruo "We definitely need to keep that momentum going!"
+    noburo "We definitely need to keep that momentum going!"
     show matsuko_halfbody_neutral
     hide noburo_halfbody_happy
     with Dissolve(0.25)
@@ -196,7 +196,7 @@ label scene2_1:
     show yashimata_halfbody_neutral
     hide kazuhiko_halfbody_thinking
     with Dissolve(0.25)
-    yashimata "All right! This is the perfect event for me to bust out the cooking skills! Can I join you, Nobruo?"
+    yashimata "All right! This is the perfect event for me to bust out the cooking skills! Can I join you, Noburo?"
     show noburo_halfbody_happy
     hide yashimata_halfbody_neutral
     with Dissolve(0.25)
@@ -216,6 +216,7 @@ label scene2_1:
     with Dissolve(0.25)
     hiko "Before we split up, I think it would be wise for both Eizo and Hisako to rest of the time being, especially Eizo." # PAN TO EIZO 
     show eizo_halfbody_upset
+    hide kazuhiko_halfbody_thinking
     with Dissolve(0.25)
     eizo "... ... ... ..."
     show naoki_halfbody_frustrated
@@ -240,92 +241,323 @@ label scene2_1:
     with Dissolve(0.25)
     ryosei "Because we all know that you'll slink away to your room, not to help any one of us."
     ryosei "Then you'll stay there in complete darkness until Grimaldi and Nayoko barge in again and force you to attend the mixer."
+    show vladnot_halfbody_frustrated
+    hide ryosei_halfbody_frustrated
+    with Dissolve(0.25)
     vladnot "... ..."
+    show vladnot_halfbody_neutral
+    hide vladnot_halfbody_frustrated
+    with Dissolve(0.25)
     vladnot "Understandable then. I shall accompany Hisako and help lay the soul of the poor fast food worker to rest."
+    show yashimata_halfbody_neutral
+    hide vladnot_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "Woah, that guy really is a psychic."
-    ryosei "And you thought that I was a farce? Hah! Ryosei Jozato will always be a true psychic, outshining all others!"
+    show ryosei_halfbody_happy
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
+    ryosei "And you thought that I was a farce? Hah! Ryosei Kozato will always be a true psychic, outshining all others!"
     hkmonologue "Ryosei's showmanship will always be on a higher level. I'm really glad he was able to help persuade Vladnot to help me out."
 
     # HIKO TETSU NAOKI LEAVE 
+    show kazuhiko_halfbody_neutral
+    hide ryosei_halfbody_happy
+    with Dissolve(0.25)
     hiko "Okay! With all that setled, let's break up and set up! Best of luck everyone!"
-    hiko "Tetsu. Naoki. You're with me!" # EXIT HIKO
-    tetsu "Soinds good to me." # EXIT TETSU 
-    naoki "Okay then! See you around, Hisako!" # EXIT NAOKI 
+    show kazuhiko_halfbody_happy
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
+    hiko "Tetsu. Naoki. You're with me!" 
+    # EXIT HIKO
+    play sfx_channel walking volume 0.85 noloop
+    hide kazuhiko_halfbody_happy
+    with Dissolve(1.00)
+
+    show tetsunori_halfbody_neutral
+    with Dissolve(0.25)
+    tetsu "Sounds good to me." 
+   
+    # EXIT TETSU 
+    play sfx_channel walking volume 0.85 noloop
+    hide tetsunori_halfbody_neutral
+    with Dissolve(1.00)
+
+    show naoki_halfbody_happy
+    with Dissolve(0.25)
+    naoki "Okay then! See you around, Hisako!"  
     hk "See you later guys!"
 
-    # YASHIMATA NOBURO GRIMALDI LEAVE 
-    yashimata "What are we waiting for, you two? Let's go down to the kitchen and make some bomb-ass food! Last one there is a rotten egg!" # EXIT YASHIMATA
-    noburo "Hey! No fair, Yashimata! You have, like, unlimited stamina!!" # EXIT NOBURO 
-    grimaldi "Grimaldi hate rottene egg, so he definitely does not want to be one!" # EXIT GRIMALDI 
+    # EXIT NAOKI
+    play sfx_channel walking volume 0.85 noloop
+    hide naoki_halfbody_happy
+    with Dissolve(1.00)
 
-    #ROYSEI KICHI SHINZO 
+    # YASHIMATA NOBURO GRIMALDI LEAVE 
+    show yashimata_halfbody_happy
+    yashimata "What are we waiting for, you two? Let's go down to the kitchen and make some bomb-ass food! Last one there is a rotten egg!" 
+   
+    # EXIT YASHIMATA
+    play sfx_channel running volume 0.85 noloop
+    hide yashimata_halfbody_happy
+    with Dissolve(1.00)
+
+    show noburo_halfbody_upset
+    with Dissolve(0.25)
+    noburo "Hey! No fair, Yashimata! You have, like, unlimited stamina!!" 
+    
+    # EXIT NOBURO 
+    play sfx_channel running volume 0.85 noloop
+    hide noburo_halfbody_upset
+    with Dissolve(1.00)
+
+    show grimaldi_halfbody_upset
+    with Dissolve(0.25)
+    grimaldi "Grimaldi hate rotten egg, so he definitely does not want to be one!" 
+    
+    # EXIT GRIMALDI 
+    play sfx_channel running volume 0.85 noloop
+    hide grimaldi_halfbody_upset
+    with Dissolve(1.00)
+
+    #RYOSEI KICHI SHINZO 
+    show ryosei_halfbody_thinking
+    with Dissolve(0.25)
     ryosei "I have a bad feeling those fools are going to be making quite the mess. I'm going down as well to ensure this future does not come to pass."
+    show kichi_halfbody_annoyed
+    hide ryosei_halfbody_thinking
+    with Dissolve(0.25)
     kichi "Well, I can tell you this much that I didn't come down and help, I'd be more useless than tits on a bull."
+    show shinzo_halfbody_frustrated
+    hide kichi_halfbody_annoyed
+    with Dissolve(0.25)
     shinzo "Why does a lass like you have to have the mouth and language of a verteran sheriff?"
-    kichi "I think it's quite fun, Mr. Cowboy. And by the looks of it, you ain't as innocent as you make yourself out to be." # EXIT KICHI 
-    shinzo "I...Uh...Um...That's something that can't be helped!!!" # EXIT SHINZO 
+    show kichi_halfbody_happy
+    hide shinzo_halfbody_frustrated
+    with Dissolve(0.25)
+    kichi "I think it's quite fun, Mr. Cowboy. And by the looks of it, you ain't as innocent as you make yourself out to be." 
+    
+    # EXIT KICHI 
+    play sfx_channel walking volume 0.85 noloop
+    hide kichi_halfbody_happy
+    with Dissolve(1.00)
+
+    show shinzo_halfbody_upset
+    with Dissolve(0.25)
+    shinzo "I...Uh...Um...That's something that can't be helped!!!" 
+    
+    # EXIT SHINZO 
+    play sfx_channel walking volume 0.85 noloop
+    hide shinzo_halfbody_upset
+    with Dissolve(1.00)
+
+    show ryosei_halfbody_thinking
+    with Dissolve(0.25)
     ryosei "I sense I'm making a grave mistake for my mental sanity with this one."
     hk "Do take care of yourself, Ryosei."
-    ryosei "I shall overcome this. I see it in my future...There's nothing a few ibuprofen can't do. Farewell, Ms. Lawyer." # EXIT RYOSEI 
+    show ryosei_halfbody_neutral
+    hide ryosei_halfbody_thinking
+    with Dissolve(0.25)
+    ryosei "I shall overcome this. I see it in my future...There's nothing a few ibuprofen can't do."
+    ryosei "Farewell, Ms. Lawyer." 
+    
+    # EXIT RYOSEI 
+    play sfx_channel walking volume 0.85 noloop
+    hide ryosei_halfbody_neutral
+    with Dissolve(1.00)
+
     hkmonologue "I don't know if he'll make it out of there alive. Let's hope he does."
 
     # AZUMI FUJIKO CHINO 
+    show fujiko_halfbody_happy
+    with Dissolve(0.25)
     fujiko "Hey Azumi, are you thinking what I'm thinking {i}*smug*{/i}?"
+    show azumi_halfbody_neutral
+    hide fujiko_halfbody_happy
+    with Dissolve(0.25)
     azumi "Going back to the music room to find our entertainment for the evening?"
+    show fujiko_halfbody_happy
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     fujiko "Bingo! Let's go!"
+    show azumi_halfbody_happy
+    hide fujiko_halfbody_happy
+    with Dissolve(0.25)
     azumi "Chino, you're coming with us!"
+    show chino_halfbody_blush
+    hide azumi_halfbody_happy
+    with Dissolve(0.25)
     chino "O-Okay! I'll do my best to make sure I don't get in the way!"
-    fujiko "Chino, you've been everything but troublesome for Azumi and I."
+    show fujiko_halfbody_neutral
+    hide chino_halfbody_blush
+    with Dissolve(0.25)
+    fujiko "Chino, you've been everything {i}*but*{/i} troublesome for Azumi and me."
+    show azumi_halfbody_neutral
+    hide fujiko_halfbody_neutral
+    with Dissolve(0.25)
     azumi "We'd never think that about you!"
-    chino "T-Thank you. That means so much to me!" # EXIT AZUMI FUJIKO CHINO 
+    show chino_halfbody_blush
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
+    chino "T-Thank you. That means so much to me!" 
+    
+    # EXIT AZUMI FUJIKO CHINO 
+    play sfx_channel double_walk_sfx volume 0.85 noloop
+    hide chino_halfbody_blush
+    with Dissolve(1.00)
 
     #NARUMI MATSUKO NAGANORI 
+    show narumi_halfbody_bored
+    with Dissolve(0.25)
     narumi "I believe there is no need for me to be here."
     narumi "I'm going back to the bar, and it would be greatly appreciated if no one were there to bother me."
+    show naganori_halfbody_bored
+    hide narumi_halfbody_bored
+    with Dissolve(0.25)
     naganori "I will be going down regardless. I refuse to work in places with such din and cacophony."
+    show narumi_halfbody_neutral
+    hide naganori_halfbody_bored
+    with Dissolve(0.25)
     narumi "As long as you don't interrupt me doing my job and don't make too much noise, I don't care."
-    matsuko "I shall tag along as wel. The more that work in silence, the better." # EXIT NARUMI MATUSKO NAGANORI 
+    show matsuko_halfbody_neutral
+    hide narumi_halfbody_neutral
+    with Dissolve(0.25)
+    matsuko "I shall tag along as wel. The more that work in silence, the better."
+    
+    # EXIT NARUMI MATUSKO NAGANORI 
+    play sfx_channel double_walk_sfx volume 0.85 noloop
+    hide matsuko_halfbody_neutral
+    with Dissolve(1.00)
 
     # YUKAKO YUI NAYOKO 
+    show yui_halfbody_happy
+    with Dissolve(0.25)
     yui "Well, I guess that just leaves the us!! Oh, I'm so excited!!"
+    show nayoko_halfbody_surprised
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     nayoko "What should we do to help out with the party?"
+    show yukako_halfbody_thinking
+    hide nayoko_halfbody_surprised
+    with Dissolve(0.25)
     yukako "I uh..."
+    show yui_halfbody_neutral
+    hide yukako_halfbody_thinking
+    with Dissolve(0.25)
     yui "You got a good point! I have no idea what we should do. What do you think we should do?"
+    show yukako_halfbody_neutral
+    hide yui_halfbody_neutral
+    with Dissolve(0.25)
     yukako "I think..."
+    show nayoko_halfbody_smug
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
     nayoko "No fair! I asked you first, Yui!"
     $ multipleppl.name = "Yui & Nayoko" # MUTLIPLE PEOPLE NAME CHANGE 
+    show nayoko_halfbody_surprised at right
+    show yui_halfbody_happy at left
+    hide nayoko_halfbody_smug   
+    with Dissolve(0.25)
     multipleppl "Yukako, what do you think?"
+    show yukako_halfbody_frustrated    
+    with Dissolve(0.25)
     yukako "... ..."
     yukako "Sorry, give me a quick second..."
+    show yukako_halfbody_sleepy
+    hide yukako_halfbody_frustrated
+    with Dissolve(0.25)
     yukako "I think we should...go down to the main area near the bar, then help clean and set up there."
+    show nayoko_halfbody_smug at right
+    show yui_halfbody_unamused at left  
+    hide nayoko_halfbody_surprised
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     multipleppl "... ..."
     hkmonologue "Oh no. Some about this conversation feels very tense all of a sudden."
+    show nayoko_halfbody_surprised at right
+    hide nayoko_halfbody_smug
+    with Dissolve(0.25)
     nayoko "... OH...MY...GOSH!!! Yukako, You are such a genius!!"
+    show yui_halfbody_happy at left 
+    hide yui_halfbody_unamused
+    with Dissolve(0.25)
     yui "How did I not think of that! Without a clean venue, the party would essentially be over before it even started!!"
+    show nayoko_halfbody_happy at right 
+    hide nayoko_halfbody_surprised
+    with Dissolve(0.25)
     nayoko "Thank you so much for your help, Yukako! You're so awesome!"
+    show yukako_halfbody_thinking 
+    hide yukako_halfbody_sleepy   
+    with Dissolve(0.25)
     yukako "Um...you're welcome. I didn't do much."
+    show nayoko_halfbody_neutral at right 
+    hide nayoko_halfbody_happy
+    with Dissolve(0.25)
     nayoko "Of course you did! Now c'mon!"
+    show yukako_halfbody_upset 
+    hide yukako_halfbody_thinking   
+    with Dissolve(0.25)
+    with hpunch
     yukako "Woah!!"
+    show yui_halfbody_genius at left
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     yui "Let's go down and clean, you two! There's no time to waste!!"
-    yukako "Could you not drag me so much please??" # EXIT YUI YUKAKO NAYOKO
+    show yukako_halfbody_upset 
+    with hpunch
+    yukako "Could you not drag me so much, please??" 
+    
+    # EXIT YUI YUKAKO NAYOKO
+    play sfx_channel double_walk_sfx volume 0.85 noloop
+    hide yukako_halfbody_upset
+    hide yui_halfbody_genius
+    hide nayoko_halfbody_neutral
+    with Dissolve(1.00)
+
+    # BACK HK MONO
     hkmonologue "Well, I'm happy that they're having fun with this!"
     hkmonologue "Now then, time to bring the poor kid to his room. And by the looks of it, he definitely needs more than just a few hours of rest!"
 
     # VLAD AND HISAKO 
+    show vladnot_halfbody_neutral
+    with Dissolve(0.25)
     vladnot "Since you are unaware of the location of our dormitories..."
+    show vladnot_halfbody_calm
+    hide vladnot_halfbody_neutral
+    with Dissolve(0.25)
     vladnot "I shall be your guide, your Charon, if you must, through the vast hallways of this manor."
     hkmonologue "He really is going a little far with the vampire persona..."
     hk "Thank you for your help! I truly appreciate it!"
+    show vladnot_halfbody_neutral
+    hide vladnot_halfbody_calm
+    with Dissolve(0.25)
     vladnot "No matter. Allow me to help you with the one who is almost a corpse. I shall get one side and you the other?"
     hk "Sounds good to me! Hup!"
-    vladnot "Follow me, Practitioner of the law."
+    vladnot "Follow me, Practitioner of the Law."
     hk "Practitioner?"
+    show vladnot_halfbody_frustrated
+    hide vladnot_halfbody_neutral
+    with Dissolve(0.25)
     vladnot "Do you not practice the law as a lawyer?"
-    hk "...Yes, I do."
-    vladnot "Then you are a practitioner as such. Now follow me to the living chambers."
+    hk "...Yes, I do."    
+    vladnot "Then you are a practitioner as such."
+    show vladnot_halfbody_neutral
+    hide vladnot_halfbody_frustrated
+    with Dissolve(0.25)
+    vladnot "Now follow me to the living chambers."
     hkmonologue "Oh, boy..."
 
-    # END SCENE 2-1
+    # END SCENE 2-1 [FINISHED ON 6/22/24 @ 9:16 PM]
+    # PLACE WALKING SFX HERE 
+    play sfx_channel walking volume 0.85 noloop
+    # TRANSITION OVER TO SCENE [1/16/2024]
+    hide vladnot_halfbody_neutral
+    with Dissolve(0.25)
+    stop music fadeout 2.0
+    hide manor_atrium
+    with fade
+    show transition
+    with Dissolve(2.0)
+    $ renpy.pause(1.75, hard=True)
 
 # SCENE 2-2 [WHITE WYVERN MANOR - EIZO'S ROOM] --> HISAKO AND VLADNOT HAVE FINALLY BROUGHT EIZO: THE ULTIMATE FAST FOOD WORKER BACK TO HIS ROOM.
 # UPON UNLOCKING AND ENTERING HIS ROOM, THEY ARE COMPLETELY FLABBERGASTED BY WHAT THEY SEE INSIDE. AFTER LEAVING EIZO, VLAD WILL DIRECT HISAKO TO WHERE 
