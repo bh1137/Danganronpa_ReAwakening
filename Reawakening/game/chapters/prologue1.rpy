@@ -1,6 +1,10 @@
 # Scene 1-1 [OUTSIDE THE SCHOOL] --> HISAKO IS SPEKAING TO THE PLAYERS VIA A MONOLOGUE.
 label scene1_1:       
-    # TALK ABOUT HOPE'S PEAK AND CONNECT TO ORIGINAL GAME
+    # RESET NAME 
+    $ hk.name = "???"
+    $ hkmonologue.name = "???"
+
+    # TALK ABOUT HOPE'S PEAK AND CONNECT TO ORIGINAL GAME 
     hkmonologue "Hope's Peak Academy..."
 
     # START MUSIC AND SHOW ACADEMY
@@ -170,7 +174,12 @@ label scene1_1:
 
 # SCENE 1-2 [ULTIMATES' LOUNGE AREA] --> HISAKO IS STARTING TO WAKE UP FROM THE WEED TRIP AND THE OTHER ULTIMATES 
 # (MAINLY NOBURO AND THE BROTHERS) ARE CONVERSING AS SHE DOES.
-label scene1_2:       
+label scene1_2:  
+    # RESET NAMES 
+    $ hiko.name = "???"
+    $ tetsu.name = "???"
+    $ naoki.name = "???"  
+    $ noburo.name = "???"   
     #SCENE STARTS OFF BLACK [4 BROS TALKING AROUND HISAKO PASSED OUT]
     naoki "Hey, big bro, I don't think she's going to be waking up any time soon."
     naoki "Like, she isn't responsive in the slightest. It's really unnerving."
@@ -616,6 +625,9 @@ label scene1_2:
 # SCENE 1-3 [WHITE WYVERN MANOR - DINING AREA] --> HISAKO IS BEING GUIDED TO THE DINING AREA BY TETSUNORI AND FOLLOWED
 # BY NAOKI AND NOBURO. THEY ARE GOING TO BE INTRODUCED TO SEVERAL OTHER ULTIMATES WHO ARRIVED WHEN HISAKO WAS UNCONSCIOUS 
 label scene1_3:
+    # RESET NAME 
+    $ kichi.name = "???"
+    $ shinzo.name= "???"
     # START SCENE OUT BY MOVING AWAY FROM TRANSITION SCENE AND INTO THE DINING AREA [STARTED 1/24/24 EST 6:21 AM]
     show dining_room
     hide transition
@@ -905,7 +917,13 @@ label scene1_3:
 
 # SCENE 1-4 [WHITE WYVERN MANOR - DINING AREA 2] --> HISAKO IS NOW BEING INTRODUCED TO MORE ULTIMATES IN THE OTHER PART OF THE DINING AREA
 # BY NONE OTHER THAN KICHI. AS THEY APPROACH THE NEW BATCH OF ULTIMATES, HISAKO LISTENS IN ON A VERY INTERESTING CONVERSATION.    
-label scene1_4:     
+label scene1_4:  
+    # RESET NAME 
+    $ yui.name = "???"
+    $ yashimata.name = "???"
+    $ eizo.name = "???"
+    $ ryosei.name = "???"  
+
     # MONOLOGUE INTO YASHIMATA NONSENSE 
     hkmonologue "As Kichi was showing us around the expansive dining area, I couldn't help but wonder how much money was invested into this place."
     hkmonologue "The answer is definitely...A LOT!"
@@ -1499,7 +1517,10 @@ label scene1_4:
 
 # SCENE 1-5 [WHITE WYVERN MANOR - LIBRARY] --> AFTER BEING GIVEN RYOSEI'S ADVICE, HISAKO MOVES ON OVER TO THE MANSION'S LIBRARY
 # AS HISAKO CANVASSES THE SEEMINGLY INFINITE NUMBER OF BOOKS, SHE MEETS AND GETS INTO A CONFRONTATION WITH ONE OF THE OTHER ULTIMATES...
-label scene1_5:     
+label scene1_5:    
+    # RESET NAMES 
+    $ matsuko.name = "???"
+    $ naganori.name = "???" 
     # MONOLOGUE BEFORE ENTERING LIBRARY
     hkmonologue "I really don't know what to exprect from this library."
     hkmonologue "If the dining area was as extravagant as it was, I can't really imagine what the library looks like."
@@ -1797,6 +1818,9 @@ label scene1_5:
 
 # SCENE 1-6 [WHITE WYVERN MANOR - BASEMENT BAR] --> HISAKO HEADS DOWN TO THE BASEMENT TO VISIT THE MANOR'S BAR. WHO WILL SHE MEET NEXT?
 label scene1_6:
+    # RESET NAMES 
+    $ narumi.name = "???"
+    $ yukako.name = "???"
     # START SCENE OUT BY MOVING AWAY FROM TRANSITION SCENE AND INTO THE LIBRARY [STARTED 3/18/24 @ EST 1:26 AM]
     show bar
     hide transition
@@ -2055,6 +2079,10 @@ label scene1_6:
 # SCENE 1-7 [WHITE WYVERN MANOR - MUSIC ROOM] --> AFTER LEAVING YUKAKO AT THE BAR, HISAKO TAKES THE TIP AND HEADS UP TO THE 2ND FLOOR MUSIC ROOM.
 # AS SHE ENTERS THE VAST, OPEN HALL, SHE CAN HEAR THE SOUND OF OTHER PEOPLE TALKING.
 label scene1_7:
+    # RESET NAMESD
+    $ azumi.name = "???"
+    $ fujiko.name = "???"
+    $ chino.name = "???"
     # START SCENE OUT BY MOVING AWAY FROM TRANSITION SCENE AND INTO THE LIBRARY [STARTED 3/19/24 @ EST 2:15 AM]
     show music_room
     hide transition
@@ -2400,6 +2428,10 @@ label scene1_7:
 # SCENE 1-8 [WHITE WYVERN MANOR - ATRIUM] --> AFTER THE ANNOUNCEMENT, HISAKO, CHINO, FUJIKO, AND AZUMI MAKE THEIR WAY FROM THE MUSIC ROOM TO THE ATRIUM
 # IN ORDER TO GATHER WITH THE OTHER ULTIMATES. AS THEY APPROACH THE ATRIUM THEY REALIZE THEY ARE THE FIRST ONES THERE
 label scene1_8: 
+    # RESET NAMES 
+    $ grimaldi.name = "???"
+    $ vladnot.name = "???"
+    $ nayoko.name = "???"
     # START SCENE OUT BY MOVING AWAY FROM TRANSITION SCENE AND INTO THE LIBRARY [STARTED 3/20/24 @ EST 4:47 AM]
     show manor_atrium
     hide transition

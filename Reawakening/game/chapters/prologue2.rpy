@@ -294,6 +294,7 @@ label scene2_1:
 
     # YASHIMATA NOBURO GRIMALDI LEAVE 
     show yashimata_halfbody_happy
+    with Dissolve(0.25)
     yashimata "What are we waiting for, you two? Let's go down to the kitchen and make some bomb-ass food! Last one there is a rotten egg!" 
    
     # EXIT YASHIMATA
@@ -549,7 +550,7 @@ label scene2_1:
     # END SCENE 2-1 [FINISHED ON 6/22/24 @ 9:16 PM]
     # PLACE WALKING SFX HERE 
     play sfx_channel walking volume 0.85 noloop
-    # TRANSITION OVER TO SCENE [1/16/2024]
+    # TRANSITION OVER TO SCENE 
     hide vladnot_halfbody_neutral
     with Dissolve(0.25)
     stop music fadeout 2.0
@@ -561,64 +562,138 @@ label scene2_1:
 
 # SCENE 2-2 [WHITE WYVERN MANOR - EIZO'S ROOM] --> HISAKO AND VLADNOT HAVE FINALLY BROUGHT EIZO: THE ULTIMATE FAST FOOD WORKER BACK TO HIS ROOM.
 # UPON UNLOCKING AND ENTERING HIS ROOM, THEY ARE COMPLETELY FLABBERGASTED BY WHAT THEY SEE INSIDE. AFTER LEAVING EIZO, VLAD WILL DIRECT HISAKO TO WHERE 
-# HER ROOM IS LOCATED
-label scene2_2:
+# HER ROOM IS LOCATED [STARTED 6/26/24 @ 9:08 PM]
+label scene2_2: 
+    # SHOW NEW BACKGROUND OF THE ATRIUM HERE 
+    show eizo_room
+    with Dissolve(1.5)   
+    $ renpy.pause(1.00, hard=True)
+
     hk "... ... ..."
+    hk "... ... ..."
+    show vladnot_halfbody_upset
+    with Dissolve(0.25)
+    vladnot "... ... ..."
     vladnot "... ... ..."
     hk "Vlad, are you see what I'm seeing?"
     vladnot "I feel as if this is all a mirage, but it's right there in front of me!"
     hk "This can't be real! It just can't be!"
+    show vladnot_halfbody_calm
+    hide vladnot_halfbody_upset
+    with Dissolve(0.25)
     vladnot "Oh, but it is, my dear!"
     hk "Eizo's room looks like the inside of a Fatty Fingers..."
+    show vladnot_halfbody_frustrated
+    hide vladnot_halfbody_calm
+    with Dissolve(0.25)
     vladnot "And it's not all merely for decoration! Look over there near the change machine!"
     hk "A full-on grill? And a fryer?"
     hk "The poor boy can't even escape work in his sleep!"
+    show vladnot_halfbody_neutral
+    hide vladnot_halfbody_frustrated
+    with Dissolve(0.25)
     vladnot "To eat, work, and sleep fast food. Truly a modern-day Sisyphus!"
     hk "If my room were modeled after a courtroom, I honestly would go insane after a week or two!"
     hk "There needs to be a balance between work and home life, and one should never overshadow the other!"
+    show vladnot_halfbody_frustrated
+    hide vladnot_halfbody_neutral
+    with Dissolve(0.25)
     vladnot "... ..."
-    vladnot "At least vampires don't have to deal with such trivial matters."
+    vladnot "... ..."
+    show vladnot_halfbody_happy
+    hide vladnot_halfbody_frustrated
+    with Dissolve(0.25)
+    play sfx_channel thunder_sfx volume 1.00 noloop
+    with vpunch
+    play music perdue2 volume 0.80 loop
+    vladnot "At least vampires don't have to deal with such trivial matters!"
     hkmonologue "There he goes again. I'm no psychoanalyst, but I'm pretty sure he just broke character for a moment."
+    show vladnot_halfbody_neutral
+    hide vladnot_halfbody_happy
+    with Dissolve(0.25)
     vladnot "What do you think, hmm?"
     hk "!!!"
     hk "Huh?? I'm so sorry. I got lost in my own thoughts. What did you ask me?"
     vladnot "I asked if you think he enjoys what he does."
     hk "I'd like to think that he enjoys being the {color=#efcc00}{b}Ultimate Fast Food Worker{/b}{/color}..."
     hk "However, it is very apparent that he has been overworking himself, completely disregarding his health and purely focusing on work."
+    show vladnot_halfbody_frustrated
+    hide vladnot_halfbody_neutral
+    with Dissolve(0.25)
     vladnot "Do you think he'll be okay here at Hope's Peak?"
     hk "I don't know what set of circumstances led him to his destructive work habits in the first place..."
     hk "But I truly believe that he'll be able to recuperate and learn how to balance and maintain his health."
-    hk "Once he does that, he'll also be able to meet the demands that come from being an Ultimate in the fast food sector!"
+    hk "Once he does that, he'll also be able to meet the demands that come from being an {color=#efcc00}{b}Ultimate{/b}{/color} in the fast food sector!"
     hk "I mean isn't that why we're all here in the first place?"
+    show vladnot_halfbody_neutral
+    hide vladnot_halfbody_frustrated
+    with Dissolve(0.25)
     vladnot "In what way do you mean?"
     hk "All of us {color=#efcc00}{b}Ultimates{/b}{/color}: 
     we have come to this school because there are particular flaws within our lives that need attending."
     hk "We all may technically be the best in our field, but it doesn't mean we are perfect."
+    show vladnot_halfbody_calm
+    hide vladnot_halfbody_neutral
+    with Dissolve(0.25)
     vladnot "Hmmm....You do make a compelling argument."
     hk "We would all like to think that our {color=#efcc00}{b}Ultimate Abilities{/b}{/color} are what sets us apart from the others in our fields."
     hk "If we had no problems, flaws, or any imperfections, we wouldn't need to be here."
-    vladnot "How do our {color=#efcc00}{b}Ultimate Abilities{/b}{/color} not put us at the top immediately? That's the whole point of an Ultimate."
-    hk "Sure, being an Ultiamte distinguishes you from the crowd, but it depends on your personality, actions, and character as a whole."
+    show vladnot_halfbody_frustrated
+    hide vladnot_halfbody_calm
+    with Dissolve(0.25)
+    vladnot "How do our {color=#efcc00}{b}Ultimate Abilities{/b}{/color} not put us at the top immediately? That's the whole point of an {color=#efcc00}{b}Ultimate{/b}{/color}."
+    hk "Sure, being an Ultimate distinguishes you from the crowd, but it also depends on your personality, actions, and character as a whole."
     hk "You can be an Ultimate, but have a personality that is so repulsive that it negatively impacts you."
+    show vladnot_halfbody_neutral
+    hide vladnot_halfbody_frustrated
+    with Dissolve(0.25)
     vladnot "I'm starting to see your point of view now."
     hk "Everyone here in this manor are all really genuine people! Sure, we've all come from different backgrounds and professions..."
     hk "But what truly matters is that we empathize and listen to each other, and help encourage one another to be the person they can be!"
+    show vladnot_halfbody_calm
+    hide vladnot_halfbody_neutral
+    with Dissolve(0.25)
     vladnot "Empathize...hmmm. I understand."
+    show vladnot_halfbody_neutral
+    hide vladnot_halfbody_calm
+    with Dissolve(0.25)
     vladnot "That was kind of reassuring, Madam Hisako. I do hope to become good friends and empathize with you."
     hkmonologue "I'm really happy that I was able to get pass the showmanship, and have a genuine heart-to-heart moment with him!"
     hk "Same here, Vladnot! I also wanted to thank you for helping me with Eizo in bringing him back to his room!"
+    show vladnot_halfbody_happy
+    hide vladnot_halfbody_neutral
+    with Dissolve(0.25)
     vladnot "'Tis no problem from an immortal!"
     hkmonologue "Well, at least he is a good person all around!"
+    show vladnot_halfbody_neutral
+    hide vladnot_halfbody_happy
+    with Dissolve(0.25)
     vladnot "One more thing before you leave: Your chambers are the last one down and to the left."
     hk "Thank you! Well, I'm gonna go check it out then!"
     vladnot "You go and do that. I will return to thine place of living and allow the darkness to develop and comfort me."
     vladnot "If you need my attention, do please knock ahead of time."
     hk "Will do! I'll see you at the party!"
-    vladnot "See you around." # EXIT VLADNOT 
+    show vladnot_halfbody_calm
+    hide vladnot_halfbody_neutral
+    with Dissolve(0.25)
+    vladnot "See you around." 
+    
+    # EXIT VLADNOT 
+    play sfx_channel walking volume 0.35 noloop
+    hide vladnot_halfbody_calm
+    with Dissolve(1.00)
+
     hkmonologue "Okay! Time to go to my room and look around some. I just hope that it isn't a courtroom."
     hkmonologue "Knock on wood, fingers crossed, whatever I need for good luck!"
 
-    # END SCENE 2-2
+    # END SCENE 2-2       
+    # TRANSITION OVER TO SCENE [6/26/2024 @ 9:36 PM & 10:03 PM]    
+    stop music fadeout 2.0
+    hide eizo_room
+    with fade
+    show transition
+    with Dissolve(2.0)
+    $ renpy.pause(1.75, hard=True)
 
 # SCENE 2-3 [WHITE WYVERN MANOR - HISAKO'S ROOM] --> AFTER BRINGING EIZO BAK TO HIS ROOM, HISAKO DECIDES TO GO AND CHECK OUT HER ROOM
 # TO HER AMAZEMENT, HER ROOM IS THEMED ACCORDING TO HER PARTICULAR TASTE IN STLE AS WELL AS HER TO HER ULTIMATE ABILITY
