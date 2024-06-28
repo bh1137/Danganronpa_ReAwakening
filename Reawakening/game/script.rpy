@@ -1,5 +1,9 @@
 ﻿# The game starts here.
 label start:
+    # 3D CAMERA PERSPECTIVE (VISUAL NOVEL DESIGN YOUTUBE)
+    camera:
+        perspective True
+        
     # START THE GAME      
     # ATTEMPT TO JUMP PART 1 SCRIPT 
     jump scene2_1    
