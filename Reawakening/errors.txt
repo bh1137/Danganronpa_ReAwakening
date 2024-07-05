@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapters/prologue2.rpy", line 332: end of line expected.
-    shinzo "Why does a lass like you have to have the mouth and language of a verteran sheriff?".
-                                                                                                ^
+File "game/misc.rpy", line 17: 'zpos' is not a keyword argument or valid child of the imagebutton statement.
+    zpos 0.05    
+        ^
 
-Ren'Py Version: Ren'Py 8.2.1.24030407
-Sat Jun 22 21:17:46 2024
+Ren'Py Version: Ren'Py 8.2.3.24061702
+Thu Jul  4 20:49:31 2024

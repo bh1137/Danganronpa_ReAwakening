@@ -564,7 +564,7 @@ label scene2_1:
 # UPON UNLOCKING AND ENTERING HIS ROOM, THEY ARE COMPLETELY FLABBERGASTED BY WHAT THEY SEE INSIDE. AFTER LEAVING EIZO, VLAD WILL DIRECT HISAKO TO WHERE 
 # HER ROOM IS LOCATED [STARTED 6/26/24 @ 9:08 PM]
 label scene2_2: 
-    # SHOW NEW BACKGROUND OF THE ATRIUM HERE 
+    # SHOW NEW BACKGROUND OF EIZO ROOM HERE 
     show eizo_room
     with Dissolve(1.5)   
     $ renpy.pause(1.00, hard=True)
@@ -593,7 +593,7 @@ label scene2_2:
     hide vladnot_halfbody_frustrated
     with Dissolve(0.25)
     vladnot "To eat, work, and sleep fast food. Truly a modern-day Sisyphus!"
-    hk "If my room were modeled after a courtroom, I honestly would go insane after a week or two!"
+    hk "If my room were modeled after a courtroom, I'd honestly go insane after a week or two!"
     hk "There needs to be a balance between work and home life, and one should never overshadow the other!"
     show vladnot_halfbody_frustrated
     hide vladnot_halfbody_neutral
@@ -698,10 +698,35 @@ label scene2_2:
 # SCENE 2-3 [WHITE WYVERN MANOR - HISAKO'S ROOM] --> AFTER BRINGING EIZO BAK TO HIS ROOM, HISAKO DECIDES TO GO AND CHECK OUT HER ROOM
 # TO HER AMAZEMENT, HER ROOM IS THEMED ACCORDING TO HER PARTICULAR TASTE IN STLE AS WELL AS HER TO HER ULTIMATE ABILITY
 # SHE WILL DELVE INTO MORE DETAIL ABOUT HER ROOM, REST FOR A QUICK MINUTE, THEN HEAD BACK DOWNSTAIRS TO HELP SET UP FOR THE PARTY (MULTICHOICE)
-label scene2_3:
+label scene2_3:   
+    # SHOW HISAKO ROOM      
+    show hisako_room
+    with Dissolve(1.5)   
+    $ renpy.pause(1.00, hard=True)
+
+    # PLAY MUSIC HERE 
+    play music calm_seas volume 0.75 loop
+
+    # MONOLOGUE HERE 
     hkmonologue "This is absolutely amazing! It looks completely different from Eizo's that's for sure!"
     hkmonologue "And it's exactly how I would've modeled my dream apartment, down to the glass shower on the second floor!"
     hkmonologue "They weren't kidding when they said they knew everything about us."
+    hkmonologue "Hmmmm, I wonder what else they know about my dream designs...."
+
+    # TEST OUTLINE FOR EXPLORATION WITH UI EXPLORATION 
+    sfxText "Hello! Since you are new to the game, allow me to introduce some of the core mechanics of the game."
+    sfxText "When in a room, you can do one of three things:"
+    sfxText "#1. You can {color=#efcc00}{b}Investigate{/b}{/color} a room and search for very important clues."
+    sfxText "#2. If another student is in the room, you can {color=#efcc00}{b}Talk{/b}{/color} to them and get to know them better."
+    sfxText "#3. You can decide to {color=#efcc00}{b}Move{/b}{/color} to another room or section around campus."
+    sfxText "Interested in doing it yourself? Click on the {color=#efcc00}{b}\"Investigate\"{/b}{/color} box to look around your new room!"
+    
+    # INVESTIGATION SCREEN
+    call screen investigation(0,0)
+    
+
+   
+
     hkmonologue "The detail is immaculate and intricate! And the room is so massive too!"
     hkmonologue "How were they able to turn the luxury of a mansion into a one-bedroom apartment? It is totally astounding to me!"
     hkmonologue "They even have a small bookshelf near a work desk!"

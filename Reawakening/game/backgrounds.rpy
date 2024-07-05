@@ -42,6 +42,8 @@ image manor_atrium:
 image eizo_room:
     "images/backgrounds/eizo_room.png"
 
+image hisako_room:
+    "images/backgrounds/hisako_room.png"
 # CHARACTER CARD INTRODUCTIONS 
 # KAZUHIKO
 image kazuhiko_card_background:
