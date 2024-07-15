@@ -699,6 +699,16 @@ label scene2_2:
 # TO HER AMAZEMENT, HER ROOM IS THEMED ACCORDING TO HER PARTICULAR TASTE IN STLE AS WELL AS HER TO HER ULTIMATE ABILITY
 # SHE WILL DELVE INTO MORE DETAIL ABOUT HER ROOM, REST FOR A QUICK MINUTE, THEN HEAD BACK DOWNSTAIRS TO HELP SET UP FOR THE PARTY (MULTICHOICE)
 label scene2_3:   
+    # SET CHAPTER NUMBER AND SCENE ROOM FOR INVESTIGATION HERE 
+    $ sceneRoom = "prologue_hisakoRoom"
+    $ magGlassNum = 4
+
+    # BOOLEAN VALUE     
+    define isMagGlassOneSeen = "false"
+    define isMagGlassTwoSeen = "false"
+    define isMagGlassThreeSeen = "false"
+    define isMagGlassFourSeen = "false"
+
     # SHOW HISAKO ROOM      
     show hisako_room
     with Dissolve(1.5)   
@@ -709,7 +719,7 @@ label scene2_3:
 
     # MONOLOGUE HERE 
     hkmonologue "This is absolutely amazing! It looks completely different from Eizo's that's for sure!"
-    hkmonologue "And it's exactly how I would've modeled my dream apartment, down to the glass shower on the second floor!"
+    hkmonologue "And it's exactly how I would've modeled my dream apartment!"
     hkmonologue "They weren't kidding when they said they knew everything about us."
     hkmonologue "Hmmmm, I wonder what else they know about my dream designs...."
 
@@ -723,56 +733,47 @@ label scene2_3:
     
     # INVESTIGATION SCREEN
     call screen investigation(0,0)
-    
+       
+    # POST INVESTIGATION SCENE 
+    label scene2_3_Post_Investigation:        
+        hkmonologue "I'm so glad that I was given this opportunity and privilege of a second chance to prove myself as the 
+        {color=#efcc00}{b}Ultimate Lawyer{/b}{/color}!"
+        hkmonologue "I promise not only to the school and the government, but also to myself that I will put 110%% into everything I do here!"
+        hkmonologue "Oh, man...this place is so amazing!" 
+        hkmonologue "I know these next four years will fly by, but right now, I just want to enjoy one day at a time! And tonight, we're gonna have a party!"
+        hkmonologue "We're all going to get to know each other, eat good food, and have drinks prepared by the greatest bartender ever!"
+        hkmonologue "And most importantly, we're all going to have so much fun before classes start!"
+        hkmonologue "I'm so excited, I can hardly contain myself!"
+        hkmonologue "...Oh, yeah! I know I was told to rest, but I honestly feel better already!"
+        hkmonologue "I appreciate everyone's concern, but I would feel terrible if I didn't help at least a little bit with the party set-up."
+        hkmonologue "The question now is: where do I go and help out?"
+        hkmonologue "Hmmmmm...Decisions...Decisions"
 
-   
+        # MULTICHOICE BRANCH-OFF
+        menu:
+            "Lounge":
+                hkmonologue "It's decided then! I'll head on down to the lounge and help out the Akuda brothers!"
+                jump scene2_4
+            "Kitchen":
+                hkmonologue "I think I'll head over to the kitchen to check up on Noburo and the gang."
+                hkmonologue "I'm just hoping they didn't make too much of a mess!"
+                jump scene2_5
+            "Dining Room":
+                hkmonologue "Let's go to the dining room to see how Shinzo, Kichi, and Ryosei are holding up."
+                hkmonologue "I'm just hoping that Noburo and the others haven't caused mayhem in the kitchen!"
+                jump scene2_6
+            "Bar":
+                hkmonologue "I know I'm going to regret this very soon..."
+                hkmonologue "But I guess I'll go down to the bar and see if Narumi and the others need some extra hands."
+                jump scene2_7
+            "Recreation Room":
+                hkmonologue "Let's go check and see what Yukako, Yui, and Nayoko are up to in the rec room!"
+                jump scene2_8
+            "Music Room":
+                hkmonologue "I think I'll go see if Azumi and Fujiko need any help in the music room!"
+                jump scene2_9
 
-    hkmonologue "The detail is immaculate and intricate! And the room is so massive too!"
-    hkmonologue "How were they able to turn the luxury of a mansion into a one-bedroom apartment? It is totally astounding to me!"
-    hkmonologue "They even have a small bookshelf near a work desk!"
-    hkmonologue "{i}The Dark Underbelly: Unravelling the Complexities of Crime and Law{/i}!"
-    hkmonologue "{i}Understanding the Criminal Mind{/i}!"
-    hkmonologue "{i}The Lawyer's Pocket Dictionary for Law and Order{/i}!?"
-    hkmonologue "All the books I've always wanted, but never had the chance to buy them! This is amazing!!"
-    hkmonologue "With the time I'll have, I'll be able to catch up on my backlog and learn more in the process!"
-    hkmonologue "I'm so glad that I was given this opportunity and privilege of a second chance to prove myself as the 
-    {color=#efcc00}{b}Ultimate Lawyer{/b}{/color}!"
-    hkmonologue "I promise not only to the school and the government, but also to myself that I will put 110% into everything I do here!"
-    hkmonologue "Oh, man...this place is so amazing!" 
-    hkmonologue "I know these next four yeas will fly by, but right now, I just want to enjoy one day at a time! And tonight, we're gonna have a party!"
-    hkmonologue "We're all going to get to know each other, eat good food, and have drinks prepared by the greatest bartender ever!"
-    hkmonologue "And most importantly, we're all going to have so much fun before classes start!"
-    hkmonologue "I'm so exicted, I can hardly contain myself!"
-    hkmonologue "...Oh, yeah! I know I was told to rest, but I honestly feel better already!"
-    hkmonologue "I appreciate everyone's concern, but I would feel terrible if I didn't help at least a little bit with the party set-up."
-    hkmonologue "The question now is: where do I go and help out?"
-    hkmonologue "Hmmmmm...Decisions...Decisions"
-
-    # MULTICHOICE BRANCH-OFF
-    menu:
-        "Lounge":
-            hkmonologue "It's decided then! I'll head on down to the lounge and help out the Akuda brothers!"
-            jump scene2_4
-        "Kitchen":
-            hkmonologue "I think I'll head over to the kitchen to check up on Noburo and the gang."
-            hkmonologue "I'm just hoping they didn't make too much of a mess!"
-            jump scene2_5
-        "Dining Room":
-            hkmonologue "Let's go to the dining room to see how Shinzo, Kichi, and Ryosei are holding up."
-            hkmonologue "I'm just hoping that Noburo and the others haven't caused mayhem in the kitchen!"
-            jump scene2_6
-        "Bar":
-            hkmonologue "I know I'm going to regret this very soon..."
-            hkmonologue "But I guess I'll go down to the bar and see if Narumi and the others need some extra hands."
-            jump scene2_7
-        "Recreation Room":
-            hkmonologue "Let's go check and see what Yukako, Yui, and Nayoko are up to in the rec room!"
-            jump scene2_8
-        "Music Room":
-            hkmonologue "I think I'll go see if Azumi and Fujiko need any help in the music room!"
-            jump scene2_9
-
-    # END SCENE 3
+        # END SCENE 3
 
 # SCENE 4 [WHITE WYVERN MANOR - LOUNGE (MULTICHOICE OPTION 1)] --> HISAKO DECIDES TO HELP OUT THE AKUDA BROTHERS
 # IN THE LOUNGE WITH SOME HEAVY LIFTING OF THEIR DJ EQUIPMENT.

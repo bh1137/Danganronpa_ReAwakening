@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/misc.rpy", line 17: 'zpos' is not a keyword argument or valid child of the imagebutton statement.
-    zpos 0.05    
-        ^
+File "game/investigation_room_screens.rpy", line 18: keyword argument 'action' appears more than once in a imagebutton statement.
+    hover "mag_glass_hover" action Play("sound", "audio/sfx/damage.ogg")        
+                                  ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Thu Jul  4 20:49:31 2024
+Sun Jul 14 20:58:41 2024

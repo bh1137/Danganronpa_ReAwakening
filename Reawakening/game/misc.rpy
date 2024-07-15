@@ -48,7 +48,13 @@ screen investigation(isPersonInRoom, canIMove):
 # IN ORDER TO FIND SOME HIDDEN GEMS ABOUT THE ROOM. ALSO HAVE A QUICK TUTORIAL MOMENT TO GET THE PLAYERS TO FAMILIARIZE THEMSELVES
 # WITH SEARCHING AROUND 7-1-24 9:56PM
 
-label investigate_room:
+label investigate_room:    
+    if (sceneRoom == "prologue_hisakoRoom"):       
+        # CALL SCREEN 
+        call screen hisakoRoom()
+
+
+
     $ ui.interact()
 
 label talk_room:

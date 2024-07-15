@@ -1,70 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/chapters/prologue2.rpy", line 725, in script
-    call screen investigation(0, 0)
-  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/misc.rpy", line 2, in execute
-    screen investigation(isPersonInRoom, canIMove):
-  File "game/misc.rpy", line 2, in execute
-    screen investigation(isPersonInRoom, canIMove):
-  File "game/misc.rpy", line 12, in execute
-    imagebutton:
-  File "renpy/common/00defaults.rpy", line 168, in _imagemap_auto_function
-    rv = auto_param % variant
-TypeError: not all arguments converted during string formatting
+  File "game/chapters/prologue2.rpy", line 735, in script call
+    call screen investigation(0,0)
+  File "game/misc.rpy", line 54, in script call
+    call screen hisakoRoom()
+  File "game/chapters/prologue2.rpy", line 747, in script
+    hkmonologue "I promise not only to the school and the government, but also to myself that I will put 110% into everything I do here!"
+TypeError: %i format: a number is required, not TagQuotingDict
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/chapters/prologue2.rpy", line 725, in script
-    call screen investigation(0, 0)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1971, in execute
-    self.call("execute")
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1953, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\statements.py", line 349, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\exports.py", line 3420, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 2166, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 2688, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 2688, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/misc.rpy", line 2, in execute
-    screen investigation(isPersonInRoom, canIMove):
-  File "game/misc.rpy", line 2, in execute
-    screen investigation(isPersonInRoom, canIMove):
-  File "game/misc.rpy", line 12, in execute
-    imagebutton:
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ui.py", line 950, in _imagebutton
-    idle = choice(idle, idle_image, "idle", required=True)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ui.py", line 938, in choice
-    rv = renpy.config.imagemap_auto_function(auto, name)
-  File "renpy/common/00defaults.rpy", line 168, in _imagemap_auto_function
-    rv = auto_param % variant
-TypeError: not all arguments converted during string formatting
+  File "game/chapters/prologue2.rpy", line 735, in script call
+    call screen investigation(0,0)
+  File "game/misc.rpy", line 54, in script call
+    call screen hisakoRoom()
+  File "game/chapters/prologue2.rpy", line 747, in script
+    hkmonologue "I promise not only to the school and the government, but also to myself that I will put 110% into everything I do here!"
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\exports.py", line 1483, in say
+    what = what % tag_quoting_dict
+TypeError: %i format: a number is required, not TagQuotingDict
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.3.24061702
 Reawakening 1.0
-Thu Jul  4 20:46:44 2024
+Sun Jul 14 21:19:55 2024
