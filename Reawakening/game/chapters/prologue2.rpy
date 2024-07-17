@@ -734,8 +734,10 @@ label scene2_3:
     # INVESTIGATION SCREEN
     call screen investigation(0,0)
        
-    # POST INVESTIGATION SCENE 
-    label scene2_3_Post_Investigation:        
+    # POST INVESTIGATION SCENE [FINISHED 7/16/24 @ 7:39 PM]
+    label scene2_3_Post_Investigation:  
+        # RESTART DIALOGUE    
+        hkmonologue "Oh man...."  
         hkmonologue "I'm so glad that I was given this opportunity and privilege of a second chance to prove myself as the 
         {color=#efcc00}{b}Ultimate Lawyer{/b}{/color}!"
         hkmonologue "I promise not only to the school and the government, but also to myself that I will put 110%% into everything I do here!"

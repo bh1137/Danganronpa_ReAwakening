@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/investigation_room_screens.rpy", line 18: keyword argument 'action' appears more than once in a imagebutton statement.
-    hover "mag_glass_hover" action Play("sound", "audio/sfx/damage.ogg")        
+File "game/misc.rpy", line 17: 'Play' is not a keyword argument or valid child of the imagebutton statement.
+    idle "investigation_idle" Play("sound", menu_click_sfx), action Function(renpy.call, "investigate_room")
                                   ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Sun Jul 14 20:58:41 2024
+Tue Jul 16 19:33:40 2024

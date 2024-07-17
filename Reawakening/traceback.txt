@@ -5,28 +5,36 @@ While running game code:
     call screen investigation(0,0)
   File "game/misc.rpy", line 54, in script call
     call screen hisakoRoom()
-  File "game/chapters/prologue2.rpy", line 747, in script
-    hkmonologue "I promise not only to the school and the government, but also to myself that I will put 110% into everything I do here!"
-TypeError: %i format: a number is required, not TagQuotingDict
-
--- Full Traceback ------------------------------------------------------------
-
-Full traceback:
   File "game/chapters/prologue2.rpy", line 735, in script call
     call screen investigation(0,0)
   File "game/misc.rpy", line 54, in script call
     call screen hisakoRoom()
-  File "game/chapters/prologue2.rpy", line 747, in script
-    hkmonologue "I promise not only to the school and the government, but also to myself that I will put 110% into everything I do here!"
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
-    Say.execute(self)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\exports.py", line 1483, in say
-    what = what % tag_quoting_dict
-TypeError: %i format: a number is required, not TagQuotingDict
+ScriptError: could not find label ' bed_dialogue'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\main.py", line 637, in main
+    run(restart)
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\main.py", line 145, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\execution.py", line 955, in run_context
+    context.run()
+  File "game/chapters/prologue2.rpy", line 735, in script call
+    call screen investigation(0,0)
+  File "game/misc.rpy", line 54, in script call
+    call screen hisakoRoom()
+  File "game/chapters/prologue2.rpy", line 735, in script call
+    call screen investigation(0,0)
+  File "game/misc.rpy", line 54, in script call
+    call screen hisakoRoom()
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label ' bed_dialogue'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.3.24061702
 Reawakening 1.0
-Sun Jul 14 21:19:55 2024
+Tue Jul 16 19:14:11 2024

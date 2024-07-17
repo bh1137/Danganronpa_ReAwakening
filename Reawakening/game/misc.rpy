@@ -14,8 +14,9 @@ screen investigation(isPersonInRoom, canIMove):
         yanchor 0.5
         xpos 0.25
         ypos 0.85      
-        auto "investigate_%s"
-        action Function(renpy.call, "investigate_room")                
+        idle "investigate_idle" action Play("sound", menu_click_sfx), Function(renpy.call, "investigate_room")
+        hover "investigate_hover" hovered Play("sound", menu_hover_sfx)
+                        
 
     # TALK BUTTON
     if(isPersonInRoom == 1):
@@ -24,8 +25,9 @@ screen investigation(isPersonInRoom, canIMove):
             yanchor 0.5
             xpos 0.50
             ypos 0.85      
-            auto "talk_%s"
-            action Function(renpy.call, "talk_room")
+            idle "talk_idle" action Play("sound", menu_click_sfx), Function(renpy.call, "talk_room")
+            hover "talk_hover" hovered Play("sound", menu_hover_sfx)
+                        
 
     # MOVE BUTTON 
     if(canIMove == 1):
@@ -34,8 +36,9 @@ screen investigation(isPersonInRoom, canIMove):
             yanchor 0.5
             xpos 0.75
             ypos 0.85      
-            auto "move_%s"
-            action Function(renpy.call, "move_room")
+            idle "move_idle" action Play("sound", menu_click_sfx), Function(renpy.call, "move_room")
+            hover "move_hover" hovered Play("sound", menu_hover_sfx)
+                        
 
     
 
@@ -48,8 +51,9 @@ screen investigation(isPersonInRoom, canIMove):
 # IN ORDER TO FIND SOME HIDDEN GEMS ABOUT THE ROOM. ALSO HAVE A QUICK TUTORIAL MOMENT TO GET THE PLAYERS TO FAMILIARIZE THEMSELVES
 # WITH SEARCHING AROUND 7-1-24 9:56PM
 
-label investigate_room:    
-    if (sceneRoom == "prologue_hisakoRoom"):       
+label investigate_room:  
+    # SWITCH CASE
+    if (sceneRoom == "prologue_hisakoRoom"):             
         # CALL SCREEN 
         call screen hisakoRoom()
 
