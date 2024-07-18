@@ -566,6 +566,7 @@ label scene2_1:
 label scene2_2: 
     # SHOW NEW BACKGROUND OF EIZO ROOM HERE 
     show eizo_room
+    hide transition
     with Dissolve(1.5)   
     $ renpy.pause(1.00, hard=True)
 
@@ -711,6 +712,7 @@ label scene2_3:
 
     # SHOW HISAKO ROOM      
     show hisako_room
+    hide transition
     with Dissolve(1.5)   
     $ renpy.pause(1.00, hard=True)
 
@@ -754,103 +756,351 @@ label scene2_3:
         # MULTICHOICE BRANCH-OFF
         menu:
             "Lounge":
-                hkmonologue "It's decided then! I'll head on down to the lounge and help out the Akuda brothers!"
+                hkmonologue "It's decided then! I'll head on down to the lounge and help out the Okuda brothers!"
+                # END SCENE 2-3       
+                # TRANSITION OVER TO SCENE [7/17/2024 @ 8:43 PM]    
+                stop music fadeout 2.0
+                hide hisako_room
+                with fade
+                show transition
+                with Dissolve(2.0)
+                $ renpy.pause(1.75, hard=True)
                 jump scene2_4
             "Kitchen":
                 hkmonologue "I think I'll head over to the kitchen to check up on Noburo and the gang."
                 hkmonologue "I'm just hoping they didn't make too much of a mess!"
+                # END SCENE 2-3       
+                # TRANSITION OVER TO SCENE [7/17/2024 @ 9:25 PM]    
+                stop music fadeout 2.0
+                hide hisako_room
+                with fade
+                show transition
+                with Dissolve(2.0)
+                $ renpy.pause(1.75, hard=True)
                 jump scene2_5
             "Dining Room":
                 hkmonologue "Let's go to the dining room to see how Shinzo, Kichi, and Ryosei are holding up."
                 hkmonologue "I'm just hoping that Noburo and the others haven't caused mayhem in the kitchen!"
+                # END SCENE 2-3       
+                # TRANSITION OVER TO SCENE [7/17/2024 @ 9:25 PM]    
+                stop music fadeout 2.0
+                hide hisako_room
+                with fade
+                show transition
+                with Dissolve(2.0)
+                $ renpy.pause(1.75, hard=True)
                 jump scene2_6
             "Bar":
                 hkmonologue "I know I'm going to regret this very soon..."
                 hkmonologue "But I guess I'll go down to the bar and see if Narumi and the others need some extra hands."
+                # END SCENE 2-3       
+                # TRANSITION OVER TO SCENE [7/17/2024 @ 9:25 PM]    
+                stop music fadeout 2.0
+                hide hisako_room
+                with fade
+                show transition
+                with Dissolve(2.0)
+                $ renpy.pause(1.75, hard=True)
                 jump scene2_7
             "Recreation Room":
                 hkmonologue "Let's go check and see what Yukako, Yui, and Nayoko are up to in the rec room!"
+                # END SCENE 2-3       
+                # TRANSITION OVER TO SCENE [7/17/2024 @ 9:25 PM]    
+                stop music fadeout 2.0
+                hide hisako_room
+                with fade
+                show transition
+                with Dissolve(2.0)
+                $ renpy.pause(1.75, hard=True)
                 jump scene2_8
             "Music Room":
                 hkmonologue "I think I'll go see if Azumi and Fujiko need any help in the music room!"
+                # END SCENE 2-3       
+                # TRANSITION OVER TO SCENE [7/17/2024 @ 9:25 PM]    
+                stop music fadeout 2.0
+                hide hisako_room
+                with fade
+                show transition
+                with Dissolve(2.0)
+                $ renpy.pause(1.75, hard=True)
                 jump scene2_9
 
         # END SCENE 3
 
 # SCENE 4 [WHITE WYVERN MANOR - LOUNGE (MULTICHOICE OPTION 1)] --> HISAKO DECIDES TO HELP OUT THE AKUDA BROTHERS
-# IN THE LOUNGE WITH SOME HEAVY LIFTING OF THEIR DJ EQUIPMENT.
+# IN THE LOUNGE WITH SOME HEAVY LIFTING OF THEIR DJ EQUIPMENT. [STARTED 7/17/24 @ 8:41 PM]
 label scene2_4:  
-    # BROTHERS ARE TALKING          
+    # SHOW LOUNGE 
+    show lounge
+    hide transition
+    with Dissolve(1.5)   
+    $ renpy.pause(1.00, hard=True)
+
+    # PLAY MUSIC HERE 
+    play music funkman volume 0.70 loop
+    # BROTHERS ARE TALKING   
+    show kazuhiko_halfbody_neutral
+    with Dissolve(0.25)       
     hiko "Alright, there's one more box!"
     hiko "Naoki, how are you doing? Is everything good?"
-    naoki "I'm all good! Just brough over the turntables and mixer from my room. I also have most of my records with me as well!"
+    show naoki_halfbody_neutral
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
+    naoki "I'm all good! Just brought over the turntables and mixer from my room. I also have most of my records with me as well!"
+    show kazuhiko_halfbody_happy
+    hide naoki_halfbody_neutral
+    with Dissolve(0.25)
     hiko "That's excellent! And how about you, Tetsu?"
+    show tetsunori_halfbody_neutral
+    hide kazuhiko_halfbody_happy
+    with Dissolve(0.25)
     tetsu "Everything's good on my end as well. I was able to bring down some speakers, lights, and other loose cables from Naoki's room!"
+    show tetsunori_halfbody_surprised
+    hide tetsunori_halfbody_neutral
+    with Dissolve(0.25)
     tetsu "I'm pretty sure we have everything we need."
+    show kazuhiko_halfbody_neutral
+    hide tetsunori_halfbody_surprised
+    with Dissolve(0.25)
     hiko "Nice! Nice! I see that we have everything accounted for!"
+    show kazuhiko_halfbody_thinking
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
     hiko "However, there is one small issue..."
+    show naoki_halfbody_frustrated
+    hide kazuhiko_halfbody_thinking
+    with Dissolve(0.25)
     naoki "And what's that, Hiko?"
+    show kazuhiko_halfbody_upset
+    hide naoki_halfbody_frustrated
+    with Dissolve(0.25)
     hiko "We have way too many boxes to bring to the rec room, and we still need time to set up down there as well."
-    naoki "Oh yeah...I didn't even really notice that until now."
+    show naoki_halfbody_upset
+    hide kazuhiko_halfbody_upset
+    with Dissolve(0.25)
+    naoki "I didn't even notice!"
+    show tetsunori_halfbody_upset
+    hide naoki_halfbody_upset
+    with Dissolve(0.25)
     tetsu "I hate to admit it, but I think we got a {i}*little*{/i} too excited to be the entertainment for this party."
+    show kazuhiko_halfbody_upset
+    hide tetsunori_halfbody_upset
+    with Dissolve(0.25)
     hiko "..."
+    show naoki_halfbody_frustrated
+    hide kazuhiko_halfbody_upset
+    with Dissolve(0.25)
     naoki "Is something the matter, Hiko?"
-    hiko "No, no, I'm totally fine! I do think you are right, Tetsu."
-    hiko "We may have over prepared for this event! I guess I'm so used to performing in large venues, I forgot what it's like to prep for smaller events!"
+    show kazuhiko_halfbody_happy
+    hide naoki_halfbody_frustrated 
+    with Dissolve(0.25)   
+    # ADD EXCLAMATION SFX FOR HIKO
+    play sfx_channel exclamation volume 1.50 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")     
+    hiko "!!!"
+    hiko "No, no, I'm totally fine!"
+    show kazuhiko_halfbody_thinking
+    hide kazuhiko_halfbody_happy
+    with Dissolve(0.25)
+    hiko "However, I do think you are right, Tetsu."
+    show kazuhiko_halfbody_happy
+    hide kazuhiko_halfbody_thinking
+    with Dissolve(0.25)
+    hiko "We may have over prepared for this event!"
+    show kazuhiko_halfbody_blush
+    hide kazuhiko_halfbody_happy
+    with Dissolve(0.25)
+    hiko "I guess I'm so used to performing in large venues, I forgot what it's like to prep for smaller events!"
+    show naoki_halfbody_neutral
+    hide kazuhiko_halfbody_blush
+    with Dissolve(0.25)
     naoki "It's okay, Hiko! I had the same problem!"
+    show naoki_halfbody_happy
+    hide naoki_halfbody_neutral
+    with Dissolve(0.25)
     naoki "The last time we were at a small venue was when I was starting high school!"
 
     # HISAKO ENTERS
+    # ADD EXCLAMATION SFX FOR TETSU
+    show tetsunori_halfbody_surprised
+    hide naoki_halfbody_happy
+    with Dissolve(0.25)
+    play sfx_channel exclamation volume 1.50 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")    
     tetsu "Wait a minute, is that Hisako?"
+    show kazuhiko_halfbody_upset
+    hide tetsunori_halfbody_surprised
+    with Dissolve(0.25)
     hiko "It shouldn't be. I thought we said she should go back to her toom and rest."
+    show tetsunori_halfbody_unamused
+    hide kazuhiko_halfbody_upset
+    with Dissolve(0.25)
     tetsu "Whie I agree with you on that, I'm pretty sure that is Hisako!"
-    hiko "What?"
+    show kazuhiko_halfbody_thinking
+    hide tetsunori_halfbody_unamused
+    with Dissolve(0.25)
+    hiko "Are you sure, Tetsu?"
+    hide kazuhiko_halfbody_thinking
+    with Dissolve(0.25)
+
+    # MULTI-SPLIT OF BROTHERS HERE 
     hk "Hey guys, what's up?"
-    $ multipleppl.name = "Akuda Brothers"
+    $ multipleppl.name = "Okuda Brothers"
+
+    show kazuhiko_halfbody_upset at center
+    with Dissolve(0.25)
+    show tetsunori_halfbody_upset at right 
+    with Dissolve(0.25)
+    show naoki_halfbody_upset at left
+    with Dissolve(0.25)    
     multipleppl "Hisako!"
     hk "How are you all doing?"
+    show tetsunori_halfbody_surprised at right 
+    hide tetsunori_halfbody_upset
+    with Dissolve(0.25)
     tetsu "That's the same question we should be asking you!"
+    show kazuhiko_halfbody_thinking at center
+    hide kazuhiko_halfbody_upset
+    with Dissolve(0.25)
     hiko "How are you feeling? You should be resting in your room!"
-    hk "I'm feeling 1000% better than I did earlier!"
+    hk "I'm feeling 1000%% better than I did earlier!"
+    show naoki_halfbody_happy at left 
+    hide naoki_halfbody_upset
+    with Dissolve(0.25)
     naoki "That's wonderful to hear!"
     hk "So, I decided to come down here and see if you needed any help!"
+    show kazuhiko_halfbody_upset at center 
+    hide kazuhiko_halfbody_thinking
+    with Dissolve(0.25)
     hiko "Are you sure about that? I honestly think that's a bad idea."
     hk "Why is that? I feel fine!"
+    show kazuhiko_halfbody_neutral at center 
+    hide kazuhiko_halfbody_upset 
+    with Dissolve(0.25)
     hiko "I know that you're feeling better than you did earlier, which I am really happy to hear, by the way."
+    show kazuhiko_halfbody_thinking at center 
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
     hiko "But you shouldn't exert yourself so quickly and risk feeling even worse than before!"
+    show naoki_halfbody_neutral at left
+    hide naoki_halfbody_happy
+    with Dissolve(0.25)
     naoki "We want you to enjoy yourself at the party, not feel crappy and miserable!"
+    show tetsunori_halfbody_neutral at right 
+    hide tetsunori_halfbody_surprised
+    with Dissolve(0.25)
     tetsu "We still think that it would be best if you went back to your room and relaxed until the party starts."
+
+    # ADD EXCLAMATION SFX FOR HISAKO
+    play sfx_channel exclamation volume 1.50 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
+    show kazuhiko_halfbody_upset at center
+    hide kazuhiko_halfbody_thinking
+    show tetsunori_halfbody_upset at right 
+    hide tetsunori_halfbody_neutral
+    show naoki_halfbody_upset at left
+    hide naoki_halfbody_neutral
+
     hk "Kazuhiko! Tetsunori! Naoki!"
     hk "I really appreciate the concern for my health and safety, but I promise that I feel good enough to help you set up for the party!"
     hk "Besides, if I went back to my room, I would be very restless and feel very guilty."
+    show tetsunori_halfbody_surprised at right 
+    hide tetsunori_halfbody_upset
+    with Dissolve(0.25)
     tetsu "Guilty? Why would you feel guilty?"
     hk "Because everyone else is working very hard to prepare for the party, knowing full well that I could help out in some way that isn't just resting."
+    show kazuhiko_halfbody_blush at center 
+    hide kazuhiko_halfbody_upset
+    with Dissolve(0.25)
     hiko "Dang it. You beat me to it."
     hk "With that in mind, is it cool if I help you out?"
+    show kazuhiko_halfbody_thinking at center 
+    hide kazuhiko_halfbody_blush
+    with Dissolve(0.25)
     hiko "Hmmm... I still have some very strong reservations about this."
+    show naoki_halfbody_neutral at left 
+    hide naoki_halfbody_upset
+    with Dissolve(0.25)
     naoki "If Hisako says she's does feel better, I say it's good in my book!"
+    show tetsunori_halfbody_unamused at right 
+    hide tetsunori_halfbody_surprised
+    with Dissolve(0.25)
     tetsu "I agree. And if we're being completely honest here, we can use all the help we can get right now."
-    hiko "Hmmmm...okay."
+    hiko "Hmmmm...okay."    
     hiko "You can help us, but you have to promise me that the minute you start feeling unwell, you will tell us and take it easy! Promise?"
     hk "I promise!"
+    show kazuhiko_halfbody_neutral at center 
+    hide kazuhiko_halfbody_thinking
+    with Dissolve(0.25)
     hiko "Alright then. With that, I feel better about having you help us!"
     hiko "Now then...We haven't a moment to waste!"
+    show kazuhiko_halfbody_thinking at center 
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
     hiko "Listen up real quick! We have about an hour-and-a-half to get all of these boxes and equipment down to the basement!"
     hiko "We also need to keep in mind that we need to set up shop, before the first guest arrive! Let's get to it, shall we?"
     hk "Understood!"
+    show kazuhiko_halfbody_neutral at center 
+    hide kazuhiko_halfbody_thinking
+    with Dissolve(0.25)
     hiko "Naoki: continue carrying your turntables and mixer downstairs, and then start setting up!"
     hiko "Your job is the most integral part to this whole operation! I'm counting on you!"
+    show naoki_halfbody_happy at left 
+    hide naoki_halfbody_neutral
+    with Dissolve(0.25)
     naoki "On it, bro!"
-    hiko "Tetsu: help me carry the carry these bigger boxes and power supplies! We can't have the music bumpin' without these!"
+    
+    # NAOKI LEAVE 
+    play sfx_channel walking volume 0.85 noloop
+    hide naoki_halfbody_happy 
+    with Dissolve(0.65)
+
+    
+    hiko "Tetsu: help me carry these bigger boxes along with the power supplies! We can't have the music bumpin' without these!"
+    show tetsunori_halfbody_surprised at right 
+    hide tetsunori_halfbody_unamused
+    with Dissolve(0.25)
     tetsu "Right!"
+
+    # TETSU LEAVE 
+    play sfx_channel walking volume 0.85 noloop
+    hide tetsunori_halfbody_surprised
+    with Dissolve(0.65)
+
+    show kazuhiko_halfbody_thinking at center 
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
     hiko "And Hisako: why don't you help Naoki out by carrying down his speakers and records crate."
+    show kazuhiko_halfbody_neutral at center 
+    hide kazuhiko_halfbody_thinking
+    with Dissolve(0.25)
     hiko "Can't have a lively party without the speakers and the music!"
     hk "Absolutely! Right on it, Kazuhiko!"
-    hiko "And more thing: thank you once again for helping us out."
+    show kazuhiko_halfbody_thinking at center 
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
+    hiko "And more thing, Hisako..."
+    show kazuhiko_halfbody_blush
+    hide kazuhiko_halfbody_thinking
+    with Dissolve(0.25)
+    hiko "Thank you once again for helping us out."
     hk "It's no problem at all!"
-    hk "If it allows you three to set up what you need to faster, while avoiding reckless decisions, then I'm happy to help! Now then, on we go!"
+    hk "If it allows you three to set up what you need to faster, while avoiding reckless decisions, then I'm happy to help!"
+    hk "Now then, on we go!"
 
     # FADE TO BLACK HERE AND THEN REAPPEAR AT THE BASEMENT!
+    # PLACE WALKING SFX HERE 
+    play sfx_channel walking volume 0.85 noloop
+    # TRANSITION OVER TO SCENE 
+    hide kazuhiko_halfbody_blush
+    with Dissolve(0.25)    
+    hide lounge
+    with fade
+    show transition
+    with Dissolve(2.0)
+    $ renpy.pause(1.75, hard=True)
+
+    # REAPPEAR HERE 
 
     hk "And that should be the rest of the records!"
     naoki "Awesome!! Thank you, Hisako!!"

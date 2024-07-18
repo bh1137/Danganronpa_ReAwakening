@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/misc.rpy", line 17: 'Play' is not a keyword argument or valid child of the imagebutton statement.
-    idle "investigation_idle" Play("sound", menu_click_sfx), action Function(renpy.call, "investigate_room")
-                                  ^
+File "game/chapters/prologue2.rpy", line 851: end of line expected.
+    hide naoki_halfbody_neutral.
+                               ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Jul 16 19:33:40 2024
+Wed Jul 17 21:25:26 2024

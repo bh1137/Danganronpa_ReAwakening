@@ -1,40 +1,48 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/chapters/prologue2.rpy", line 735, in script call
+  File "game/chapters/prologue2.rpy", line 737, in script call
     call screen investigation(0,0)
-  File "game/misc.rpy", line 54, in script call
+  File "game/misc.rpy", line 58, in script call
     call screen hisakoRoom()
-  File "game/chapters/prologue2.rpy", line 735, in script call
-    call screen investigation(0,0)
-  File "game/misc.rpy", line 54, in script call
-    call screen hisakoRoom()
-ScriptError: could not find label ' bed_dialogue'.
+  File "game/investigation_scene_label_prompts.rpy", line 20, in script call
+    call screen hisakoRoom
+  File "game/investigation_scene_label_prompts.rpy", line 20, in script call
+    call screen hisakoRoom
+  File "game/investigation_scene_label_prompts.rpy", line 60, in script call
+    call screen hisakoRoom
+  File "game/investigation_scene_label_prompts.rpy", line 40, in script call
+    call screen hisakoRoom
+  File "game/chapters/prologue2.rpy", line 966, in script
+    hk "I'm feeling 1000% better than I did earlier!"
+ValueError: unsupported format character 'b' (0x62) at index 18
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\main.py", line 637, in main
-    run(restart)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\main.py", line 145, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\execution.py", line 955, in run_context
-    context.run()
-  File "game/chapters/prologue2.rpy", line 735, in script call
+  File "game/chapters/prologue2.rpy", line 737, in script call
     call screen investigation(0,0)
-  File "game/misc.rpy", line 54, in script call
+  File "game/misc.rpy", line 58, in script call
     call screen hisakoRoom()
-  File "game/chapters/prologue2.rpy", line 735, in script call
-    call screen investigation(0,0)
-  File "game/misc.rpy", line 54, in script call
-    call screen hisakoRoom()
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label ' bed_dialogue'.
+  File "game/investigation_scene_label_prompts.rpy", line 20, in script call
+    call screen hisakoRoom
+  File "game/investigation_scene_label_prompts.rpy", line 20, in script call
+    call screen hisakoRoom
+  File "game/investigation_scene_label_prompts.rpy", line 60, in script call
+    call screen hisakoRoom
+  File "game/investigation_scene_label_prompts.rpy", line 40, in script call
+    call screen hisakoRoom
+  File "game/chapters/prologue2.rpy", line 966, in script
+    hk "I'm feeling 1000% better than I did earlier!"
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\exports.py", line 1483, in say
+    what = what % tag_quoting_dict
+ValueError: unsupported format character 'b' (0x62) at index 18
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.3.24061702
 Reawakening 1.0
-Tue Jul 16 19:14:11 2024
+Wed Jul 17 21:51:26 2024

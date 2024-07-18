@@ -32,6 +32,7 @@ define harpsichord_fuge = "audio/music/harpsichord_fuge.mp3"
 define governor_minuet = "audio/music/governor_minuet.mp3"
 define perdue2 = "audio/music/perdue_2.mp3"
 define calm_seas = "audio/music/on_calm_sea.mp3"
+define funkman = "audio/music/funkman.mp3"
 
 # SOUND EFFECTS 
 define dizzy_sfx = "audio/sfx/dizzy.ogg"
