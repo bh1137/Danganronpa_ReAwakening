@@ -1095,38 +1095,102 @@ label scene2_4:
     hide kazuhiko_halfbody_blush
     with Dissolve(0.25)    
     hide lounge
+    with fade    
+    $ renpy.pause(2.75, hard=True)
+
+    # REAPPEAR HERE 
+    show basement
+    with Dissolve(1.5)   
+    $ renpy.pause(1.00, hard=True)
+
+    # RESTART DIALOGUE 
+    hk "And that should be the rest of the records!"
+    show naoki_halfbody_happy
+    with Dissolve(0.25)
+    naoki "Awesome!! Thank you, Hisako!!"
+    show tetsunori_halfbody_surprised
+    hide naoki_halfbody_happy
+    with Dissolve(0.25)
+    tetsu "And with that, we've managed to finish moving everything down from the lounge!"
+    show tetsunori_halfbody_neutral
+    hide tetsunori_halfbody_surprised
+    with Dissolve(0.25)
+    tetsu "In addition, Naoki is almost done setting up his booth, and with 15 minutes to spare too!" 
+    show kazuhiko_halfbody_happy at center
+    hide tetsunori_halfbody_neutral
+    with Dissolve(0.25)
+    hiko "Thanks for the update, Tetsu!"
+    show kazuhiko_halfbody_neutral at center
+    hide kazuhiko_halfbody_happy
+    with Dissolve(0.25)
+    hiko "Now then, Hisako, on behalf of the three of us..."
+    show tetsunori_halfbody_neutral at right 
+    with Dissolve(0.15)
+    show naoki_halfbody_neutral at left 
+    with Dissolve(0.15)
+    hiko "I would like to thank you once again for your help!"
+    show kazuhiko_halfbody_blush at center 
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
+    hiko "Without you, we would've never been able to set up on time!"
+    hk "It's no problem at all!"
+    show kazuhiko_halfbody_thinking at center 
+    hide kazuhiko_halfbody_blush
+    with Dissolve(0.25)
+    hiko "I also want to apologize for being very insistant and pushy earlier regarding your bedrest."
+    hiko "Knowing firsthand what happened earlier, we just wanted to make sure that those brownies were out of your system before jumping into hard labor."
+    hk "It's okay! I really appreciate your apology!"
+    hk "I completely understand that you three care about me, and that's what friends do for one another!"
+    show kazuhiko_halfbody_blush at center
+    hide kazuhiko_halfbody_thinking
+    with Dissolve(0.25)
+    hiko "Hisako..."
+    hk "Again, I'm happy I was able to help, but I'm also glad I was able to have fun helping my friends too!"
+    show kazuhiko_halfbody_happy at center
+    hide kazuhiko_halfbody_blush
+    with Dissolve(0.25)
+    hiko "That really means a lot! Thank you so much...for everything!"
+    show kazuhiko_halfbody_neutral at center 
+    hide kazuhiko_halfbody_blush
+    with Dissolve(0.25)
+    hiko "Now, I'd recommend you go upstairs and get ready for the party!"
+    hk "You know, I think I'll take you up on your recommendation!"
+    show kazuhiko_halfbody_happy at center 
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
+    hiko "Hahaha! Your humor is impeccable!"
+    show kazuhiko_halfbody_neutral at center 
+    hide kazuhiko_halfbody_happy
+    with Dissolve(0.25)
+    hiko "Take care, Hisako!"
+    hk "I'll see you all very soon!"
+    show tetsunori_halfbody_happy at right 
+    hide tetsunori_halfbody_neutral 
+    with Dissolve(0.252)
+    tetsu "See ya!"
+    show naoki_halfbody_happy at left 
+    hide naoki_halfbody_neutral
+    with Dissolve(0.25)
+    naoki "Bye, Hisako!"
+    hk "Bye Bye!"
+
+    # END SCENE 2-4 [FINISHED ON 7/22/24 @ 8:52 PM]
+    # PLACE WALKING SFX HERE 
+    play sfx_channel walking volume 0.85 noloop
+    # TRANSITION OVER TO SCENE
+    hide kazuhiko_halfbody_neutral
+    hide tetsunori_halfbody_happy
+    hide naoki_halfbody_happy
+    with Dissolve(0.25)
+    stop music fadeout 2.0
+    hide basement
     with fade
     show transition
     with Dissolve(2.0)
     $ renpy.pause(1.75, hard=True)
 
-    # REAPPEAR HERE 
 
-    hk "And that should be the rest of the records!"
-    naoki "Awesome!! Thank you, Hisako!!"
-    tetsu "And with that, we've managed to finish moving everything down from the lounge!"
-    tetsu "In addition, Naoki is almost done setting up his booth, and with 15 minutes to spare too!" 
-    hiko "Thanks for the update, Tetsu!"
-    hiko "Now then, Hisako, on behalf of the three of us, I would like to thank you once again for your help!"
-    hiko "Without you, we would've never been able to set up on time!"
-    hk "It's no problem at all!"
-    hiko "I also want to apologize for being very insistant and pushy earlier regarding your bedrest."
-    hiko "Knowing firsthand what happened earlier, we just wanted to make sure that those brownies were out of your system before jumping into hard labor."
-    hk "It's okay! I really appreciate your apology!"
-    hk "I completely understand that you three care about me, and that's what friends do for one another!"
-    hiko "Hisako..."
-    hk "Again, I'm happy I was able to help, but I'm also glad I was able to have fun helping my friends too!"
-    hiko "That really means a lot! Thank you so much...for everything!"
-    hiko "Now, I'd recommend you go upstairs and get ready for the party!"
-    hk "You know, I think I'll take you up on your recommendation!"
-    hiko "Hahaha! Your humor is impeccable!"
-    hiko "Take care, Hisako!"
-    hk "I'll see you all very soon!"
-    tetsu "See ya!"
-    naoki "Bye, Hisako!"
-    hk "Bye Bye!"
-
-    # END SCENE 2-4
+    # JUMP TO SCENE 2-10
     jump scene2_10
 
 # SCENE 5 [WHITE WYVERN MANOR - KITCHEN (MULTICHOICE OPTION 2)] --> HISAKO DECIDES TO LEND A HAND TO YASHIMATA, 
