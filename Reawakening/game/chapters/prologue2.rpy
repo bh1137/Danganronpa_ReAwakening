@@ -837,7 +837,7 @@ label scene2_4:
     $ renpy.pause(1.00, hard=True)
 
     # PLAY MUSIC HERE 
-    play music funkman volume 0.70 loop
+    play music watch_ur_behavior volume 0.85 loop
     # BROTHERS ARE TALKING   
     show kazuhiko_halfbody_neutral
     with Dissolve(0.25)       
@@ -1194,7 +1194,7 @@ label scene2_4:
     jump scene2_10
 
 # SCENE 5 [WHITE WYVERN MANOR - KITCHEN (MULTICHOICE OPTION 2)] --> HISAKO DECIDES TO LEND A HAND TO YASHIMATA, 
-# NOBURO, AND GRIMALDI IN THE KITCHEN. WHAT SHE DOESN'T EXPECT FROM THE BROS WILL HER BLOW HER MIND!
+# NOBURO, AND GRIMALDI IN THE KITCHEN. WHAT SHE DOESN'T EXPECT FROM THE BROS WILL HER BLOW HER MIND! [STARTED 7/28/24 @ 6:09 PM]
 label scene2_5:  
     # HISAKO MONOLOGUING 
     hkmonologue "I honestly have no idea what to expect! I know they all mean well..."
@@ -1204,6 +1204,12 @@ label scene2_5:
     hkmonologue "What happens if the whole mansion burns down!?!?"
 
     # HISAKO ENTERS THE KITCHEN
+    # SHOW NEW BACKGROUND OF KITCHEN HERE 
+    show kitchen
+    with Dissolve(1.5)
+    play music sundowner volume 0.50 loop
+    $ renpy.pause(0.75, hard=True)  
+
     hkmonologue "What if...huh??"
     hkmonologue "The kitchen...it's spotless!"
     hkmonologue "Not even a single crumb anywhere on the floor!"
@@ -1212,135 +1218,360 @@ label scene2_5:
     hkmonologue "I don't even know if they even need any help at this point, but I'm still going to check just in case."
 
     # DUDES IN THE KITCHEN
+    show yashimata_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "Hey, Noburo! How's the punch coming along?"
+    show noburo_halfbody_happy
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
     noburo "It's going pretty well! Just putting the finishing touches!"
+    show noburo_halfbody_neutral
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     noburo "How about you, Broseph? How goes the cooking?"
-    yashimata "Everything is going perfectly as planeed! Just reducing the heat to a simmer for a few minutes and it should be all good!!"
+    show yashimata_halfbody_happy
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
+    yashimata "Everything is going perfectly as planned! Just reducing the heat to a simmer for a few minutes and it should be all good!!"
+    show yashimata_halfbody_neutral
+    hide yashimata_halfbody_happy
+    with Dissolve(0.25)
     yashimata "And don't think I forgot about you, Grimaldi! How you doing over there, big guy?"
-    grimaldi "Grimaldi be having wonderful time! I too am almost done with dish from homeland!"
+    show grimaldi_halfbody_laughing
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
+    grimaldi "Grimaldi be having wonderful time! I, too, am almost done with dish from homeland!"
+    show grimaldi_halfbody_neutral
+    hide grimaldi_halfbody_laughing
+    with Dissolve(0.25)
     grimaldi "All that need to be finished is brief pan-fry with seasoning and spices!"
+    show yashimata_halfbody_happy
+    hide grimaldi_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "Awesome!! And we're also earlier than expected!!"
+    show noburo_halfbody_happy
+    hide yashimata_halfbody_happy
+    with Dissolve(0.25)
     noburo "Hell yeah!!"
 
     # HISAKO APPEARS
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
+    play sfx_channel knocking_sfx volume 1.30 noloop
     sfxText "{i}*knock knock knock*{/i}"
     hk "Hey guys!"
+    show yashimata_halfbody_neutral at center 
+    with Dissolve(0.25)
     yashimata "Hisako!"
+    show grimaldi_halfbody_neutral at right 
+    with Dissolve(0.25)
     grimaldi "Hello, my friend!"
+    show noburo_halfbody_happy at left
+    with Dissolve(0.25)
     noburo "Glad to see you up and about!"
     hk "How is everything going in here?"
+    show noburo_halfbody_neutral at left 
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     noburo "Everything is perfect! All of us are just about finished with our dishes."
     noburo "All we have left is a final taste test and then we're gucci!"
+    show yashimata_halfbody_happy at center 
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "Noburo, I have a pretty radical idea!"
+    show noburo_halfbody_confused at left 
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
     noburo "What's that, my guy?"
+    show yashimata_halfbody_neutral at center 
+    hide yashimata_halfbody_happy
+    with Dissolve(0.25)
     yashimata "Instead of us tasting our own dishes, why don't we have Hisako taste them for us!"
     hk "are you sure? I'm not exactly known for my exquisite palate."
+    show yashimata_halfbody_happy at center 
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "Exactly! With you tasting our dishes, we'll have an unbiased result about how good they taste!"
+    show noburo_halfbody_happy at left
+    hide noburo_halfbody_confused
+    with Dissolve(0.25)
     noburo "I think that's an excellent idea, dude! What about you, Grimaldi?"
+    show grimaldi_halfbody_laughing at right 
+    hide grimaldi_halfbody_neutral
+    with Dissolve(0.25)
     grimaldi "Grimaldi believes that is a lovely idea!"
     hk "I don't know. What happens if I mess up a dish because I don't like it?"
+    show yashimata_halfbody_frustrated at center 
+    hide yashimata_halfbody_happy
+    with Dissolve(0.25)
     yashimata "Nonsense! I have a very strong feeling that you are the perfect person for this!"
+    show yashimata_halfbody_neutral at center 
+    hide yashimata_halfbody_frustrated
+    with Dissolve(0.25)
     yashimata "Noburo. Grimaldi. Do you have that same feeling I do?"
+    show noburo_halfbody_neutral at left 
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     noburo "I totally agree with you, bro! Hisako is definitely the one!"
+    show grimaldi_halfbody_happy at right
+    hide grimaldi_halfbody_laughing
+    with Dissolve(0.25)
     grimaldi "Grimaldi is also in agreement! Let us prepare food for Hisako!"
     yashimata "It's settled then!"
+    show yashimata_halfbody_happy at center 
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "Now before the tasting starts, are you all okay with Hisako trying my dish first?"
+    show noburo_halfbody_happy at left
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
     noburo "By all means!"
+    show grimaldi_halfbody_laughing at right 
+    hide grimaldi_halfbody_happy
+    with Dissolve(0.25)
     grimaldi "Let Hisako save Grimaldi's dish for last!"       
 
-    # HISAKO TRIES YASHIMATA'S DISH FIRST
+    # EXIT YASHIMATA AND HISAKO 
     yashimata "Awesome!! Come over here to my station, Hisako!"
-    hk "O-Okay."
+    hk "O-Okay."    
+    play sfx_channel double_walk_sfx volume 0.40 noloop
+    hide yashimata_halfbody_happy
+    hide noburo_halfbody_happy
+    hide grimaldi_halfbody_laughing
+    with Dissolve(1.00)
+
+    # HISAKO TRIES YASHIMATA'S DISH FIRST
+    show yashimata_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "Alright! Let me plate this, pour this, and BOOM! My world-famous beans and rice!"
     hk "Oh wow! This looks amazing!"
+    show yashimata_halfbody_happy
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "I can't wait to hear your thoughts!"
+    play sfx_channel eating_sfx volume 0.90 noloop
     sfxText "{i}*munch munch chew chew*{/i}"
+    show yashimata_halfbody_neutral
+    hide yashimata_halfbody_happy
+    with Dissolve(0.25)
     yashimata "Soooooooo??"
     hk "This is very delicious, Yashimata! I can assure you that everyone will love your dish!"
+    show yashimata_halfbody_happy
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "Thank you very much, Hisako! That means a lot."
     hk "I do have just one question."
     yashimata "Hmm?"
     hk "Why did you choose rice and beans, specifically? There's nothing wrong with your choice. I'm just a little curious!"
+    show yashimata_halfbody_upset
+    hide yashimata_halfbody_happy
+    with Dissolve(0.25)
     yashimata "Well...this is the only thing I know how to cook."
-    yashimata "I know that it's just rice and beans, but my mom taught me how to make it, and it's really good too!"
+    show yashimata_halfbody_frustrated
+    hide yashimata_halfbody_upset
+    with Dissolve(0.25)
+    yashimata "I know that it's just rice and beans..."
+    show yashimata_halfbody_neutral
+    hide yashimata_halfbody_frustrated
+    with Dissolve(0.25)
+    yashimata "However, my mom taught me how to make it, and it's too good not to make for all of my new friends!"
     hk "Awww! That's very sweet! I'm glad that you were able to make us a dish that means so much to you!"
+    show yashimata_halfbody_happy
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "It's no problem! I'm just happy I can do something for all of you!"
     yashimata "Thank you once again or tasting it! Glad to hear you loved it!"
     hk "You're welcome, and I truly did love it!"
 
     # NOBURO'S PUNCH 
-    nobruo "Okay, my turn! Come over here, Hisako, and witness the true power of a punch master!"
+    show noburo_halfbody_happy
+    hide yashimata_halfbody_happy
+    with Dissolve(0.25)
+    noburo "Okay, my turn! Come over here, Hisako, and witness the true power of a punch master!"
     hk "Haha! Okay, let's see how this punch...looks..."
+    show noburo_halfbody_upset
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     noburo "What's the matter, Hisako?"
     hk "I'm just wondering why the punch is pitch black?"
+    show noburo_halfbody_neutral
+    hide noburo_halfbody_upset
+    with Dissolve(0.25)
     noburo "It's supposed to be that color!"
     hk "But it's bubbling and smoking???"
+    show noburo_halfbody_happy
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
     noburo "That's the dry ice!"
     hk "What's the flavor???"
+    show noburo_halfbody_confused
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     noburo "Well, I can't really pinpoint a particular flavor. However, I do have a wicked name for it!"
     hk "And what is it?"
+    show noburo_halfbody_happy
+    hide noburo_halfbody_confused
+    with Dissolve(0.25)
+    play sfx_channel thunder_sfx volume 0.90 noloop
+    with vpunch
     noburo "I call it: AMBROSIA!!!!"
     hk "Ambrosia? Like the drink of the gods?"
     noburo "EXACTLY!!!"
     hkmonologue "This drink looks like something that could kill a god."
     hkmonologue "I really hope this is closer to the Ambrosia of life and not what I see before me..."
     hk "How does one go about making Ambrosia?"
+    show noburo_halfbody_neutral
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     noburo "It's pretty simple!"
+    show noburo_halfbody_confused
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
     noburo "You know when you were in the bathroom as a kid, and you would just mix every lotion, shampoo, and conditioner into a mystical potion?"
     hk "Um...Yes...?"
+    show noburo_halfbody_happy
+    hide noburo_halfbody_confused
+    with Dissolve(0.25)
     noburo "That's pretty much how I make all of my drink for parties!"
     hk "And how are the end results?"
+    show noburo_halfbody_confused
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     noburo "At first it used to be very trial-and-error-y, but I as I perfected drink-making, my drinks are pretty much bombin' most of the time!"
     hk "Most of the time?"
+    show noburo_halfbody_neutral
+    hide noburo_halfbody_confused
+    with Dissolve(0.25)
     noburo "Yes, and this is one of those times! So, go on: try it!"
     hk "...Uh...Um...Alright."
     noburo "Radical!"
     hkmonologue "Here it goes, I hope I don't die from this..."
+    show noburo_halfbody_happy
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
     noburo "Drink! Drink! Drink! Drink!"
+    play sfx_channel drinking_sfx volume 4.50 noloop
     sfxText "{i}*sip sip sip*{/i}"
     hk "Woah!"
     noburo "Uh Huh! Told ya!"
     hk "That's crazy! One minute it tastes like a sangria..."
     hk "Then the next moment it tastes like fruit punch, right before going over to a Malibu sunset!!"
+    show noburo_halfbody_blush
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     noburo "That's to be expected from a potions expert as one like myself."
     hk "That's amazing, Noburo! I'm sorry I doubted you!"
-    noburo "Nah, it's all good! Even I was a little anxious when it started to look like primordial sludge!"
+    show noburo_halfbody_neutral
+    hide noburo_halfbody_blush
+    with Dissolve(0.25)
+    noburo "Nah, it's all good!"
+    show noburo_halfbody_happy
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
+    noburo "Even I was a little anxious when it started to look like primordial sludge!"
+    # ADD EXCLAMATION SFX FOR HISAKO
+    play sfx_channel exclamation volume 1.50 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff") 
     hk "Wait! I thought you said it was supposed to be that color!"
+    show noburo_halfbody_confused
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     noburo "I mean, it was supposed to be more of a rich red, but I'm glad it all worked out!"
     hk "I'm glad it did too! Hahaha..."
-    hkmonologue "I could've been poisoned by punch... ..."
-    hkmonologue "I just played Russian Roulette with his punch..."
+    hide noburo_halfbody_confused
+    with Dissolve(0.25)
+    hkmonologue "I could've been poisoned by punch... ... ..."
+    hkmonologue "I just played Russian Roulette with a bowl of punch..."
     hkmonologue "At least I'm almost done with the taste testing. Let's just hope the last dish won't try to kill me..."
 
     # GRIMALDI'S DISH BEST FOR LAST 
-    hk "All right, Grimaldi. I have save the best dish for last!"
+    hk "All right, Grimaldi. I have saved the best dish for last!"
+    show grimaldi_halfbody_laughing
+    with Dissolve(0.25)
     grimaldi "And Grimaldi is very excited that lawyer friend did so!"
+    show grimaldi_halfbody_neutral
+    hide grimaldi_halfbody_laughing
+    with Dissolve(0.25)
     grimaldi "Grimaldi presents to Hisako food from homeland: Pierogi with sauteed sauerkraut!"
+    play sfx_channel eating_sfx volume 0.70 noloop
     sfxText "{i}*chew chew munch munch*{/i}"
     hk "Oooo! This is so tasty, Grimaldi! The flavors melt on my tongue!!"
+    show grimaldi_halfbody_happy
+    hide grimaldi_halfbody_neutral
+    with Dissolve(0.25)
     grimaldi "Grimaldi is truly jubilant that friend enjoys food from the homeland!"
-    grimaldi "Does Hisako think other will enjoy Grimaldi's cooking?"
+    show grimaldi_halfbody_thinking
+    hide grimaldi_halfbody_happy
+    with Dissolve(0.25)
+    grimaldi "Does Hisako think others will enjoy Grimaldi's cooking?"
     hk "They won't just enjoy it, but they'll absolutely love it!"
+    show grimaldi_halfbody_laughing
+    hide grimaldi_halfbody_thinking
+    with Dissolve(0.25)
     grimaldi "Grimaldi is overflowing with joy!"
 
     # ENDING OF SCENE 5
-    nobruo "Awesome!! We got through all of the dishes, making sure they were certified-delicious, and now they're ready to plate!"
+    show noburo_halfbody_neutral
+    hide grimaldi_halfbody_laughing
+    with Dissolve(0.25)
+    noburo "Awesome!! We got through all of the dishes, making sure they were certified-delicious, and now they're ready to plate!"
+    show yashimata_halfbody_neutral
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "Hisako, thank you so much once again for helping us out with our dishes! We seriously cannot thank you enough!"
+    show grimaldi_halfbody_neutral
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
     grimaldi "Grimaldi promises to return favor in future!"
+    hide grimaldi_halfbody_neutral
+    with Dissolve(0.25)
     hk "Guys, it's no problem at all!"
     hk "You three spent a huge chunk of time making the food for everyone, so I should really be thanking you!"
     hk "Besides, friends help each other, no matter how big or small the problem is!"
+    show yashimata_halfbody_happy
+    with Dissolve(0.25)
     yashimata "We're all glad to have someone so tubular as our friend!"
+    show noburo_halfbody_blush
+    hide yashimata_halfbody_happy
+    with Dissolve(0.25)
     noburo "Having you as a fellow peer and friend is gonna make these school years the best time ever!"
+    show grimaldi_halfbody_laughing
+    hide noburo_halfbody_blush
+    with Dissolve(0.25)
     grimaldi "Grimaldi agrees with other friends and is happy to cherish friendship!"
+    hide grimaldi_halfbody_laughing
+    with Dissolve(0.25)
     hk "And I am happy to have friends like you as well!"
-    hk "Now, unless there's anything else you need me to help with, I'm gonna head back to my room and get ready for the party! Is that cool?"
+    hk "Now, unless there's anything else you need me to help with, I'm gonna head back to my room and get ready for the party!"
+    hk "Is that cool?"
+    show yashimata_halfbody_neutral
+    with Dissolve(0.25)
     yashimata "Yeah, go on ahead! We're all good here!"
+    show grimaldi_halfbody_happy
+    hide yashimata_halfbody_neutral
+    with Dissolve(0.25)
     grimaldi "See you at party, Hisako!"
+    show noburo_halfbody_happy
+    hide grimaldi_halfbody_happy
+    with Dissolve(0.25)
     noburo "Smell you later, Hisako!"
     hk "Bye, now!"
 
-    # END SCENE 5
+
+    # END SCENE 2-5 [FINISHED ON 7/28/24 @ 7:10 PM & 9:17 PM]
+    # PLACE WALKING SFX HERE 
+    play sfx_channel walking volume 0.85 noloop
+    # TRANSITION OVER TO SCENE
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
+    stop music fadeout 2.0
+    hide kitchen
+    with fade
+    show transition
+    with Dissolve(2.0)
+    $ renpy.pause(1.75, hard=True)
+
+    # JUMP TO SCENE 2-10
     jump scene2_10
         
 # SCENE 6 [WHITE WYVERN MANOR - DINING ROOM (MULTICHOICE OPTION 3)] --> HISAKO GOES TO THE DINING ROOM TO SEE HOW SHINZO, KICHI, AND RYOSEI ARE HOLDING UP.

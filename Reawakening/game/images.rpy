@@ -346,7 +346,7 @@ image grimaldi_halfbody_laughing:
     "images/characters/grimaldi/grimaldi_laughing_halfbody.png"
 
 image grimaldi_halfbody_thinking: 
-    "images/characters/grimaldi/grimaldi_thinkng_halfbody.png"    
+    "images/characters/grimaldi/grimaldi_thinking_halfbody.png"    
 
 image grimaldi_halfbody_unamused: 
     "images/characters/grimaldi/grimaldi_unamused_halfbody.png"

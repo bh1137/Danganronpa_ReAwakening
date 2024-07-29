@@ -47,6 +47,9 @@ image hisako_room:
 
 image basement:
     "images/backgrounds/basement.png"
+
+image kitchen:
+    "images/backgrounds/kitchen.png"
 # CHARACTER CARD INTRODUCTIONS 
 # KAZUHIKO
 image kazuhiko_card_background:
