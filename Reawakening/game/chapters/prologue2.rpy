@@ -1576,80 +1576,213 @@ label scene2_5:
         
 # SCENE 6 [WHITE WYVERN MANOR - DINING ROOM (MULTICHOICE OPTION 3)] --> HISAKO GOES TO THE DINING ROOM TO SEE HOW SHINZO, KICHI, AND RYOSEI ARE HOLDING UP.
 # SHE'S HOPING THAT THE 3 BROS IN THE KITCHEN AREN'T CAUSING MAYHEM, BUT SEE WILL SOON DISCOVER THE OTHERS ARE IN MAYHEM THEMSELVES.
+# [STARTED 7/30/24 @ 8:14 PM]
 label scene2_6:
-    hkmonologue "Okay...I am pretty sure that everything's fine in the dining room, but what happens if it isn't?"
+    hkmonologue "Okay...I am pretty sure that everything's fine in the dining room"
+    hkmonologue "But what happens if it isn't?"
     hkmonologue "There could be all sorts of pandemonium in there, making Kichi, Shinzo, and Ryosei's jobs and their lives harder than it has to be!"
     hkmonologue "Fingers crossed...Fingers crossed...Fingers crossed!"
 
-    # HISAKO ENTERS THE DINING ROOM 
-    hkmonologue "And...we're all good! Everything seems to be going smoothly doen here!"
-    hkmonologue "The silverware has been polished, the plates set up on the tray in an ornate fashion..."
-    hkmonologue "...and the glasses cleaned and rinsed: ready for whatever drinks go in them!"
+    # SHOW NEW BACKGROUND OF DINING ROOM HERE 
+    show dining_room
+    with Dissolve(1.5)    
+    $ renpy.pause(0.75, hard=True) 
+    # HISAKO ENTERS THE DINING ROOM
+    hkmonologue "And...we're all good! Everything seems to be going smoothly down here!"
+    hkmonologue "The silverware has been polished."
+    hkmonologue "The plates set up on the tray in an ornate fashion."
+    hkmonologue "And the glasses cleaned and rinsed: ready for whatever drinks go in them!"
     hkmonologue "Awesome! I guess the only think that needs to be done is wait for the food to finish cooking, plate it, then bring it down to the basement!"
-    hkmonologue "Now it's time for me to find Kichi and ask her if she needs me help out!" 
+    hkmonologue "Now it's time for me to find Kichi and ask if she needs any more assistance!" 
     
+    
+
     # START OF THE DEBATE
     kichi "...And that is how both of our {color=#efcc00}{b}Ultimates{/b}{/color} are different, while also sharing multiple similarities!"
     hkmonologue "Wait! Was that Kichi? I wonder what they're talking about..."
+
+    # START MUSIC HERE
+    play music high_school_snaps volume 0.75 loop
+
+    show kichi_halfbody_annoyed
+    with Dissolve(0.25)
     kichi "Do you finally understand what the differences are?"
+    show shinzo_halfbody_upset
+    hide kichi_halfbody_annoyed
+    with Dissolve(0.25)
     shinzo "Not at t'all! It's all still so confusin', it feels like my head's on backwards!"
+    show ryosei_halfbody_thinking
+    hide shinzo_halfbody_upset
+    with Dissolve(0.25)
     ryosei "{i}Maybe your head really is on backwards...{/i}"
+    show shinzo_halfbody_frustrated
+    hide ryosei_halfbody_thinking
+    with Dissolve(0.25)
+    play sfx_channel thunder_sfx volume 0.90 noloop
+    with vpunch    
     shinzo "What'd you say, partner?"
+    show ryosei_halfbody_happy
+    hide shinzo_halfbody_frustrated
+    with Dissolve(0.25)
+    play sfx_channel exclamation volume 1.50 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     ryosei "I said: What parts are you still confused with?"
+    show shinzo_halfbody_frustrated
+    hide ryosei_halfbody_happy
+    with Dissolve(0.25)
     shinzo "You said that an astrologist uses the planets, stars, an' a person's birth date information to make the predictions..."
+    show ryosei_halfbody_neutral
+    hide shinzo_halfbody_frustrated
+    with Dissolve(0.25)
     ryosei "Yes, what you said is true, so far."
+    show shinzo_halfbody_frustrated
+    hide ryosei_halfbody_neutral
+    with Dissolve(0.25)
     shinzo "And when it comes to the psychics, they rely more on th' mind and speak to dead people and stuff?"
+    show ryosei_halfbody_frustrated
+    hide shinzo_halfbody_frustrated
+    with Dissolve(0.25)
     ryosei "No, those are spiritual mediums."
+    show shinzo_halfbody_upset
+    hide ryosei_halfbody_frustrated
+    with Dissolve(0.25)
     shinzo "Then why do you use all those tools that she uses like cards and crystals an' all?"
 
     # DEBATE GETTING HEATED
-    kichi "Like we've explained it four times, hun: psychics and astrologists use the same tools more or less for predictin' the future."
+    show kichi_halfbody_annoyed
+    hide shinzo_halfbody_upset
+    with Dissolve(0.25)
+    kichi "Like we've explained it the other four times: psychics and astrologists use the same tools more or less for predictin' the future."
+    show shinzo_halfbody_frustrated 
+    hide kichi_halfbody_annoyed
+    with Dissolve(0.25)
     shinzo "But then who has ESP or whatever it was?"
-    ryosei "Like {i}*I*{/i} also said multiple times, my dear friend: I, as a psychic, have extrasensory perception."
+    show ryosei_halfbody_frustrated
+    hide shinzo_halfbody_frustrated
+    with Dissolve(0.25)
+    ryosei "Like {i}*I*{/i} have also said multiple times, my dear friend:"
+    ryosei "I, as a {color=#efcc00}{b}Psychic{/b}{/color}, have extrasensory perception."
     ryosei "This allows me to be more open to both the spiritual and supernatural aspects of this wonderful world."
+    show ryosei_halfbody_happy
+    hide ryosei_halfbody_frustrated
+    with Dissolve(0.25)
     ryosei "I use divinatory items in order to make my connection with the Astral Plane stronger to gaze into the future more clearly."
+    show ryosei_halfbody_thinking
+    hide ryosei_halfbody_happy
+    with Dissolve(0.25)
     ryosei "Do you get it {i}*now*{/i}??"
+    show shinzo_halfbody_frustrated
+    hide ryosei_halfbody_thinking
+    with Dissolve(0.25)
     shinzo "Then if you have extra senses, what does she use?"
+    show kichi_halfbody_upset
+    hide shinzo_halfbody_frustrated
+    with Dissolve(0.25)
     kichi "Oh, bless your heart...None of this was written in the stars."
+    show shinzo_halfbody_upset
+    hide kichi_halfbody_upset
+    with Dissolve(0.25)
     shinzo "So if you couldn't foretell this, did your ESP detect this then?"
+    show ryosei_halfbody_angry
+    hide shinzo_halfbody_upset
+    with Dissolve(0.25)
     ryosei "Why, I did not. I don't think even the Akashic record could either..."
 
     # HISAKO INTERRUPTS TO AVOID A CONFRONTATION 
+    hide ryosei_halfbody_angry
+    with Dissolve(0.25)
     hkmonologue "Oh boy, I do not like where this is heading."
     hkmonologue "The last thing I need today is to see Ryosei try to strangle a fellow housemate."
+    play sfx_channel knocking_sfx volume 1.65 noloop
     sfxText "{i}*knock knock knock*{/i}"
+    show ryosei_halfbody_surprised at center
+    with Dissolve(0.25)
+    play sfx_channel exclamation volume 1.50 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     ryosei "Huh? Who is over there? Speak now and reveal thyself!"
     hk "Hello!"
     ryosei "Hisako!"
+    show shinzo_halfbody_happy at right 
+    with Dissolve(0.25)
     shinzo "How do ya do, lass?"
+    show kichi_halfbody_neutral at left 
+    with Dissolve(0.25)
     kichi "Hisako, dumplin'! How's everything treating you 'round here?"
     hk "I'm feeling a lot better than I did earlier!"
+    show kichi_halfbody_happy at left 
+    hide kichi_halfbody_neutral
+    with Dissolve(0.25)
     kichi "That's great to hear, darlin'!"
+    show shinzo_halfbody_neutral at right 
+    hide shinzo_halfbody_happy
+    with Dissolve(0.25)
     shinzo "What you doin' around these parts for? Shouldn't you be taking it easy n' lying down?"
     hk "Since I was feeling better, I decided to come down here and help out!"
+    show ryosei_halfbody_neutral at center
+    hide ryosei_halfbody_surprised
+    with Dissolve(0.25)
     ryosei "Although your thoughts of generosity and charity are appreciated by all of us, we've already finished all that can be at the moment."
+    show ryosei_halfbody_thinking at center 
+    hide ryosei_halfbody_neutral
+    with Dissolve(0.25)
     ryosei "And until The Three Musketeers in the kitchen finish their cookings, I forsee us being here for quite a time."
+    show kichi_halfbody_neutral at left 
+    hide kichi_halfbody_happy
+    with Dissolve(0.25)
     kichi "You are welcome to stay and chat with us for the time bein', hun!"
     hk "Only if it's cool with all of you."
-    ryosei "Absolutely."
+    show ryosei_halfbody_happy at cente r
+    hide ryosei_halfbody_thinkning 
+    with Dissolve(0.25)
+    ryosei "Absolutely!"
+    show shinzo_halfbody_happy at right 
+    hide shinzo_halfbody_neutral
+    with Dissolve(0.25)
     shinzo "By all means."
     hk "Thank you! Also! Sorry about interrupting your conversation earlier."
+    show kichi_halfbody_upset at left 
+    hide kichi_halfbody_neutral
+    with Dissolve(0.25)
     kichi "Oh no. You're fine, hun! It wasn't anything important now."
     hk "What were you all talking about, if you don't mind me asking?"
+    show ryosei_halfbody_frustrated at center 
+    hide ryosei_halfbody_happy
+    with Dissolve(0.25)
     ryosei "{i}*sigh*{/i}"
     hkmonologue "Yep, I can understand how frustrated you are, Ryosei..."
     hk "Did I say something wrong?"
+    show ryosei_halfbody_thinking at center 
+    hide ryosei_halfbody_frustrated
+    with Dissolve(0.25)
     ryosei "No...no you didn't. It's just complicated, Hisako."
     hk "The conversation?"
+    show ryosei_halfbody_neutral at center
+    hide ryosei_halfbody_thinking
+    with Dissolve(0.25)
     ryosei "Indeed, my friend."
+    show ryosei_halfbody_thinking at center 
+    hide ryosei_halfbody_neutral
+    with Dissolve(0.25)
     ryosei "To make a long story short, Kichi and I have been trying to explain to The Malboro Man..."
-    ryosei "how both of our {color=#efcc00}{b}Ultimates{/b}{/color}, although very similar, are actually quite different from one another."
+    ryosei "How both of our {color=#efcc00}{b}Ultimates{/b}{/color}, although very similar, are actually quite different from one another."
     hk "Does he understand the differences?"
+    show kichi_halfbody_annoyed at left 
+    hide kichi_halfbody_upset
+    with Dissolve(0.25)
     kichi "That befuddled-lookin' face says it all, but why don't you tell her, Doc Holiday?"
+    show shinzo_halfbody_upset at right 
+    hide shinzo_halfbody_happy
+    with Dissolve(0.25)
     shinzo "I'm telling y'all: it still don't make any sense to me!"
+    show ryosei_halfbody_angry at center
+    hide ryosei_halfbody_thinking
+    with Dissolve(0.25)
     ryosei "Do we have to go through all of this a fifth time to you?"
-    hk "I don't think that will be necessary, Ryosei! I think what Shinzo needs is an apology!"
+    hk "I don't think that will be necessary, Ryosei! I think what Shinzo needs is an analogy!"
     hk "Once he connects with something he's very well-acquainted with, then everything else will fall into place."
+    show ryosei_halfbody_thinking at center 
+    hide ryosei_halfbody_angry
+    with Dissolve(0.25)
     ryosei "Well I hope so, not only for you, but for all of our sakes!"
 
     # ANALOGY TIME 
@@ -1695,7 +1828,8 @@ label scene2_6:
     noburo "Now, let's get to it! The party starts in less than an hour!"
     ryosei "With seven of us, I see us finishing this rather quickly."
     shinzo "I don't think my Third Eye is all that impressive in size, but my gut feeling agrees with ya!"
-    kichi "Why don't we stop talking 'bout the size your Third Eye, and prepare the food. Hisako, hun, are you ready?"
+    kichi "Why don't we stop talking 'bout the size of 'ya Third Eye, and prepare the food."
+    kichi "Hisako, hun, are you ready?"
     hk "Yeah! Let's do this!"
 
     # FADE TO BLACK, THEN REAPPEAR 

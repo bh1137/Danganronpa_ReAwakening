@@ -935,7 +935,7 @@ label scene1_4:
     show dining_room_2
     hide transition
     with Dissolve(1.5)
-    play music fantastic_beat_remix volume 0.85 loop
+    play music sundowner volume 0.85 loop
     $ renpy.pause(1.00, hard=True)
 
     # YASHIMATA AND YUI TALKING 
