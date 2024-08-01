@@ -1602,7 +1602,7 @@ label scene2_6:
     hkmonologue "Wait! Was that Kichi? I wonder what they're talking about..."
 
     # START MUSIC HERE
-    play music high_school_snaps volume 0.75 loop
+    play music high_school_snaps volume 0.70 loop
 
     show kichi_halfbody_annoyed
     with Dissolve(0.25)
@@ -1673,7 +1673,7 @@ label scene2_6:
     ryosei "Do you get it {i}*now*{/i}??"
     show shinzo_halfbody_frustrated
     hide ryosei_halfbody_thinking
-    with Dissolve(0.25)
+    with Dissolve(0.25)    
     shinzo "Then if you have extra senses, what does she use?"
     show kichi_halfbody_upset
     hide shinzo_halfbody_frustrated
@@ -1682,6 +1682,8 @@ label scene2_6:
     show shinzo_halfbody_upset
     hide kichi_halfbody_upset
     with Dissolve(0.25)
+    play sfx_channel shocked_sfx volume 1.00 noloop
+    with hpunch
     shinzo "So if you couldn't foretell this, did your ESP detect this then?"
     show ryosei_halfbody_angry
     hide shinzo_halfbody_upset
@@ -1731,7 +1733,7 @@ label scene2_6:
     with Dissolve(0.25)
     kichi "You are welcome to stay and chat with us for the time bein', hun!"
     hk "Only if it's cool with all of you."
-    show ryosei_halfbody_happy at cente r
+    show ryosei_halfbody_happy at center
     hide ryosei_halfbody_thinkning 
     with Dissolve(0.25)
     ryosei "Absolutely!"
@@ -1787,12 +1789,32 @@ label scene2_6:
 
     # ANALOGY TIME 
     hk "Don't worry! Just trust me!"
+    show ryosei_halfbody_neutral at center 
+    hide ryosei_halfbody_thinking
+    with Dissolve(0.25)
     ryosei "Alright then..."
-    hk "Okay! So, Shinzo, you're still confused on what makes a psychic different from an astrologist, correct?"
+    hide ryosei_halfbody_neutral
+    hide shinzo_halfbody_upset
+    hide kichi_halfbody_annoyed
+    with Dissolve(0.25)
+    hk "Okay! So, Shinzo, you're still confused on what makes a {color=#efcc00}{b}psychic{/b}{/color} different from an {color=#efcc00}{b}astrologist{/b}{/color}, correct?"
+    show shinzo_halfbody_frustrated 
+    with Dissolve(0.25)
     shinzo "Damn straight! All of the similarities and whatnot made me feel like I went and gone off the deep end!"
+    show ryosei_halfbody_frustrated 
+    hide shinzo_halfbody_frustrated
+    with Dissolve(0.25)
     ryosei "{i}Probably because you have{/i}."
+    show kichi_halfbody_annoyed 
+    hide ryosei_halfbody_frustrated
+    with Dissolve(0.25)
     kichi "Ryosei! Shhhhhh."
+    show ryosei_halfbody_frustrated
+    hide kichi_halfbody_annoyed
+    with Dissolve(0.25)
     ryosei "Okay, okay."
+    hide ryosei_halfbody_frustrated
+    with Dissolve(0.25)
 
     # ANALOGY
     hk "Think of it this way: Imagine a psychic and an astrologist like a sheriff and a deputy."
@@ -1801,55 +1823,174 @@ label scene2_6:
     hk "While psychics and astrologists both predict futures, psychics may invoke the powers of astrology themselves!"
     hk "This, along with other divination practices, allows them to further their mind into the future unknown!"
     hk "Astrologists, however, are bound only to their own practice and cannot use other forms of divination to delve into the astral plane."
+    show shinzo_halfbody_frustrated 
+    with Dissolve(0.25)
     shinzo "Uh huh..."
     hk "Finally to drive the point home: A sheriff can be a deputy; the deputy cannot be a former sheriff."
     hk "Therefore: A psychic can be an astrologist, but an astrologist cannot be a psychic! Does that make sense to you?"
 
     # REALIZATION 
     shinzo "... ..."
-    shnzo "OHHHHHHHHHHH!! I get it now!"
+    show shinzo_halfbody_upset
+    hide shinzo_halfbody_frustrated
+    with Dissolve(0.25)
+    play sfx_channel exclamation volume 1.50 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
+    shinzo "OHHHHHHHHHHH!! I get it now!"
+    show shinzo_halfbody_neutral
+    hide shinzo_halfbody_upset
+    with Dissolve(0.25)
     shinzo "Why didn't the two of y'all explain it like that earlier?"
+    show ryosei_halfbody_angry
+    hide shinzo_halfbody_neutral
+    with Dissolve(0.25)
     ryosei "{i}*slap*{/i} Even with my hundreds of readings today, none have predicted a future such as this..."
+    show kichi_halfbody_upset
+    hide ryosei_halfbody_angry
+    with Dissolve(0.25)
     kichi "Fate can be most cruel sometimes, hun. It truly can be."
+    show shinzo_halfbody_happy
+    hide kichi_halfbody_upset
+    with Dissolve(0.25)
     shinzo "Much obliged for the help, Hisako!"
     hk "No problem at all! Glad I could help!"
+    show shinzo_halfbody_frustrated
+    hide shinzo_halfbody_happy
+    with Dissolve(0.25)
     shinzo "And my apologies to you two. I didn't mean to sound like such a dunce."
+    show kichi_halfbody_neutral
+    hide shinzo_halfbody_frustrated
+    with Dissolve(0.25)
     kichi "No hard feelings, hun."
+    show ryosei_halfbody_neutral
+    hide kichi_halfbody_neutral
+    with Dissolve(0.25)
     ryosei "I suppose the universe is back in balance, so all is forgiven."
+    show ryosei_halfbody_happy
+    hide ryosei_halfbody_neutral
+    with Dissolve(0.25)
     ryosei "It would also be dishonorable and bad karma to harbor ill feelings to those who ask for forgiveness with sincerity."
     hk "Now that that's all said and done, all we need to do is wait for the food to finish cooking!"
+    show ryosei_halfbody_thinking
+    hide ryosei_halfbody_happy
+    with Dissolve(0.25)
     ryosei "Who knows how long that will take? It may be minutes, hours, days, or even..."
-    sfxText "{i}*ding ding ding*{/i}"
+    play sfx_channel hotel_bell volume 1.00 noloop
+    sfxText "{i}*ding*{/i}"
+    show noburo_halfbody_neutral
+    hide ryosei_halfbody_thinking
+    with Dissolve(0.25)
     noburo "Food is ready!"
+    show ryosei_halfbody_thinking
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
     ryosei "...Seconds. It will take seconds."
-    noburo "Get ready to start plating, my dudes! Oh hey, Hisako! Glad to see you doing better! Are you helping us plate the food?"
+    show noburo_halfbody_neutral
+    hide ryosei_halfbody_thinking
+    with Dissolve(0.25)
+    noburo "Get ready to start plating, my dudes!"
+    show noburo_halfbody_happy
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
+    noburo "Oh hey, Hisako! Glad to see you doing better! Are you helping us plate the food?"
     hk "Yes, I am!"
     noburo "Totally 'licious, bro! The more help, the better!!"
+    show noburo_halfbody_neutral
+    hide noburo_halfbody_happy
+    with Dissolve(0.25)
     noburo "Now, let's get to it! The party starts in less than an hour!"
-    ryosei "With seven of us, I see us finishing this rather quickly."
+    show ryosei_halfbody_happy
+    hide noburo_halfbody_neutral
+    with Dissolve(0.25)
+    ryosei "With five of us, I see us finishing this rather quickly."
+    show shinzo_halfbody_neutral
+    hide ryosei_halfbody_happy
+    with Dissolve(0.25)
     shinzo "I don't think my Third Eye is all that impressive in size, but my gut feeling agrees with ya!"
+    show kichi_halfbody_annoyed
+    hide shinzo_halfbody_neutral
+    with Dissolve(0.25)
     kichi "Why don't we stop talking 'bout the size of 'ya Third Eye, and prepare the food."
+    show kichi_halfbody_happy
+    hide kichi_halfbody_annoyed
+    with Dissolve(0.25)
     kichi "Hisako, hun, are you ready?"
     hk "Yeah! Let's do this!"
 
     # FADE TO BLACK, THEN REAPPEAR 
+    # TRANSITION OVER TO SCENE 
+    hide kichi_halfbody_happy
+    with Dissolve(0.25)    
+    hide dining_room
+    with fade    
+    $ renpy.pause(2.75, hard=True)
+
+    # REAPPEAR HERE 
+    show dining_room
+    with Dissolve(1.5)   
+    $ renpy.pause(1.00, hard=True)
 
     # AFTER THEY FINISH PLATING AND ENDING SCENE 
+    show shinzo_halfbody_neutral
+    with Dissolve(0.25)
     shinzo "All right! All of the food is set up, drinks poured out, and right before the top of th' hour too!"
+    show kichi_halfbody_neutral
+    hide shinzo_halfbody_neutral
+    with Dissolve(0.25)
     kichi "Hisako, dear, we wanted to thank you for your help, not only with the food prep, but also with our conversation earlier!"
     hk "There's no need to thank me, Kichi! I was just glad to have helped out before tensions boiled over!"
-    kichi "If you hadn't come by the time you did, I just knew that Ryosei would'a blown a fuse tryin'a hold in all that frustration, and honestly,
-    I don't blame him."
+    show kichi_halfbody_happy
+    hide kichi_halfbody_neutral
+    with Dissolve(0.25)
+    kichi "If you hadn't come by the time you did, I just knew that Ryosei would'a blown a fuse tryin'a hold in all that frustration..."
+    show kichi_halfbody_upset
+    hide kichi_halfbody_happy
+    with Dissolve(0.25)
+    kichi "And honestly, I don't blame him."
     hk "Neither do I. Even upon entering the dining room, I could just feel the energy surrounding Ryosei."
+    show kichi_halfbody_happy
+    hide kichi_halfbody_upset
+    with Dissolve(0.25)
     kichi "Sounds like you're more in-tune with the supernatural than I thought you were!"
     hk "Really?"
+    show kichi_halfbody_neutral
+    hide kichi_halfbody_happy
+    with Dissolve(0.25)
     kichi "Indeed! However, I think it'd be best to hold off on this little chat and save it later for the party."
+    show kichi_halfbody_happy
+    hide kichi_halfbody_neutral
+    with Dissolve(0.25)
     kichi "You should take this time to freshen up before the party, hmm?"
     hk "You're right! I might as well while I have the time!"
     hk "Again, it was really nice helping you and the others out! See you at the party!"
+    show kichi_halfbody_neutral
+    hide kichi_halfbody_happy
+    with Dissolve(0.25)
     kichi "See you soon, Hisako!"
+    show shinzo_halfbody_happy
+    hide kichi_halfbody_neutral
+    with Dissolve(0.25)
+    shinzo "See you, Lass! Many thanks for th' help!"
+    show ryosei_halfbody_happy
+    hide shinzo_halfbody_happy
+    with Dissolve(0.25)
+    ryosei "Care take, Hisako!"
+    hk "Bye Bye!"
 
-    # END SCENE 6
+    # END SCENE 2-6 [FINISHED ON 7/31/24 @ 9:25 PM]
+    # PLACE WALKING SFX HERE 
+    play sfx_channel walking volume 0.85 noloop
+    # TRANSITION OVER TO SCENE
+    hide ryosei_halfbody_happy
+    with Dissolve(0.25)
+    stop music fadeout 2.0
+    hide dining_room
+    with fade
+    show transition
+    with Dissolve(2.0)
+    $ renpy.pause(1.75, hard=True)
+
+    # JUMP TO SCENE 2-10
     jump scene2_10
 
 # SCENE 7 [WHITE WYVERN MANOR - BAR (MULTICHOICE OPTION 4)] --> ALTHOUGH SHE KNOWS I TMIGHT BE A BAD IDEA, HISAKO DECIDES TO GO HELP 

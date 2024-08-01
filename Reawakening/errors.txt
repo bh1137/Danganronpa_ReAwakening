@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapters/prologue2.rpy", line 851: end of line expected.
-    hide naoki_halfbody_neutral.
-                               ^
+File "game/chapters/prologue2.rpy", line 1734: end of line expected.
+    show ryosei_halfbody_happy at cente r
+                                        ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Wed Jul 17 21:25:26 2024
+Wed Jul 31 20:42:12 2024
