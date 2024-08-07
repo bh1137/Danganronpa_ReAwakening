@@ -1,24 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/chapters/prologue2.rpy", line 1839, in script
-    shnzo "OHHHHHHHHHHH!! I get it now!"
-Exception: Sayer 'shnzo' is not defined.
+  File "game/chapters/prologue2.rpy", line 2014, in script
+    matusko "... ..."
+Exception: Sayer 'matusko' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/chapters/prologue2.rpy", line 1839, in script
-    shnzo "OHHHHHHHHHHH!! I get it now!"
+  File "game/chapters/prologue2.rpy", line 2014, in script
+    matusko "... ..."
   File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
     Say.execute(self)
   File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 575, in execute
     who = eval_who(self.who, self.who_fast)
   File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 464, in eval_who
     raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'shnzo' is not defined.
+Exception: Sayer 'matusko' is not defined.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.3.24061702
 Reawakening 1.0
-Wed Jul 31 21:19:55 2024
+Tue Aug  6 20:54:32 2024

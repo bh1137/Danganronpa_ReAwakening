@@ -424,7 +424,7 @@ label scene2_1:
     with Dissolve(0.25)
     matsuko "I shall tag along as wel. The more that work in silence, the better."
     
-    # EXIT NARUMI MATUSKO NAGANORI 
+    # EXIT NARUMI matsuko NAGANORI 
     play sfx_channel double_walk_sfx volume 0.85 noloop
     hide matsuko_halfbody_neutral
     with Dissolve(1.00)
@@ -1995,89 +1995,226 @@ label scene2_6:
 
 # SCENE 7 [WHITE WYVERN MANOR - BAR (MULTICHOICE OPTION 4)] --> ALTHOUGH SHE KNOWS I TMIGHT BE A BAD IDEA, HISAKO DECIDES TO GO HELP 
 # MATSUKO, NAGANORI, AND NARUMI DOWN AT THE BASEMENT BAR. WHAT WILL HAPPEN WHEN HER HAPPY AND FRIENDLY NATURE IS CHALLENGED BY THE 
-# SILENCE AND COLDNESS EMANATING FROM THE OTHERS?    
+# SILENCE AND COLDNESS EMANATING FROM THE OTHERS? [STARTED 8/6/24 @ 8:47 PM]
 label scene2_7:
-        # HISAKO ENTERS THE BAR 
-        hkmonologue "Wow, it's very quiet down here! no talking, no music, nothing at all. Is there even anybod down here?"
 
-        # THE OTHERS AT THE BAR 
-        naganori "... ..."
-        matusko "... ..."
-        narumi "... ..."
-        hkmonologue "Nope, they're down here after all."
-        hkmonologue "With this much silence, you could drop a pin and it would sound like glasses smashing on the floor!"
-        naganori "You do knew we can all hear you, Hisako."
-        hk "What!? How'd you know and how could you tell it was me?"
-        naganori "Eizo is out of commission and Vladnot holed up in his room, you were the only logical answer left."
-        matusko "In addition, your shoes were slapping against the tile. If you were trying to be sneaky, it wasn't working."   
-        naganori "..."     
-        narumi "..."
-        hk "Was I really that loud?"
-        matsuko "Yes. Yes, you were. And until you arrived, it was rather quite peaceful."
-        hk "I'm...really sorry. I'll make sure not to bother you."
-        hk "See you all at the party...I guess...." # EXIT HISAKO 
+    # HISAKO ENTERS THE BAR 
+    # SHOW NEW BACKGROUND OF KITCHEN HERE 
+    show bar
+    with Dissolve(1.5)
+    play music bell_pepper_beef volume 0.75 loop
+    $ renpy.pause(1.00, hard=True) 
 
-        # NARUMI CHIMES IN 
-        matsuko "..."
-        naganori "..."
-        narumi "... ... Wait."
-        hk "Narumi?"
-        narumi "I have a few cases of glasses ad other bar supplies that need to be cleaned, and help would be greatly appreciated in the dishroom."
-        hk "Are you sure?"
-        narumi "Yes, I am sure, Hisako."
-        matusko "Narumi, what are you doing?"
-        narumi "Giving her something to do. Is there anything wrong with my decision?"
-        matsuko "You know just as well as I do that we were doing just fine until she came strolling along."
-        narumi "Do you want to go back there and do all the dirty work or rather her do it?"
-        narumi "It doesn't negate the fact we still have things that need to be cleaned, prior to Hisako's arrival."
-        matsuko "I still think it's a bad idea."
-        hkmonologue "Me just being here has made tensions rise so much! Should I just leave? Ugh, I feel so guilty..."
-        narumi "Naganori: your thoughts?"
-        naganori "Hmmm...I think it would be best for HIsako to deal with cleaning the glassware while we finished up here behind the counter."
-        matsuko "Now you too?"
-        naganori "Matusko, you make it sound as if I betrayed you in some way."
-        naganori "We could use the help, and Hisako is right before us wanting to do just that."
-        naganori "And to be frank with you, the way you have been reacting to Hisako's presence is akin to that of a child throwing a tantrum in a public place."
-        matusko "How dare you..."
-        naganori "Irrational anger, outbursts, personal insultations."
-        naganori "You have hit all three marks all because Hisako decided to come down here and visit."
-        narumi "I stand by my decision. If it bothers you so much, you are welcome to leave until the party. Are we all in agreement?"
-        naganori "Indeed."
-        matusko "Hmph. Whatever"
-        narumi "Good. Hisako: dishroom is behind the double doors, straight down, and on the first right."
-        hk "Thank you very much for allowing me to stay! It really means a lot to me."
-        narumi "...I mean, it's just washing dishes, but you're welcome."
-        hk "I'll make sure those glasses are absolutely spotless!"
-        matusko "You can't make them spotless if you keep on talking about and not actually going into the dishroom."
-        naganori "There you go again with the juvenile quibs."
-        hk "No, Matusko's right! I need to do more action and talk less! I'll see you guys in a few!" # EXIT HISAKO 
-        naganori "I'm surprised she still has that Happy-Go-Lucky attitude and tenacity from earlier."
-        naganori "If I were her, trying to maintain that peppiness would honestly tire me to the bone."
-        matsuko "... ..."
-        narumi "At least it saves me from doing the dishes myself again, and I'll take what I can get."
-        narumi "I look forward to see how spotless those glasses will turn out to be."
+    # HISAKO STARTS MONOLOGUE 
+    hkmonologue "Wow, it's very quiet down here! no talking, nothing at all. Just pure silence."
+    hkmonologue "Is there even anybody down here?"
 
-        # FADE TO BLACK, THEN REAPPEAR 
+    # THE OTHERS AT THE BAR 
+    show naganori_halfbody_bored        
+    with Dissolve(0.25)
+    naganori "... ..."        
+    show matsuko_halfbody_bored
+    hide naganori_halfbody_bored
+    with Dissolve(0.25)
+    matsuko "... ..."
+    show narumi_halfbody_bored
+    hide matsuko_halfbody_bored
+    with Dissolve(0.25)
+    narumi "... ..."
+    hide narumi_halfbody_bored
+    with Dissolve(0.25)
+    hkmonologue "Nope, they're down here after all."
+    hkmonologue "With this much silence, you could drop a pin and it would sound like glass smashing on the floor!"
+    show naganori_halfbody_neutral
+    with Dissolve(0.25)
+    naganori "You do know we can all hear you, Hisako."
+    play sfx_channel exclamation volume 1.50 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
+    hk "What!? How'd you know and how could you tell it was me?"
+    show naganori_halfbody_bored
+    hide naganori_halfbody_neutral
+    with Dissolve(0.25)
+    naganori "Eizo is out of commission and Vladnot holed up in his room, you were the only logical answer left."
+    show matsuko_halfbody_happy
+    hide naganori_halfbody_bored
+    with Dissolve(0.25)
+    matsuko "In addition, your shoes were slapping against the tile."
+    show matsuko_halfbody_neutral
+    hide matsuko_halfbody_happy
+    with Dissolve(0.25)
+    matsuko "If you were trying to be sneaky, it wasn't working." 
+    show naganori_halfbody_bored
+    hide matsuko_halfbody_neutral
+    with Dissolve(0.25)  
+    naganori "..."     
+    show narumi_halfbody_bored
+    hide naganori_halfbody_bored
+    with Dissolve(0.25)
+    narumi "..."
+    hk "Was I really that loud?"
+    show matsuko_halfbody_upset
+    hide narumi_halfbody_bored
+    with Dissolve(0.25)
+    matsuko "Yes. Yes, you were. And until you arrived, it was rather quite peaceful."
+    hk "I'm...really sorry. I'll make sure not to bother you."   
+    hk "See you all at the party...I guess...." 
+    
+    # EXIT HISAKO     
+    play sfx_channel walking volume 0.85 noloop
+    hide matsuko_halfbody_upset
+    with Dissolve(1.00)
+    
+    # NARUMI CHIMES IN
+    show naganori_halfbody_bored
+    with Dissolve(0.25)
+    naganori "..."
+    show matsuko_halfbody_calm
+    hide naganori_halfbody_bored
+    with Dissolve(0.25)
+    matsuko "..."   
+    show narumi_halfbody_upset
+    hide matsuko_halfbody_calm
+    with Dissolve(0.25)    
+    narumi "... ... ..."
+    show narumi_halfbody_neutral
+    hide narumi_halfbody_upset
+    with Dissolve(0.25)
+    narumi "Wait..."
+    play sfx_channel exclamation volume 1.50 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
+    hk "Narumi?"
+    narumi "I have a few cases of glasses and other bar supplies that need to be cleaned, and help would be greatly appreciated in the dishroom."
+    hk "Are you sure?"
+    show narumi_halfbody_bored
+    hide narumi_halfbody_neutral
+    with Dissolve(0.25)
+    narumi "Yes, I am sure, Hisako."
+    show matsuko_halfbody_neutral
+    hide narumi_halfbody_bored
+    with Dissolve(0.25)
+    matsuko "Narumi, what are you doing?"
+    show narumi_halfbody_neutral
+    hide matsuko_halfbody_neutral
+    with Dissolve(0.25)
+    narumi "Giving her something to do. Is there anything wrong with my decision?"
+    show matsuko_halfbody_frustrated
+    hide narumi_halfbody_neutral
+    with Dissolve(0.25)
+    play sfx_channel thunder_sfx volume 0.90 noloop
+    with vpunch
+    matsuko "You know just as well as I do that we were doing just fine until she came strolling along."
+    show narumi_halfbody_frustrated
+    hide matsuko_halfbody_frustrated
+    with Dissolve(0.25)
+    play sfx_channel stern_sfx volume 1.00 noloop
+    narumi "Do you want to go back there and do all the dirty work or rather her do it?"
+    narumi "It doesn't negate the fact we still have things that need to be cleaned, prior to Hisako's arrival."
+    show matsuko_halfbody_frustrated
+    hide narumi_halfbody_frustrated
+    with Dissolve(0.25)
+    play sfx_channel thunder_sfx volume 0.90 noloop
+    with vpunch
+    matsuko "I still think it's a horrid idea!"
+    hide matsuko_halfbody_frustrated
+    with Dissolve(0.25)
+    hkmonologue "Me just being here has made tensions rise so much!"
+    hkmonologue "Should I just leave? Ugh, I feel so guilty..."
+    show narumi_halfbody_neutral
+    with Dissolve(0.25)
+    narumi "Naganori: your thoughts?"
+    show naganori_halfbody_bored
+    hide narumi_halfbody_bored
+    with Dissolve(0.25)
+    naganori "Hmmm...I think it would be best for HIsako to deal with cleaning the glassware while we finished up here behind the counter."
+    show matsuko_halfbody_upset
+    hide naganori_halfbody_bored
+    with Dissolve(0.25)
+    matsuko "Now you too?"
+    show naganori_halfbody_neutral
+    hide matsuko_halfbody_upset
+    with Dissolve(0.25)
+    naganori "Matsuko, you make it sound as if I betrayed you in some way."
+    naganori "We could use the help, and Hisako is right before us wanting to do just that."
+    show naganori_halfbody_upset
+    hide naganori_halfbody_neutral
+    with Dissolve(0.25)
+    naganori "And to be frank with you, the way you have been reacting to Hisako's presence is akin to that of a child throwing a tantrum in a public place."
+    show matsuko_halfbody_frustrated
+    hide naganori_halfbody_upset
+    with Dissolve(0.25)
+    play sfx_channel thunder_sfx volume 0.90 noloop
+    with vpunch
+    matsuko "How dare you..."
+    show naganori_halfbody_upset
+    hide matsuko_halfbody_frustrated
+    with Dissolve(0.25)
+    naganori "Irrational anger, outbursts, personal insultations."
+    show naganori_halfbody_frustrated
+    hide naganori_halfbody_upset
+    with Dissolve(0.25)
+    naganori "You have hit all three marks all because Hisako decided to come down here and visit."
+    show narumi_halfbody_neutral
+    hide naganori_halfbody_frustrated
+    with Dissolve(0.25)
+    narumi "I stand by my decision. If it bothers you so much, you are welcome to leave until the party. Are we all in agreement?"
+    show naganori_halfbody_happy
+    hide narumi_halfbody_neutral
+    with Dissolve(0.25)
+    naganori "Indeed, we are."
+    show matsuko_halfbody_bored
+    hide naganori_halfbody_happy
+    with Dissolve(0.25)
+    matsuko "Hmph. Whatever"
+    show narumi_halfbody_neutral
+    hide matsuko_halfbody_bored
+    with Dissolve(0.25)
+    narumi "Good. Now then, Hisako: dishroom is behind the double doors, straight down, and on the first right."
+    hk "Thank you very much for allowing me to stay! It really means a lot to me."
+    narumi "...I mean, it's just washing dishes, but you're welcome."
+    hk "I'll make sure those glasses are absolutely spotless!"
+    show matsuko_halfbody_neutral
+    hide narumi_halfbody_neutral
+    with Dissolve(0.25)
+    matsuko "You can't make them spotless if you keep on talking about and not actually going into the dishroom."
+    show naganori_halfbody_neutral
+    hide matsuko_halfbody_neutral
+    with Dissolve(0.25)
+    naganori "There you go again with the juvenile quibs."
+    hk "No, Matsuko's right! I need to do more action and talk less! I'll see you guys in a few!" 
+    
+    # EXIT HISAKO 
+    play sfx_channel running volume 0.85 noloop
+    hide naganori_halfbody_neutral
+    with Dissolve(0.75)
 
-        narumi "I'm impressed. You really put your heart into making those glasses shine like crystals. Thank you for your help, Hisako."
-        hk "No...problem. Sorry, I'm just a little tired."
-        naganori "It appears she put more than just \"heart\" into washing the glasses."
-        naganori "I guess you could say that just by appearance alone, hmmm hmmm hmmm."
-        narumi "On that note, since everything is pretty muh finished around here..."
-        narumi "I'd recommend you go back to your room and get a new change of clothes before the party starts."
-        narumi "You're drenched from head to toe in water. How's that even possible, I don't know."
-        hk "Yeahhhh, that was kind of my first time woking in a dishroom."
-        hk "I wanted to make sure I helped you out more than potentially being a detriment."
-        narumi "I can tell you that you weren't a detriment. But, you should leave now before you continue another conversation."
-        hk "You're right! I do tend to derail my own train of thought and completely forget what I was doing in the first place."
-        narumi "You're doing it again."
-        hk "Oops! I'll be leaving now. Thank you for letting me help you all out! I'll see you all in a little bit!"
-        matsuko "..."
-        naganori "Take care, Hisako."
-        naurmi "Later."
 
-        # END SCENE 7
-        jump scene2_10
+    naganori "I'm surprised she still has that Happy-Go-Lucky attitude and tenacity from earlier."
+    naganori "If I were her, trying to maintain that peppiness would honestly tire me to the bone."
+    matsuko "... ..."
+    narumi "At least it saves me from doing the dishes myself again, and I'll take what I can get."
+    narumi "I look forward to see how spotless those glasses will turn out to be."
+
+    # FADE TO BLACK, THEN REAPPEAR 
+
+    narumi "I'm impressed. You really put your heart into making those glasses shine like crystals. Thank you for your help, Hisako."
+    hk "No...problem. Sorry, I'm just a little tired."
+    naganori "It appears she put more than just \"heart\" into washing the glasses."
+    naganori "I guess you could say that just by appearance alone, hmmm hmmm hmmm."
+    narumi "On that note, since everything is pretty muh finished around here..."
+    narumi "I'd recommend you go back to your room and get a new change of clothes before the party starts."
+    narumi "You're drenched from head to toe in water. How's that even possible, I don't know."
+    hk "Yeahhhh, that was kind of my first time woking in a dishroom."
+    hk "I wanted to make sure I helped you out more than potentially being a detriment."
+    narumi "I can tell you that you weren't a detriment. But, you should leave now before you continue another conversation."
+    hk "You're right! I do tend to derail my own train of thought and completely forget what I was doing in the first place."
+    narumi "You're doing it again."
+    hk "Oops! I'll be leaving now. Thank you for letting me help you all out! I'll see you all in a little bit!"
+    matsuko "..."
+    naganori "Take care, Hisako."
+    naurmi "Later."
+
+    # END SCENE 7
+    jump scene2_10
 
 # SCENE 8 [WHITE WYVERN MANOR - RECREATION ROOM (MULTICHOICE OPTION 5)] --> HISAKO DECIDES TO PAY YUKAKO, YUI, AND NAYOKO A VISIT IN THE BASEMENT
 # RECREATION ROOM NEAR THE BAR. HOW WILL THE INTERACTIONS GO?
@@ -2197,7 +2334,7 @@ label scene2_8:
     yui "See you later, Hisako!!"
     nayoko "Bye Bye!"
 
-    # END SCENE 9
+    # END SCENE 8
     jump scene2_10
 
 # SCENE 9 [WHITE WYVERN MNAOR - MUSIC ROOM (MULTCHOICE CHOICE 6)] --> HISAKO DECIDES TO CHECK THE MUSIC ROOM WHERE AZUMI, FUJIKO, AND CHINO ARE AT.
