@@ -2188,32 +2188,103 @@ label scene2_7:
     with Dissolve(0.75)
 
 
+    # NAGANORI STARTS TO TALK ONCE AGAIN 
+    show naganori_halfbody_happy
+    with Dissolve(0.25)
     naganori "I'm surprised she still has that Happy-Go-Lucky attitude and tenacity from earlier."
+    show naganori_halfbody_bored 
+    hide naganori_halfbody_happy
+    with Dissolve(0.25)
     naganori "If I were her, trying to maintain that peppiness would honestly tire me to the bone."
+    show matsuko_halfbody_bored 
+    hide naganori_halfbody_bored
+    with Dissolve(0.25)
     matsuko "... ..."
+    show narumi_halfbody_bored
+    hide matsuko_halfbody_bored
+    with Dissolve(0.25)
     narumi "At least it saves me from doing the dishes myself again, and I'll take what I can get."
+    show narumi_halfbody_neutral
+    hide narumi_halfbody_bored
+    with Dissolve(0.25)
     narumi "I look forward to see how spotless those glasses will turn out to be."
 
-    # FADE TO BLACK, THEN REAPPEAR 
+    # FADE TO BLACK, THEN REAPPEAR    
+    hide narumi_halfbody_neutral
+    with Dissolve(0.25)    
+    hide bar
+    with fade    
+    $ renpy.pause(2.75, hard=True)
 
+    # REAPPEAR HERE 
+    show bar
+    with Dissolve(1.5)   
+    $ renpy.pause(1.00, hard=True)
+
+    # ENDING THE SCENE 
+    show narumi_halfbody_happy
+    with Dissolve(0.25)
     narumi "I'm impressed. You really put your heart into making those glasses shine like crystals. Thank you for your help, Hisako."
     hk "No...problem. Sorry, I'm just a little tired."
+    show naganori_halfbody_happy 
+    hide narumi_halfbody_happy
+    with Dissolve(0.25)
     naganori "It appears she put more than just \"heart\" into washing the glasses."
     naganori "I guess you could say that just by appearance alone, hmmm hmmm hmmm."
+    show narumi_halfbody_bored 
+    hide naganori_halfbody_happy
+    with Dissolve(0.25)
     narumi "On that note, since everything is pretty muh finished around here..."
+    show narumi_halfbody_neutral 
+    hide narumi_halfbody_bored
+    with Dissolve(0.25)
     narumi "I'd recommend you go back to your room and get a new change of clothes before the party starts."
+    show narumi_halfbody_happy
+    hide narumi_halfbody_neutral
+    with Dissolve(0.25)
     narumi "You're drenched from head to toe in water. How's that even possible, I don't know."
     hk "Yeahhhh, that was kind of my first time woking in a dishroom."
     hk "I wanted to make sure I helped you out more than potentially being a detriment."
-    narumi "I can tell you that you weren't a detriment. But, you should leave now before you continue another conversation."
+    narumi "I can tell you that you weren't a detriment."
+    show narumi_halfbody_bored
+    hide narumi_halfbody_happy
+    with Dissolve(0.25)
+    narumi "However, you should leave now before you continue another conversation."
     hk "You're right! I do tend to derail my own train of thought and completely forget what I was doing in the first place."
+    show narumi_halfbody_neutral 
+    hide narumi_halfbody_bored
+    with Dissolve(0.25)
     narumi "You're doing it again."
+    play sfx_channel exclamation volume 1.50 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     hk "Oops! I'll be leaving now. Thank you for letting me help you all out! I'll see you all in a little bit!"
+    show matsuko_halfbody_neutral 
+    hide narumi_halfbody_neutral
+    with Dissolve(0.25)
     matsuko "..."
+    show naganori_halfbody_happy
+    hide matsuko_halfbody_neutral 
+    with Dissolve(0.25)
     naganori "Take care, Hisako."
+    show narumi_halfbody_happy 
+    hide naganori_halfbody_happy
+    with Dissolve(0.25)
     naurmi "Later."
 
-    # END SCENE 7
+    # END SCENE 2-7 [FINISHED ON 8/07/24 @ 9:14 PM]
+    # PLACE WALKING SFX HERE 
+    play sfx_channel walking volume 0.85 noloop
+    # TRANSITION OVER TO SCENE
+    hide narumi_halfbody_happy
+    with Dissolve(0.25)
+    stop music fadeout 2.0
+    hide bar
+    with fade
+    show transition
+    with Dissolve(2.0)
+    $ renpy.pause(1.75, hard=True)
+
+    # JUMP TO SCENE 10
     jump scene2_10
 
 # SCENE 8 [WHITE WYVERN MANOR - RECREATION ROOM (MULTICHOICE OPTION 5)] --> HISAKO DECIDES TO PAY YUKAKO, YUI, AND NAYOKO A VISIT IN THE BASEMENT
