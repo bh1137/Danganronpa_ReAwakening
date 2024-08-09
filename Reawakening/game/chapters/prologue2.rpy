@@ -1206,6 +1206,7 @@ label scene2_5:
     # HISAKO ENTERS THE KITCHEN
     # SHOW NEW BACKGROUND OF KITCHEN HERE 
     show kitchen
+    hide transition
     with Dissolve(1.5)
     play music sundowner volume 0.50 loop
     $ renpy.pause(0.75, hard=True)  
@@ -1585,6 +1586,7 @@ label scene2_6:
 
     # SHOW NEW BACKGROUND OF DINING ROOM HERE 
     show dining_room
+    hide transition
     with Dissolve(1.5)    
     $ renpy.pause(0.75, hard=True) 
     # HISAKO ENTERS THE DINING ROOM
@@ -1999,8 +2001,9 @@ label scene2_6:
 label scene2_7:
 
     # HISAKO ENTERS THE BAR 
-    # SHOW NEW BACKGROUND OF KITCHEN HERE 
+    # SHOW NEW BACKGROUND OF BAR HERE 
     show bar
+    hide transition
     with Dissolve(1.5)
     play music bell_pepper_beef volume 0.75 loop
     $ renpy.pause(1.00, hard=True) 
@@ -2288,8 +2291,15 @@ label scene2_7:
     jump scene2_10
 
 # SCENE 8 [WHITE WYVERN MANOR - RECREATION ROOM (MULTICHOICE OPTION 5)] --> HISAKO DECIDES TO PAY YUKAKO, YUI, AND NAYOKO A VISIT IN THE BASEMENT
-# RECREATION ROOM NEAR THE BAR. HOW WILL THE INTERACTIONS GO?
-label scene2_8:
+# RECREATION ROOM NEAR THE BAR. HOW WILL THE INTERACTIONS GO? [STARTED 8/8/24 @ 8:58 PM]
+label scene2_8:     
+    # SHOW NEW BACKGROUND OF BASEMENT HERE 
+    show basement
+    hide transition
+    with Dissolve(1.5)
+    #play music bell_pepper_beef volume 0.75 loop
+    $ renpy.pause(1.00, hard=True) 
+
     # JUMPING RIGHT INTO THE SCENE 
     yui "Come on, Yukako, you can't just leave me hanging like that!"
     yui "You gotta tell me more about yourself! The anticipation is killing me!"
