@@ -1207,9 +1207,9 @@ label scene2_5:
     # SHOW NEW BACKGROUND OF KITCHEN HERE 
     show kitchen
     hide transition
-    with Dissolve(1.5)
-    play music sundowner volume 0.50 loop
+    with Dissolve(1.5)    
     $ renpy.pause(0.75, hard=True)  
+    play music sundowner volume 0.50 loop
 
     hkmonologue "What if...huh??"
     hkmonologue "The kitchen...it's spotless!"
@@ -2004,9 +2004,9 @@ label scene2_7:
     # SHOW NEW BACKGROUND OF BAR HERE 
     show bar
     hide transition
-    with Dissolve(1.5)
-    play music bell_pepper_beef volume 0.75 loop
+    with Dissolve(1.5)    
     $ renpy.pause(1.00, hard=True) 
+    play music bell_pepper_beef volume 0.75 loop
 
     # HISAKO STARTS MONOLOGUE 
     hkmonologue "Wow, it's very quiet down here! no talking, nothing at all. Just pure silence."
@@ -2296,126 +2296,385 @@ label scene2_8:
     # SHOW NEW BACKGROUND OF BASEMENT HERE 
     show basement
     hide transition
-    with Dissolve(1.5)
-    #play music bell_pepper_beef volume 0.75 loop
+    with Dissolve(1.5)    
     $ renpy.pause(1.00, hard=True) 
+    play music day_dreams volume 0.75 loop
 
-    # JUMPING RIGHT INTO THE SCENE 
+    # JUMPING RIGHT INTO THE SCENE
+    show yui_halfbody_happy
+    with Dissolve(0.25) 
     yui "Come on, Yukako, you can't just leave me hanging like that!"
     yui "You gotta tell me more about yourself! The anticipation is killing me!"
+    show yukako_halfbody_upset
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     yukako "I don't know what you find so interesting about me."
+    show yui_halfbody_happy
+    hide yukako_halfbody_upset
+    with Dissolve(0.25)
     yui "Oh, nonsense! There's no need to be so modest here!"
+    show yukako_halfbody_sleepy
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     yukako "I assure you that I'm not being modest. All I know is that I am a normal person just like yourself."
+    show yui_halfbody_unamused
+    hide yukako_halfbody_sleepy
+    with Dissolve(0.25)
     yui "Have you looked at yourself in the mirror?"
+    show yukako_halfbody_neutral
+    hide yui_halfbody_unamused
+    with Dissolve(0.25)
     yukako "I believe I did about..."
-    yui "Your enigmatic personality, eyes that have seen events that could span many lifetimes..."
-    yui "and behind every word, another door leading to a maze of endless mystery!"
+    show yui_halfbody_genius
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
+    yui "Your enigmatic personality. Eyes that have seen events that could span many lifetimes..."
+    yui "And behind every word, another door leading to a maze of endless mystery!"
+    show yukako_halfbody_upset
+    hide yui_halfbody_genius
+    with Dissolve(0.25)
     yukako "Are you really sure you can see all of that in me?"
+    show yui_halfbody_happy
+    hide yukako_halfbody_upset
+    with Dissolve(0.25)
     yui "Trust me! I'd never lie when it come to seeing the potential and inspiration in a muse!"
+    show nayoko_halfbody_surprised
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     nayoko "Oh my gosh, Yui!! Your {color=#efcc00}{b}Ultimate{/b}{/color} is so awesome!!"
+    show nayoko_halfbody_neutral
+    hide nayoko_halfbody_surprised
+    with Dissolve(0.25)
     nayoko "How are you able to find so many qualities in a person just by looking at them?"
-    yui "Hehehehehe...If it isn't possible to notice, I have been blessed by the gods of Olympus, Zeus himself, with such a gift!"
+    show yui_halfbody_genius
+    hide nayoko_halfbody_neutral
+    with Dissolve(0.25)
+    yui "Hehehehehe..."
+    yui "If it isn't possible to notice, I have been blessed by the gods of Olympus, Zeus himself, with such a gift!"
+    show nayoko_halfbody_surprised
+    hide yui_halfbody_genius
+    with Dissolve(0.25)
     nayoko "REALLY???"
+    show yui_halfbody_happy
+    hide nayoko_halfbody_surprised
+    with Dissolve(0.25)
     yui "Nah, I just made that up on the spot. What did you think? Cool, right?"
+    show nayoko_halfbody_surprised
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     nayoko "You made that story up that quickly??"
+    show yui_halfbody_genius
+    hide nayoko_halfbody_surprised
+    with Dissolve(0.25)
     yui "Yeah huh!"
+    show nayoko_halfbody_neutral
+    hide yui_halfbody_genius
+    with Dissolve(0.25)
     nayoko "That's amazing!!"
+    show yui_halfbody_genius
+    hide nayoko_halfbody_neutral
+    with Dissolve(0.25)
     yui "Hehehehehe!"
 
     # ENTER HISAKO 
+    hide yui_halfbody_genius
+    with Dissolve(0.25)
+    play sfx_channel knocking_sfx volume 1.65 noloop
     sfxText "{i}*knock knock knock*{/i}"
+    show yui_halfbody_upset
+    with Dissolve(0.25)
     yui "Huh? What was that?"
     hk "Hey guys!"
+    show nayoko_halfbody_surprised
+    hide yui_halfbody_upset
+    with Dissolve(0.25)
     nayoko "Is that who I think it is?"
+    show yui_halfbody_happy
+    hide nayoko_halfbody_surprised
+    with Dissolve(0.25)
     yui "It is!!"
+    show yukako_halfbody_happy at center
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     yukako "Hi...Hisako."
     $ multipleppl.name = "Yui & Nayoko" # NAME CHANGE 
+    show yui_halfbody_happy at left 
+    show nayoko_halfbody_neutral at right 
+    with Dissolve(0.25)
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     multipleppl "Hisako!"
     hk "How are you..."
+    hide yukako_halfbody_happy
+    hide yui_halfbody_happy
+    hide nayoko_halfbody_neutral
+    with Dissolve(0.25)
+    play sfx_channel scuttle_shuffle volume 1.30 noloop
     sfxText "{i}*scuttle scuttle shuffle shuffle*{/i}"
+    play sfx_channel stunned volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     hk "What the...!?"
     
     # YUI AND NAYOKO TALKING 
+    show yui_halfbody_happy at left
+    show nayoko_halfbody_happy at right 
+    with Dissolve(0.25)
     nayoko "Hiiiiiiiiii! How are you feeling? You look a million time better!"
     yui "I know, right? She just looks absolutely stunning!"
+    show nayoko_halfbody_smug at right 
+    hide nayoko_halfbody_happy
+    with Dissolve(0.25)
     nayoko "However, there's a more pressing matter at the moment: Why has Hisako come down here?"
-    yui "{i}*gasp{/i} Do you think she is here because she wanted to help us clean?"
+    show yui_halfbody_thinking at left 
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
+    yui "{i}*gasp*{/i} Do you think she is here because she wanted to help us clean?"
+    show nayoko_halfbody_happy at right 
+    hide nayoko_halfbody_smug
+    with Dissolve(0.25)
     nayoko "Oh...My...Gosh...That would be so awesome!! However, we shouldn't assume, so we should ask instead!!"
+    show nayoko_halfbody_surprised at right 
+    show yui_halfbody_happy at left
+    hide yui_halfbody_thinking
+    hide nayoko_halfbody_happy
+    with Dissolve(0.25)
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     multipleppl "Are you here to help us, Hisako??"
     hk "Uh..."
-    yukako "I am pretty sure that she has come down to help. Right, Hisako?"
+    show yukako_halfbody_happy at center
+    with Dissolve(0.25)
+    yukako "I am positive she has come down to help. Right, Hisako?"
     hk "...Right! Yes! Since I am feeling better, I thought I'd come down to see if you three needed any assistance cleaning up the recreation room!"
     hk "I mean, cleaning up an area as big as this can be quite daunting for only three people."
-    nayoko "You're literally the best, Hisako!! Of course you can help, however, from the looks of it, I dont think there's much left... ... ..."
+    show nayoko_halfbody_happy at right 
+    hide nayoko_halfbody_surprised 
+    with Dissolve(0.25)
+    nayoko "You're literally the best, Hisako!! Of course you can help however, from the looks of it, I dont think there's much left... ... ..."
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     hk "Nayoko, are you okay?"
-    nayoko "What happened to all of our progress, Yui?"
+    show nayoko_halfbody_upset at right 
+    hide nayoko_halfbody_happy
+    with Dissolve(0.25)
+    nayoko "Yui, what happened to all of our progress?"
+    show yui_halfbody_neutral at left 
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     yui "I have no idea! I swear we were almost finished!"
-    nayoko "Like didn't we already sweep over there? And set up the table in the corner? What is happening!?"
+    show yukako_halfbody_neutral at center 
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)
+    nayoko "Like didn't we already sweep over there? And did we not set up the table in the corner? What is happening!?"
+    show yui_halfbody_upset at left 
+    hide yui_halfbody_neutral
+    with Dissolve(0.25)
     yui "Do you think someone may have cast a spell on us, or even used time manipulation just to mess with us? Or maybe..."
+    show yukako_halfbody_frustrated at center 
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
     yukako "If I may interject..."
-    hk "Yukako?"
+    hk "Yukako?"    
     yukako "The reason...why the room isn't finished is becaused I have been doing most of the work."
     hkmonologue "Well that makes a lot more sense than time travel."
-    yui "I thought we've been helping you this entire time!"
+    show yui_halfbody_thinking at left 
+    hide yui_halfbody_upset
+    with Dissolve(0.25)
+    yui "I thought we've been helping you this entire time!"    
+    show yukako_halfbody_sleepy at center 
+    hide yukako_halfbody_frustrated
+    with Dissolve(0.25)
     yukako "In all honesty, not really...you both get distracted very easily."
+    show yukako_halfbody_thinking at center 
+    hide yukako_halfbody_sleepy
+    with Dissolve(0.25)
     yukako "Since you saw me as...a muse, you have been asking me questions non-stop while Nayoko sits and watches."
+    show yui_halfbody_upset at left 
+    hide yui_halfbody_thinking
+    with Dissolve(0.25)
     yui "So, we were the ones that were holding you back?"
+    play sfx_channel shocked_sfx volume 1.00 noloop
+    with hpunch
     nayoko "And making you do all the work?"
+    hide yui_halfbody_upset
+    hide yukako_halfbody_thinking
+    hide nayoko_halfbody_upset
+    with Dissolve(0.25)
     hkmonologue "Oh no..."
+    show yui_halfbody_upset at left
+    show nayoko_halfbody_upset at right 
+    with Dissolve(0.15)
+    play sfx_channel thunder_sfx volume 0.90 noloop
+    with vpunch  
     multipleppl "WE'RE SO SORRY, YUKAKO!!"
+    hide yui_halfbody_upset   
+    hide nayoko_halfbody_upset
+    with Dissolve(0.25)
+    hkmonologue "Yep. I knew it..."
 
     # APOLOGIZING AND RECONSILIATION 
+    show yukako_halfbody_upset
+    with Dissolve(0.25)
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     yukako "Ah! It's okay, I promise."
+    show yui_halfbody_upset
+    hide yukako_halfbody_upset
+    with Dissolve(0.25)
+    play sfx_channel disappointment_sfx volume 1.25 noloop
     yui "No, it's not! We've been working you unfairly!"
+    show yukako_halfbody_upset
+    hide yui_halfbody_upset
+    with Dissolve(0.25)
     yukako "Yui, Nayoko: please don't cry!"
     yukako "It's alright. I am not mad or sad or anything. Let's just focus on cleaning..."
+    show nayoko_halfbody_upset
+    hide yukako_halfbody_upset
+    with Dissolve(0.25)
     nayoko "We'll do anything to make up for doing this to you!!"
+    show yukako_halfbody_upset
+    hide nayoko_halfbody_upset
+    with Dissolve(0.25)
     yukako "...Um..."
+    hide yukako_halfbody_upset
+    with Dissolve(0.25)
     hkmonologue "Don't worry, Yukako, I got this!"
     hk "C'mon, guys! There's no need to be upset."
+    show yui_halfbody_upset
+    with Dissolve(0.25)
     hk "Yui: you were just very excited that Yukako holds a familiar, yet exiciting, source of inspiration for your stories!"
     hk "Sometimes, you just get a little too excited. You said so yourself earlier!"
+    show nayoko_halfbody_upset
+    hide yui_halfbody_upset
+    with Dissolve(0.25)
     hk "Nayoko: it's totally okay to space out and have your head in the clouds sometimes. I completely understand! I've done it on the job sometimes myself!"
-    hk "However, there does come a times when you need to try your best and concentrate on the task at hand."
+    hk "However, there does come a time when you need to try your best and concentrate on the task at hand."
     hk "And the same goes for you too, Yui!"
+    show yukako_halfbody_happy
+    hide nayoko_halfbody_upset
+    with Dissolve(0.25)
     yukako "...Hisako..."
     hk "You both have apologized to Yukako, and she has accepted your apology."
     hk "Instead of feeling down and being upset, let's put that energy into cleaning up this room before the party starts!"
+    show yui_halfbody_neutral
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)
     yui "...You're right, Hisako! If we both continue to sulk in our own pity, then the entire party would be a complete failure, and it would be our fault."
+    show yui_halfbody_happy
+    hide yui_halfbody_neutral
+    with Dissolve(0.25)
     yui "I promise I will do my best and stay on task!"
+    show nayoko_halfbody_neutral
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     nayoko "Same here! And if either one of us starts to get distracted, don't hesitate to call us out on it!"
     hk "Sounds good to me! How about you, Yukako?"
-    yukako "Ah! Yes, all is good with me."
-    hk "Alright then! Let's get to it! We only have an hour-and-a-half to get this room in tip-top shape!"
+    show yukako_halfbody_happy
+    hide nayoko_halfbody_neutral
+    with Dissolve(0.25)
+    yukako "Yes, all is good with me."
+    hk "Alright then! Let's get to it! We only have less than an hour to get this room in tip-top shape!"
 
-    # FADE TO BLACK, THEN REAPPEAR 
+    # FADE TO BLACK, THEN REAPPEAR        
+    # TRANSITION OVER TO SCENE 
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)    
+    hide basement
+    with fade    
+    $ renpy.pause(2.75, hard=True)
 
+    # REAPPEAR HERE 
+    show basement
+    with Dissolve(1.5)   
+    $ renpy.pause(1.00, hard=True)
+
+    # FINAL REMARKS 
     hk "And that should do it!"
+    show nayoko_halfbody_happy
+    with Dissolve(0.25)
     nayoko "Yippee! We finished setting up the room!"
-    yui "And just in the nick of time too!"
-    yukako "I am glad that we were able to set up everything...without disrupting anything."
+    show yui_halfbody_happy
+    hide nayoko_halfbody_happy
+    with Dissolve(0.25)
+    yui "And just in the nick of time as well!"
+    show yukako_halfbody_thinking
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
+    yukako "I am glad that we were able to set up everything...without disruptions."
     hk "Same here! I honestly had some doubts at times."
+    show yukako_halfbody_happy
+    hide yukako_halfbody_thinking
+    with Dissolve(0.25)
     yukako "You...and me both!"
-    yui "Yukako. Hisako. Yui and I just wanted to apologize once again for causing so much inconvenience earlier."
+    show yui_halfbody_happy
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)
+    yui "Yukako. Hisako. Nayoko and I just wanted to apologize once again for causing so much inconvenience earlier."
+    show nayoko_halfbody_neutral
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     nayoko "Not only that, but we also wanted to thank you both for all your help. Without you, Hisako, this party would've died before it even started."
     hk "You guys don't have to apologize! It was no problem lending my assistance. That's what I wanted to do in the first place anyway!"
     hk "Besides, I'm sure you three would've been able to finish the rec room by yourselves!"
+    show yukako_halfbody_neutral
+    hide nayoko_halfbody_neutral
+    with Dissolve(0.25)
     yukako "No, Hisako. If you hadn't intervened, I would've been the only one cleaning."
     yukako "Nayoko and Yui would've continued being distracted and all the work that everyone else is doing would've been for naught."
+    show yukako_halfbody_sleepy
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
     yukako "You are the reason...why this party will go on!"
     hk "Yukako...Thank you! Thank you all for your kind words. I am glad that I was able to have a fun time and enjoy helping out my friends!"
+    show yukako_halfbody_happy
+    hide yukako_halfbody_sleepy
+    with Dissolve(0.25)
     yukako "Hmmm...Glad to hear."
+    show nayoko_halfbody_happy
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)
     nayoko "Yui, did she just call us..."
+    show yui_halfbody_genius
+    hide nayoko_halfbody_happy
+    with Dissolve(0.25)
     yui "One of her friends? It's so exciting!!"
+    show nayoko_halfbody_happy
+    hide yui_halfbody_genius
+    with Dissolve(0.25)
     nayoko "I know, right?"
     hk "Well, I'm gonna head back up to my room real quick and freshen up before the party!"
+    show yukako_halfbody_thinking
+    hide nayoko_halfbody_happy
+    with Dissolve(0.25)
     yukako "You go do that. You deserve it."
     hk "I will see all of you soon! Bye now!"
+    show yukako_halfbody_happy
+    hide yukako_halfbody_thinking 
+    with Dissolve(0.25)
     yukako "Goodbye, Hisako Kawahara."
+    show yui_halfbody_happy
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)
     yui "See you later, Hisako!!"
+    show nayoko_halfbody_happy
+    hide yui_halfbody_happy
+    with Dissolve(0.25)
     nayoko "Bye Bye!"
 
-    # END SCENE 8
+    # END SCENE 2-8 [FINISHED ON 8/11/24 @ 6:22 PM]
+    # PLACE WALKING SFX HERE 
+    play sfx_channel walking volume 0.85 noloop
+    # TRANSITION OVER TO SCENE
+    hide nayoko_halfbody_happy
+    with Dissolve(0.25)
+    stop music fadeout 2.0
+    hide basement
+    with fade
+    show transition
+    with Dissolve(2.0)
+    $ renpy.pause(1.75, hard=True)
+
+    # JUMP TO SCENE 10
     jump scene2_10
 
 # SCENE 9 [WHITE WYVERN MNAOR - MUSIC ROOM (MULTCHOICE CHOICE 6)] --> HISAKO DECIDES TO CHECK THE MUSIC ROOM WHERE AZUMI, FUJIKO, AND CHINO ARE AT.

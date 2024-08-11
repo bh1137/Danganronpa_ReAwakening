@@ -34,6 +34,7 @@ define perdue2 = "audio/music/perdue_2.mp3"
 define calm_seas = "audio/music/on_calm_sea.mp3"
 define funkman = "audio/music/funkman.mp3"
 define sundowner = "audio/music/sundowner.mp3"
+define day_dreams = "audio/music/day_dreams.mp3"
 
 # SOUND EFFECTS 
 define dizzy_sfx = "audio/sfx/dizzy.ogg"
@@ -60,3 +61,5 @@ define eating_sfx = "audio/sfx/eating.ogg"
 define drinking_sfx = "audio/sfx/drinking_ajauk.ogg"
 define shocked_sfx = "audio/sfx/shocked.ogg"
 define hotel_bell = "audio/sfx/hotel_bell.ogg"
+define scuttle_shuffle = "audio/sfx/shuffle.ogg"
+define stunned = "audio/sfx/stunned.ogg"

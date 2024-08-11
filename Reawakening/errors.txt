@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapters/prologue2.rpy", line 1734: end of line expected.
-    show ryosei_halfbody_happy at cente r
-                                        ^
+File "game/chapters/prologue2.rpy", line 2412: expected end of line
+    play sfx_channel scuttle_shuffle volume 1.30c noloop
+                                                ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Wed Jul 31 20:42:12 2024
+Sun Aug 11 18:27:00 2024
