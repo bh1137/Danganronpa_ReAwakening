@@ -6,7 +6,7 @@ label start:
         
     # START THE GAME      
     # ATTEMPT TO JUMP PART 1 SCRIPT 
-    jump scene2_8   
+    jump scene2_9   
    
     label saveGamePrologueOne:
         # SAVE PROMPT FOR PART 1 (FOUND FROM https://lemmasoft.renai.us/forums/viewtopic.php?t=50298)

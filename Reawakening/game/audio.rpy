@@ -35,6 +35,8 @@ define calm_seas = "audio/music/on_calm_sea.mp3"
 define funkman = "audio/music/funkman.mp3"
 define sundowner = "audio/music/sundowner.mp3"
 define day_dreams = "audio/music/day_dreams.mp3"
+define small_town_pluto = "audio/music/small_town_pluto.mp3"
+define cubicat = "audio/music/cubicat.mp3"
 
 # SOUND EFFECTS 
 define dizzy_sfx = "audio/sfx/dizzy.ogg"

@@ -2679,126 +2679,323 @@ label scene2_8:
 
 # SCENE 9 [WHITE WYVERN MNAOR - MUSIC ROOM (MULTCHOICE CHOICE 6)] --> HISAKO DECIDES TO CHECK THE MUSIC ROOM WHERE AZUMI, FUJIKO, AND CHINO ARE AT.
 # THERE SWILL TALK TO THE OTHERS ABOUT MUSIC RECOMMENDATIONS TO PLAY WHILE THE AKUDA BROTHERS ARE NOT DJ-ING DURING THE PARTY
+# [STARTED APPROXIMATELY 8/13/24]
 label scene2_9:
+    # SHOW NEW BACKGROUND OF MUSIC ROOM HERE 
+    show music_room
+    hide transition
+    with Dissolve(1.5)    
+    $ renpy.pause(1.00, hard=True) 
+    play music small_town_pluto volume 0.80 loop
+
     # JUMP RIGHT INTO THE SCENE 
+    show azumi_halfbody_bored
+    with Dissolve(0.25)
     azumi "I dont know about these, Fujiko. I'm trying to imagine it, but I really can't see this playing at the party."
+    show fujiko_halfbody_neutral
+    hide azumi_halfbody_bored
+    with Dissolve(0.25)
     fujiko "C'mon, are you sure, Azumi? These albums are pretty fire!"
+    show azumi_halfbody_happy
+    hide fujiko_halfbody_neutral
+    with Dissolve(0.25)
     azumi "While I do agree that these albums are pretty good choices..."
+    show azumi_halfbody_bored
+    hide azumi_halfbody_happy
+    with Dissolve(0.25)
     azumi "I don't think Metalcore or Heavy Metal in general will strike a chord with most partygoers in the same way it would with us."
+    show azumi_halfbody_neutral
+    hide azumi_halfbody_bored
+    with Dissolve(0.25)
     azumi "You know what I mean?"
+    show fujiko_halfbody_happy
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     fujiko "Hmmm...I see what you did there with the \"chord\" pun!"
+    show azumi_halfbody_bored
+    hide fujiko_halfbody_happy
+    with Dissolve(0.25)
     azumi "Fujiko! You know I didn't intend for that to be a pun!"
+    show fujiko_halfbody_bored
+    hide azumi_halfbody_bored
+    with Dissolve(0.25)
     fujiko "I know, I know. But, yes, I do understand what you're getting at."
+    show fujiko_halfbody_upset
+    hide fujiko_halfbody_bored
+    with Dissolve(0.25)
     fujiko "The only problem now is: what music do we choose? I mean, look at all these crates!"
     fujiko "There has to be at least a thousand records here! Hell, maybe even more!"
     azumi "I think the administration may have gone a little overboard with the records."
+    show azumi_halfbody_upset
+    hide fujiko_halfbody_upset
+    with Dissolve(0.25)
     azumi "It would be easier to find good music if we had an extra set of hands to help out."
+    hide azumi_halfbody_upset
+    with Dissolve(0.25)
 
     # ENTER HISAKO
+    play sfx_channel knocking_sfx volume 1.65 noloop
     sfxText "{i}*knock knock knock*{/i}"
-    azumi "Hmmm? Well look what the cat dragged in!"
+    show azumi_halfbody_neutral
+    with Dissolve(0.25)
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
+    azumi "Hmmm? Well look what the cat dragged in!"    
+    show fujiko_halfbody_happy
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     fujiko "Hisako!! Looking fresh to death, I see!"
     hk "Hey y'all! What are you up to here?"
+    show azumi_halfbody_happy
+    hide fujiko_halfbody_happy
+    with Dissolve(0.25)
     azumi "We are currently looking for songs to play at the party."
     hk "Huh? I thought the Akuda Brothers were in charge of the music."
+    show fujiko_halfbody_happy
+    hide azumi_halfbody_happy
+    with Dissolve(0.25)
     fujiko "Oh they are! Most of the time, that is."
     hk "What do you mean by \"most of the time\"?"
+    show azumi_halfbody_neutral
+    hide fujiko_halfbody_happy
+    with Dissolve(0.25)
     azumi "You wouldn't expect them to entertain the entire time and not have a chance to enjoy the party themselves, right?"
     hk "Now that you mention it, that is a pretty good point you bring up."
     azumi "Exactly! So that got us thinking about what we could bring down to help out with that issue."
+    show fujiko_halfbody_neutral
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     fujiko "At first we though about bringing down the harpsichord, but Azumi said that it didn't jive with the party's atmosphere."
+    show azumi_halfbody_neutral
+    hide fujiko_halfbody_neutral
+    with Dissolve(0.25)
     azumi "So that's where our next idea came in: let's bring down some records that Naoki could use on his turntables!"
+    show fujiko_halfbody_frustrated
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     fujiko "Which brings us to our current problem..."
+    show fujiko_halfbody_upset
+    hide fujiko_halfbody_frustrated
+    with Dissolve(0.25)
     fujiko "There's literally thousands of records to comb through, and we don't have enough people for the job."
+    show azumi_halfbody_neutral
+    hide fujiko_halfbody_upset
+    with Dissolve(0.25)
     azumi "Hisako, would you like help us out and find some awesome party jams?"
     hk "Absolutely! With the three of us, it shouldn't be too hard of a task to accomplish!"
 
     # CHINO JUMPSCARE!
+    show chino_halfbody_neutral
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     chino "N-Now that we have you as a fourth, we'll get it done in no time!"
+    play sfx_channel thunder_sfx volume 1.00 noloop
+    with vpunch
     hk "GYAHHHHHHH!!!!!"
+    show chino_halfbody_upset
+    hide chino_halfbody_neutral
+    with Dissolve(0.25)
+    play sfx_channel stunned volume 1.35 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     chino "AHHHHHHHHHH!!"
+    show azumi_halfbody_upset
+    hide chino_halfbody_upset
+    with Dissolve(0.25)
     azumi "Hisako! Are you okay?"
     hk "Y-Yeah, I'm good..."
     hk "Hello again...Chino..."
+    show chino_halfbody_upset
+    hide azumi_halfbody_upset
+    with Dissolve(0.25)
     chino "Hi H-H-Hisako...I'm sorry if I scared you again."
     hk "No, it was my fault. I didn't notice you were in the room again."
     hk "I sincerely apologize that this keeps happening! Truly I am!"
+    show chino_halfbody_neutral
+    hide chino_halfbody_upset
+    with Dissolve(0.25)
     chino "It's okay! I p-promise I'll make sure I'm not acting like a such a wallflower."
     hk "And I promise to be actively looking out for you!"
+    show chino_halfbody_blush
+    hide chino_halfbody_neutral
+    with Dissolve(0.25)
     chino "T-Thank you, Hisako!"
     hk "No problem!"
 
     # BACK TO THE PROBLEM AT HAND 
+    show fujiko_halfbody_bored
+    hide chino_halfbody_blush
+    with Dissolve(0.25)
     fujiko "Alright! Back to the problem at hand!"
     hk "Yes! Sorry about the interruption."
+    show azumi_halfbody_neutral
+    hide fujiko_halfbody_bored
+    with Dissolve(0.25)
     azumi "All good here! Now then, the four of us need to use our heads collectively and make the best damn playlist!"
     hk "Let's do this!"
+    show fujiko_halfbody_frustrated
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     fujiko "And we better make it quick too, or it's going to be ritual misery for all of us!"
+    show chino_halfbody_neutral
+    with Dissolve(0.25)
     chino "G-Got it!"
 
-    # FADE TO BLACK (NOT REAPPEAR HERE)
+    # FADE TO BLACK (NOT REAPPEAR HERE)    
+    hide chino
+    with Dissolve(0.25)    
+    hide music_room
+    with fade    
+    $ renpy.pause(2.75, hard=True)
+
+    # TALKING DURING TRANSITION SCENE 
     hk "Oh man, this one is a must-have! Anything by ROTFL is an instant party classic!"
-    chino "T-This one is pretty good! Whenever ON-POINT play, it actually makes me want to move off the wall and onto the dance floor!"
-    fujiko "How could I forget this absolute banger? We're absolutely putting 4AY!8 in the playlist!"
-    azumi "Now, a couple of song by The Red-Kidney Beans should finish this off!"
+    chino "T-This one is pretty good! Whenever ON-POINT plays, it actually makes me want to move off the wall and onto the dance floor!"
+    fujiko "How could I forget this absolute banger? We're absolutely putting 8OH!8 in the playlist!"
+    azumi "Now, a couple of songs by The Red-Kidney Beans should finish this off!"
     fujiko "Alright! Let's head on over to the rec room, and hand these over to the Brothers!"
 
-    # REAPPEAR HERE!!!
+    # REAPPEAR HERE!!!     
+    show basement
+    with Dissolve(1.5)   
+    $ renpy.pause(1.00, hard=True)
+
     hk "Wow! The rec room looks so inviting!"
     hk "And wait! When did the rec room connect to the bar?!"
+    show fujiko_halfbody_frustrated
+    with Dissolve(0.25)
     fujiko "Hold up. You didn't know that?"
+    show fujiko_halfbody_bored
+    hide fujiko_halfbody_frustrated
+    with Dissolve(0.25)
     fujiko "How else did you think everyone was going to get a drink from the bar?"
     hk "I...don't...know...I guess I thought Narumi would bring some bar supplies over?"
+    show fujiko_halfbody_happy
+    hide fujiko_halfbody_bored
+    with Dissolve(0.25)
     fujiko "I don't know if I agree with your reasoning, but I do agree that the rec room and bar combo looks pretty baller!"
+    show azumi_halfbody_neutral
+    hide fujiko_halfbody_happy
     azumi "Okay, Hisako! One final thing left to do: could you take these over to Naoki for me?"
     hk "Yeah, I can do that, Azumi!"
+    show azumi_halfbody_happy
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     azumi "Thanks! I really appreciate it!"
+    hide azumi_halfbody_happy
+    with Dissolve(0.25)
 
     # CUTING CONVO SHORT 
     hk "Sorry to cut the conversation short, Fujiko..."
+    show fujiko_halfbody_neutral
+    with Dissolve(0.25)
     fujiko "No worries. Imma go chat with some of the others here like that forensics chick or the storyteller! They seem fun to joke with!"
     hk "Okay then! See you around!"
-    fujiko "See ya!" # EXIT FUJIKO HERE
+    show fujiko_halfbody_happy
+    hide fujiko_halfbody_neutral
+    with Dissolve(0.25)
+    fujiko "See ya!" 
+    # EXIT FUJIKO HERE
+    play sfx_channel walking volume 0.85 noloop
+    hide fujiko_halfbody_happy
+    with Dissolve(1.00)
     hkmonologue "Alrighty then, let me hand these off to the DJ and then we should be good!"
-    sfxText "{i}*click clack click clack*{/i}"
+    play sfx_channel walking volume 0.85 noloop
+    sfxText "{i}*step click step click*{/i}"
 
     # VISITNG NAOKI 
     hk "Hey, Naoki!"
+    show naoki_halfbody_neutral
+    with Dissolve(0.25 )
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     naoki "Hi, Hisako! I'm glad to see you doing better!"
-    hk "Thank you! I definitely feel a million times better than I did earlier."
+    hk "Thank you! I definitely feel a million times better than I did earlier."    
     naoki "I'm really happy to hear that!"
     naoki "So, what's up? Did you need anything?"
     hk "Yes! Azumi, Fujiko, Chino, and myself have brought down some extra records from the music room!"
     hk "So, whenever you need to take a break from DJ-ing, you can pop one of these on and enjoy the party yourself without any hassle!"
+    show naoki_halfbody_happy
+    hide naoki_halfbody_neutral
+    with Dissolve(0.25)
     naoki "This is awesome! Thank you so much!"
+    show naoki_halfbody_upset
+    hide naoki_halfbody_happy
+    with Dissolve(0.25)
     naoki "To be completely honest, Tetsu, Hiko, and I were so focused on bringing the equipment down that we completely forgot about background party music."
-    naoki "This is such a big help! THank you so much once again!"
+    show naoki_halfbody_happy
+    hide naoki_halfbody_upset
+    with Dissolve(0.25)
+    naoki "This is such a big help! Thank you so much once again!"
     hk "No problem! We're glad we could be of assistance!"
     hk "But, I'm going to take my leave and get freshened up before the party starts!"
+    show naoki_halfbody_neutral
+    hide naoki_halfbody_happy
+    with Dissolve(0.25)
     naoki "You go do that! Take care, Hisako and see you soon!"
     hk "See ya, Naoki, and good luck!"
+    show naoki_halfbody_happy
+    hide naoki_halfbody_neutral
+    with Dissolve(0.25)
     naoki "Thank you! We'll be doing our best!"
+    hide naoki_halfbody_happy
+    with Dissolve(0.25)
 
-    # BACK TO AZUMI AND CHINO/ SCENE END 
+    # BACK TO AZUMI AND CHINO/ SCENE END     
     hkmonologue "And done! Now gotta back in with Azumi and Chino before heading up to my room!"
     hk "Okay, Azumi, the records have been handed off to Naoki!"
+    show azumi_halfbody_neutral
+    with Dissolve(0.25)
     azumi "That's wonderful!"
+    show azumi_halfbody_happy
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     azumi "Now, on behalf of me, Chino, and Fujiko, we would like to thank you for your help with the records!"
     azumi "I have no doubt that our choices will keep this party kickin'!"
     hk "Don't worry about it! I'm just glad I was able to help out and learn more about my friends through their tastes in music!"
+    show chino_halfbody_blush
+    hide azumi_halfbody_happy
+    with Dissolve(0.25)
     chino "I am glad to be considered your f-f-friend, Hisako!"
+    show azumi_halfbody_neutral
+    hide chino_halfbody_blush
+    with Dissolve(0.25)
     azumi "And the same goes for me and I know it also the same for Fujiko as well!"
     hk "I'm really happy to hear!"
+    show azumi_halfbody_happy
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     azumi "Mmmm Hmmm!"
     hk "I apologize if it seems rude of me, but I'm going to head up to my room before the party starts and..."
     azumi "You're not being rude at all, Hisako! It's perfectly normal!"
+    show azumi_halfbody_neutral
+    hide azumi_halfbody_happy
+    with Dissolve(0.25)
     azumi "But, hey, don't be a stranger at the party!"
     hk "Don't worry! I won't! I gotta keep my promise to Chino somehow! But I'll be seeing you around!"
+    show azumi_halfbody_happy
+    hide azumi_halfbody_neutral
+    with Dissolve(0.25)
     azumi "Later, alligator!"
+    show chino_halfbody_neutral
+    hide azumi_halfbody_happy
+    with Dissolve(0.25)
     chino "Goodbye. H-Hisako!"
     hk "Bye now!"
 
-    # END SCENE 9
+    # END SCENE 2-9 [FINISHED ON 8/18/24 @ 8:10 PM]
+    # PLACE WALKING SFX HERE 
+    play sfx_channel walking volume 0.85 noloop
+    # TRANSITION OVER TO SCENE
+    hide chino_halfbody_neutral
+    with Dissolve(0.25)
+    stop music fadeout 2.0
+    hide basement
+    with fade
+    show transition
+    with Dissolve(2.0)
+    $ renpy.pause(1.75, hard=True)
+    
+    # JUMP TO SCENE 10
     jump scene2_10
 
 # SCENE 10 [WHITE WYVERN MANOR - BASEMENT: REC ROOM/BAR] --> IT'S PARTY TIME AT THE WHITE WYVERN MANOR! THE COUNTDOWN TO THE EPIC CLIMAX

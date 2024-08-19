@@ -2311,7 +2311,7 @@ label scene1_7:
     show chino_halfbody_upset
     hide chino_halfbody_neutral
     with Dissolve(0.25)
-    play sfx_channel exclamation volume 1.50 noloop 
+    play sfx_channel stunned volume 1.35 noloop 
     with Fade(0.1, 0.0, 0.3, color="#fff") 
     with vpunch
     chino "EEEEEEAAAAA!!!"
