@@ -3001,10 +3001,20 @@ label scene2_9:
 # SCENE 10 [WHITE WYVERN MANOR - BASEMENT: REC ROOM/BAR] --> IT'S PARTY TIME AT THE WHITE WYVERN MANOR! THE COUNTDOWN TO THE EPIC CLIMAX
 # TO THIS PROLOGUE AND BEGINNING OF THE HOPE'S PEAK UNIVERSITY KILLING GAME STARTS HERE! WATCH THE PARTY UNFOLD AS THE STUDENTS ENJOY THEIR 
 # LAST MOMENTS OF FREEDOM BEFORE BEING FORCED INTRO A GAME FULL OF HOPE, BETRAYAL, AND DESPAIR: THIS IS DANGANRONPA: REAWAKENING
+# [STARTED 8/19/24 @ 6:27 PM]
 label scene2_10:
     # MASSIVE HISAKO MONOLOGUE INCOMING:
     # MONOLOGUE PART I
     hkmonologue "Shortly after everyone finished their assigned jobs, the party went into full swing!"
+
+    # MOVE FROM TRANSITION SCENE HERE 
+    # SHOW NEW BACKGROUND OF BASEMENT HERE 
+    show basement
+    hide transition
+    with Dissolve(1.5)    
+    $ renpy.pause(1.00, hard=True) 
+    play music cubicat volume 0.80 loop
+
     hkmonologue "Looking around the room, I see not a frown in sight! Even Vladnot was out of his room and roaming about!"
     hkmonologue "All of my fellow housemates. My peers. My friends. All of them enjoying themselves and having fun!"
     hkmonologue "Well, almost everyone. There's still no sign of {color=#efcc00}{b}Eizo{/b}{/color} anywhere."
@@ -3016,7 +3026,7 @@ label scene2_10:
     hkmonologue "Near the DJ booth are the Akuda brothers."
     hkmonologue "Kazuhiko is continuing to hype up the party, while Tetsunori ups the ante, breaking out his best moveset!"
     hkmonologue "And behind the scenes, Naoki is tearing it up with the music!"
-    hkmonologue "Making sure that each song flows into one antoerh in between transitiions, down to the last beat measure!"
+    hkmonologue "Making sure that each song flows into one another in between transitions, down to the last beat measure!"
 
     # MONOLOGUE PART III
     hkmonologue "Looking by the dance floor, Kichi, Azumi, and Fujiko are out there feeling the rhythm and soul through the music, 
@@ -3034,191 +3044,510 @@ label scene2_10:
     hkmonologue "Sitting by the side tables is Ryosei, accompanied by Matsuko, Naganori, and Vladnot."
     hkmonologue "It doesn't look like they're talking, rather, they are relaxing in silence, having a drink."
     hkmonologue "Matsuko and Ryosei seem to enjoy hard liquor, judging by the number of shot glasses between the two of them."
-    hkmonologue "Naganori, meanwhile, holds a single glass of wine in his hand as he looks off int the distance."
+    hkmonologue "Naganori, meanwhile, holds a single glass of wine in his hand as he looks off into the distance."
     hkmonologue "Vladot enjoys cocktails, more specifically ones that are red in color."
-    hkmonologue "Either he's a real vampire or he takes the whole thing so seriously!"
+    hkmonologue "Either he's a real vampire or he takes the whole thing really seriously!"
     hkmonologue "I mean, he is the {color=#efcc00}{b}Ultimate Vampire{/b}{/color}, so I shouldn't be too surprised."
 
     # MONOLOGUE PART VI 
     hkmonologue "By the snack and punch table, Yui, similar to a busy bee, is moving around Grimaldi, completely enthralled."
     hkmonologue "If I had to guess: Yui has found a fountain of inspiration with Grimaldi."
-    hkmonologue "Nayoko, on the other hand, is talking to.......Chino! Yes, she's talking to Chino."
+    hkmonologue "Nayoko, on the other hand, is talking to...."
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
+    hkmonologue "...Chino! Yes, she's talking to Chino."
     hkmonologue "Although I can't explicitly see Chino's face, the LEDs on her face show she is very happy someone is talking to her!"
     hkmonologue "I'm really happy for her!"
 
     # MONOLOGUE PART VII
     hkmonologue "Although I see most of my new friends, there's one I haven't spotted yet. I wonder where she is?"
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     hkmonologue "Hmmmmm...Ah! There she is, but why is she way over there?"
     hkmonologue "Usually, I would say that Chino is the wallflower, but {color=#efcc00}{b}Yukako{/b}{/color} is the one being the wallflower!"
     hkmonologue "Does she want to be by herself? Does she want to be at the party?"
-    hkmonologue "I hope I don't invade her personal space, but I'm just goig to pop by and make sure she's okay."
+    hkmonologue "I hope I don't invade her personal space, but I'm just going to pop by and make sure she's okay."
+
+    # WALKING SFX HERE 
+    play sfx_channel walking volume 1.30 noloop
+    sfxText "*step step step step*"
 
     # HISAKO TALKING WITH YUKAKO 
     hk "Hey, Yukako!"
+    show yukako_halfbody_sleepy
+    with Dissolve(0.25)
     yukako "... ..."
     hk "Yukako?"
     yukako "...Hmmm..."
     hk "Hey, are you good?"
-    yukako "Mmm? Ah!"
+    
+    yukako "Mmm?"
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
+    show yukako_halfbody_upset
+    hide yukako_halfbody_sleepy
+    with Dissolve(0.25)
+    yukako "Ah!"
     hk "I'm so sorry!"
+    show yukako_halfbody_neutral
+    hide yukako_halfbody_upset
+    with Dissolve(0.25)
     yukako "No...You're okay. I was just startled...that's all."
     hk "Oh, okay..."
+    show yukako_halfbody_thinking
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
     yukako "..."
     hk "..."
+    show yukako_halfbody_frustrated
+    hide yukako_halfbody_thinking
+    with Dissolve(0.25)
     yukako "..." # NERVOUS 
     hkmonologue "Oh man, now I feel bad for making it awkward!"
     hkmonologue "This must be just as bad for her! I have to get this conversation rolling!"
     hk "So, how are you feeling? Enjoying the party?"
+    show yukako_halfbody_neutral
+    hide yukako_halfbody_frustrated
+    with Dissolve(0.25)
     yukako "It's good...I am glad to see everyone having fun."
     hk "But, you aren't over there with your peers. Why is that?"
+    show yukako_halfbody_thinking
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
     yukako "I'm just not that big of a social butterfly, or a party person...However, it is a nice change of scenery."
     hk "Scenery? What do you mean?"
+    show yukako_halfbody_neutral
+    hide yukako_halfbody_thinking 
+    with Dissolve(0.25)
     yukako "With a profession like mine, life isn't all that bright."
+    show yukako_halfbody_frustrated
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
     yukako "More times than not...I've seen the end of peoples' lives more than I see their joys in life."
-    yukako "Although...I am desensitized for the most part...I enjoy seeing the spark of life iginiting with passion in one's eyes..."
-    yukako "rather than seeing it extinquished."
+    show yukako_halfbody_thinking
+    hide yukako_halfbody_frustrated
+    with Dissolve(0.25)
+    yukako "Although...I am desensitized for the most part..."
+    show yukako_halfbody_happy
+    hide yukako_halfbody_thinking
+    with Dissolve(0.25)
+    yukako " I enjoy seeing the spark of life iginiting with passion in one's eyes...rather than seeing it extinquished."
     hk "Oh, wow..."
+    show yukako_halfbody_neutral
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)
     yukako "Do not feel bad for me. It was my decision to be a {color=#efcc00}{b}forensic scientist{/b}{/color}, just as it was yours 
     to be...a {color=#efcc00}{b}lawyer{/b}{/color}."
     hk "..."
+    show yukako_halfbody_happy
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
     yukako "But, I do appreciate you asking how I feel. I do not...get that a lot."
     yukako "You are a nice person...to be around, {color=#efcc00}{b}Hisako Kawahara{/b}{/color}."
-    hk "Thank you! I'm glad I get to be not only your peer, but also your friend/"
+    hk "Thank you! I'm glad I get to be not only your peer, but also your friend!"
     yukako "I am glad...as well."
     hkmonologue "I'm really glad that she is okay and enjoying the party in her own way!"
-    yukako "I do have a question for you, Hisako Kawahara: Why do you have two drinks in your hand? Do you plan on drinking both by yourself or...?"
+    show yukako_halfbody_neutral
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)
+    yukako "I do have a question for you, Hisako Kawahara: Why do you have two drinks in your hand?"
+    show yukako_halfbody_thinking
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
+    yukako "Do you plan on drinking both by yourself or...?"
     hk "Oh my gosh! I completely forgot that I brought these over! Here! This one's for you!"
+    show yukako_halfbody_happy
+    hide yukako_halfbody_thinking
+    with Dissolve(0.25)
     yukako "Thank you...Hisako..."
     hk "Did you really think that I had them both for myself?"
-    yukako "Not...really. I wanted to feign ignorance...ust to see how you would react."
+    show yukako_halfbody_neutral
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)
+    yukako "Not...really. I wanted to feign ignorance...just to see how you would react."
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     hk "Ah!" # EMBARRASSED
+    show yukako_halfbody_happy
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
     yukako "Your embarrassed reaction...is honestly quite refreshing, Hisako."
     yukako "Glad to become friends with you...and everyone else here. I look forward to the school year ahead of us."
-    hkmonologue "Oh my gosh...Yukako is actually smiling. She finally broke not just a smirk, but an actual smile!"
-    yukako "...Erm...Hisako?"
+    hkmonologue "Oh my gosh...Yukako is genuinely happy!"
+    hkmonologue "Not a forced smile, or words to indicate she is feeling happiness."
+    hkmonologue "Just an effortless grin on her face with not a single care in the world."
+    hkmonologue "I really hope she..."
+    show yukako_halfbody_thinking
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)
+    yukako "...Um...Hisako?"
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     hk "Huh!?"
+    show yukako_halfbody_neutral
+    hide yukako_halfbody_thinking
+    with Dissolve(0.25)
     yukako "I was just asking if I was allowed to drink this now."
     hk "Oh! Um...not yet! Narumi told me that all of us have to wait until midnight to drink."
+    show yukako_halfbody_thinking
+    hide yukako_halfbody_neutral
+    with Dissolve(0.25)
     yukako "I understand...At least it is not that long of a wait at all."
     hk "At least!"
+    hide yukako_halfbody_thinking
+    with Dissolve(0.25)
+    play sfx_channel feedback volume 0.85 noloop
+    stop music fadeout 1.5    
     sfxText "{i}*tap tap boom*{/i}"
     hiko "Alright! Is this thing on?"
     hkmonologue "Looks like the {color=#efcc00}{b}Ultimate M.C.{/b}{/color} is going to be taking over this ceremony!"
 
-    # KAZUHIKO MONOLOGUE         
+    # KAZUHIKO MONOLOGUE   
+    show kazuhiko_halfbody_happy
+    with Dissolve(0.25)      
     hiko "Okay, everyone!"
+    show kazuhiko_halfbody_neutral
+    hide kazuhiko_halfbody_happy
+    with Dissolve(0.25)
     hiko "We are currently two minutes away from the top of the hour, and together, we are going to ring in the new school year, the right way!"
     hiko "Each of you currently holds a drink, crafted by none other than the {color=#efcc00}{b}Ultimate Bartender{/b}{/color} herself!"
     hiko "This drink is officially called The I-V Phoenix."
+    show kazuhiko_halfbody_thinking
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
+    play music lets_party volume 0.75 loop
     hiko "The \'IV,\' is short for \"Initium Vum\". This phrase translates to \"The Beginning of Life\"."
     hiko "Here we all stand, although as individuals, but also as a community."
+    show kazuhiko_halfbody_neutral
+    hide kazuhiko_halfbody_thinking
+    with Dissolve(0.25)
     hiko "We all come from different backgrounds and different life experiences, but the one thing that connects us all together is that we are  
     {color=#efcc00}{b}Ultimates{/b}{/color}."
     hiko "{color=#efcc00}{b}Ultimates{/b}{/color} who have been given a second chance to get back on our feet and be like those who change our world 
     for the better!"
     hiko "To all of you, I just want to say one last thing before we all toast:"
+    show kazuhiko_halfbody_blush
+    hide kazuhiko_halfbody_neutral
+    with Dissolve(0.25)
     hiko "I look forward to spending my college years here, not only to become friends with you all..."
     hiko "...but also to learn something new that I can use to change my life for the better!"
+    show kazuhiko_halfbody_happy
+    hide kazuhiko_halfbody_blush
+    with Dissolve(0.25)
     hiko "This one is to us! Our future!"
     hiko "Our new Beginning of Life! Our {color=#efcc00}{b}Reawakening{/b}{/color}!!! Cheers!"
 
     # CHEERS 
+    hide kazuhiko_halfbody_happy
+    with Dissolve(0.25)
     $ multipleppl.name = "Everyone"
     multipleppl "Cheers!!"
+    show yukako_halfbody_happy
+    with Dissolve(0.25)
     yukako "Cheers to you, Hisako Kawahara!"
     hk "And cheers to you, Yukako Maeno!"
     yukako "Hmm...I am surprised you remembered my last name."
     hk "well, I am a lawyer, so I gotta have a good memory, right?"
     yukako "I believe...you are indeed correct, Hisako."
     hk "Hahaha!"
+    hide yukako_halfbody_happy
+    with Dissolve(0.25)
+    play sfx_channel drinking_sfx volume 6.50 noloop
     sfxText "{i}*sip sip sip*{/i}"
 
     # CLIMAX 
     hk "Oh, wow! Narumi really outdid herself with this one!"
     hk "The lemon juice really compliments the gin and orange liquor! What do you think about the drink, Yukako?"
+    show yukako_halfbody_upset
+    with Dissolve(0.25)
     yukako "..."
     hk "Yukako, are you okay?"
     yukako "...This isn't good..."
-    hk "What isn't good? Is something wrong?"
+    stop music fadeout 2.0
+    hk "What isn't good? Is something wrong?"         
+    show yukako_halfbody_frustrated
+    hide yukako_halfbody_upset
+    with Dissolve(0.25) 
+    play sfx_channel stern volume 1.00 noloop 
     yukako "Hisako, we need to leave immediately!"
     hk "Yukako, you're starting to scare me. Tell me what is the matter!"
+    play sfx_channel thunder_sfx volume 1.00 noloop
+    with vpunch
     yukako "Look at the bar!"
     hk "What do you mean look at the bar? Everyone is just enjoying them...selves?"
 
-    # EVERYONE HAS COLLAPSED/DRUGGED
+    # EVERYONE HAS COLLAPSED/DRUGGED [FUTURE Note: PUT CG BACKGROUND OF ATUDENTS ALL PASSED OUT FROM BEING DRUGGED HERE]
+
+
+    play music boomerang volume 1.25 loop
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     hk "What the...? Everyone's knocked out!"
     hk "Even Narumi is out cold...Were all of our drinks spiked??"
-    yukako "It would appear so. That is why we need to leave the Manor and reach for help!"
+    show yukako_halfbody_upset
+    hide yukako_halfbody_frustrated
+    with Dissolve(0.25)
+    yukako "It would appear so! That is why we need to leave the Manor and reach for help!"
     hk "How much time do we have before the effects kick in?"
+    show yukako_halfbody_thinking
+    hide yukako_halfbody_upset
+    with Dissolve(0.25)
     yukako "Since we were the last to drink, about 3 minutes, 5 at most!"
     hk "W-What about the others? Don't they need help?"
+    show yukako_halfbody_frustrated
+    hide yukako_halfbody_thinking
+    with Dissolve(0.25)
+    play sfx_channel thunder_sfx volume 1.00 noloop
+    with vpunch
     yukako "Hisako! If we don't leave the manor and get help ourselves, we'll succumb to the same fate as everyone else!"
     yukako "So stop wasting time and let's go!"
     hk "...Ok...Let's go!"
 
-    # TRANSITION TO LIBRARY HERE 
-    hk "Alright! A minute and a half remaining! We'll be out of here in no time!"
+    # TRANSITION TO LIBRARY HERE
+    # HIDE YUKAKO HERE 
+    hide yukako_halfbody_frustrated
+    with Dissolve(0.25)
+    # PLACE RUNNING SFX HERE 
+    play sfx_channel running volume 0.85 noloop
+    # HIDE BASEMENT 
+    hide basement 
+    with fade 
+    show transition 
+    with Dissolve(2.0)
+    $ renpy.pause(1.75, hard=True)
+
+    # SHOW LIBRARY 
+    show library 
+    hide transition
+    with Dissolve(1.25) 
+    $ renpy.pause(0.75, hard=True)
+
+    hk "All right! A minute and a half remaining! We'll be out of here in no time!"
+    show yukako_halfbody_upset
+    with Dissolve(0.25)
     yukako "Hi...sa...ko..."
+    hide yukako_halfbody_upset
+    with Dissolve(0.15)
+    play sfx_channel faint volume 2.0 noloop
+    with vpunch
     sfxText "{i}*thud*{/i}"
     hk "Yukako! No!"
+    show yukako_halfbody_upset
+    with Dissolve(0.25)
     yukako "Just...leave...me..."
+    hide yukako_halfbody_upset
+    with Dissolve(0.25)
     hk "No! I'm not leaving you!"
     hk "You and I are going to make it out of here and get help! GRRRRRR!"
-    hk "Don't you...worry...I still have some strength left in me."
+    hk "Don't you...worry..."
+    hk "I still have some strength left in me."
     hk "I still have a few minutes...before it kicks in..."
 
     # TRANSITION TO DINING AREA 
+    # PLACE 2X WALK SFX HERE 
+    play sfx_channel double_walk_sfx volume 0.85 noloop
+    # HIDE BASEMENT 
+    hide library 
+    with fade 
+    show transition 
+    with Dissolve(2.0)
+    $ renpy.pause(1.75, hard=True)
+
+    # SHOW DINING ROOM 
+    show dining_room
+    hide transition
+    with Dissolve(1.25) 
+    $ renpy.pause(0.75, hard=True)
+
+
     hk "We're almost there, Yukako!"
     hk "You...hear me? Yu...Yukako?"
-    sfxText "{i}*slam*{/i}" # RINGING IN EARS
+    play sfx_channel faint volume 2.0 noloop
+    with vpunch
+    show transition
+    with Dissolve(0.15)
+    play sfx_channel tinnitus volume 0.85 noloop     
+    with Dissolve(0.15) # RINGING IN EARS    
+    stop sfx_channel  fadeout 7.0 
+    sfxText "{i}*slam*{/i}"     
+    show fading_out 
+    hide transition 
+    with Dissolve(0.25) 
     hk "...Get up...I can't get up..."
+    hide fading_out
+    with Dissolve(0.5)
     hk "Yukako...Yukako, please wake up..."
     hk "Please forgive me...I'll be back soon..."
+    
     hk "Come on...Come on..."
     hk "Please body! {i}*huff huff*{/i}"
     hk "I gotta keep moving..."
     hk "Move...Move!"
 
     # TRANSITION TO ATRIUM 
+    # PLACE WALKING SFX HERE 
+    play sfx_channel walking volume 0.85 noloop
+    # HIDE BASEMENT 
+    hide dining_room
+    with fade 
+    show transition 
+    with Dissolve(2.0)
+    $ renpy.pause(1.75, hard=True)
+
+    # SHOW LIBRARY 
+    show manor_atrium 
+    hide transition
+    with Dissolve(1.25) 
+    $ renpy.pause(0.75, hard=True)    
     hk "Almost...there..."
     hk "Door...in front of me..."
     hk "I will...get help..."
     hk "Save...everyone..."
+    stop music fadeout 3.0
     hk "Save...every...one..."
-    sfxText "{i}*ka-thump*{/i}"
+    play sfx_channel faint volume 2.0 noloop
+    with vpunch
+    show transition
+    hide manor_atrium
+    with Dissolve(0.15)
+    play sfx_channel tinnitus volume 0.85 noloop     
+    with Dissolve(0.15) # RINGING IN EARS    
+    stop sfx_channel  fadeout 7.0 
+    sfxText "{i}*ka-thump*{/i}"             
     hk "No...No..."
     hk "Please...body..."
     hk "Not...right now..."
+    show fading_out
+    hide transition
+    with Dissolve(1.5)
     hk "I need...to save them..."
     hk "I need..."
     hk "I need to save...Yukako..."
     hk "...Umph..."
+    play sfx_channel faint volume 2.0 noloop
+    with vpunch
+    hide fading_out
+    with Dissolve(0.15)
     sfxText "{i}*thud*{/i}"
-
-    # HISAKO'S VISION STARTS TO FADE IN AND OUT HERE
-
+    $ renpy.pause(0.75, hard=True)   
     # ENTER HI-DORA SAN 
     dumbhead "Alright, Boss, the last one is down for the count!"
+    # HISAKO'S VISION STARTS TO FADE IN AND OUT HERE
+    show waking_up
+    with Dissolve(0.25)
     hidora "That's great to hear, but she wouldn't have gotten this far if SOMEONE would've spiked their drinks more!"
+    show hidora_sensei
+    with Dissolve(0.25)
+    play sfx_channel thunder_sfx volume 1.00 noloop
+    with vpunch
     hidora "If she escaped, that would've ruined our ENTIRE PLAN!"
+    show hidora_chan
+    hide hidora_sensei
+    with Dissolve(0.25)
+    play sfx_channel disappointment_sfx volume 1.25 noloop
     dumbhead "Dawww, I'm sorry, Boss. I'll do better next time."
+    show hidora_sensei
+    hide hidora_chan
+    with Dissolve(0.25)
+    play sfx_channel stern volume 1.00 noloop
     hidora "Damn sure you will!"
+    show hidora_san
+    hide hidora_sensei
+    with Dissolve(0.25)
     friendlyhead "Look on the bright side, Sir! The drink finally kicked in, she didn't escape, and most importantly, she didn't hurt herself!"
+    show hidora_sensei
+    hide hidora_san
+    with Dissolve(0.25)
     hidora "Well, at least there is that."
+    show hidora_san
+    hide hidora_sensei
+    with Dissolve(0.25)
     friendlyhead "Sir, what should we do with her?"
+    show hidora_sensei
+    hide hidora_san
+    with Dissolve(0.25)
     hidora "First thing we need to do is make sure she doesn't remember any of this..."
-    hidora "If she remembers anything at all, we're screwed...Hey!! Are you two even listening??"
+    hidora "If she remembers anything at all, we're screwed..."
+    play sfx_channel thunder_sfx volume 1.00 noloop
+    with vpunch
+    hidora "Hey!! Are you two even listening??"
+    show hidora_san
+    hide hidora_sensei
+    with Dissolve(0.25)
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     friendlyhead "Yes, Sir!"
+    show hidora_chan
+    hide hidora_san
+    with Dissolve(0.25)
     dumbhead "Uh...yes, Boss!"
+    show hidora_sensei
+    hide hidora_chan
+    with Dissolve(0.25)
     hidora "Okay then. After that, take her to her room."
     hidora "This is a rinse and repeat with the others. Got it?"
+    show hidora_san
+    hide hidora_sensei
+    with Dissolve(0.25)
     friendlyhead "Absolutely, Sir!"
+    show hidora_chan
+    hide hidora_san
+    with Dissolve(0.25)
     dumbhead "Yes, Boss!"
+    show hidora_sensei
+    hide hidora_chan
+    with Dissolve(0.25)
+    play sfx_channel thunder_sfx volume 1.00 noloop
+    with vpunch
     hidora "Good, now get to it!"
+    show hidora_san
+    hide hidora_sensei
+    with Dissolve(0.25)
     friendlyhead "Okay! Let's get her ready for the mind wipe!"
+    play sfx_channel exclamation volume 1.30 noloop 
+    with Fade(0.1, 0.0, 0.3, color="#fff")
     friendlyhead "Wait a sec, she's still awake? I thought the drink would've knocked her dead."
+    show hidora_chan
+    hide hidora_san
+    with Dissolve(0.25)
     dumbhead "Don't worry, I got this! A little bonk on the head doesn't hurt anyone."
+    show hidora_san
+    hide hidora_chan
+    with Dissolve(0.25)
+    play sfx_channel stunned volume 1.00 noloop
+    with vpunch   
     friendlyhead "Wait, don't do it!!"
+    play sfx_channel damage_sfx volume 2.50 noloop
+    hide hidora_san
+    hide waking_up
+    with Dissolve(0.10)
     sfxText "{i}*SLAM*{/i}"
 
+    $ renpy.pause(2.00, hard=True)
+    play sfx_channel wind volume 0.85 noloop fadein 0.50
+    $ renpy.pause(2.00, hard=True)
+
     # PROLOGUE: DO OR DIE - RUN FOR YOUR LIFE OR SAY GOODNIGHT [THE END]
+    show prologue_ending
+    with Dissolve(5.0)
+    play music dark_guitar volume 0.85 noloop
+    $ renpy.pause(3.00, hard=True)
+    hide prologue_ending
+    with Dissolve(5.0)
+    show surviving_prologue
+    with Dissolve(5.0)
+    $ renpy.pause(3.00, hard=True)
+    hide surviving_prologue
+    with Dissolve(7.0)
+    $ renpy.pause(3.00, hard=True)
+    # FINISHED SCENE 10 ON [9/08/24 @ 1:14 AM & 1:39 AM]
+    stop sfx_channel fadeout 5.00
+    $ renpy.pause(2.00, hard=True)
+    # GO TO END OF DEMO SCENE 
+    jump end_of_demo_scene 
+
+label end_of_demo_scene:
+    sfxText "TEst TEst"
+
+
+

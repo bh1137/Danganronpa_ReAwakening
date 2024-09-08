@@ -50,6 +50,15 @@ image basement:
 
 image kitchen:
     "images/backgrounds/kitchen.png"
+
+image fading_out = Movie (play="images/backgrounds/fadeout.webm", size= (2000,1080))
+
+image prologue_ending: 
+    "images/backgrounds/prologue_screen.png"
+
+image surviving_prologue:
+    "images/backgrounds/surviving.png"
+
 # CHARACTER CARD INTRODUCTIONS 
 # KAZUHIKO
 image kazuhiko_card_background:

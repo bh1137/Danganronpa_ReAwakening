@@ -367,3 +367,13 @@ image vladnot_halfbody_upset:
 image vladnot_halfbody_calm: 
     "images/characters/vladnot/vladnot_calm_halfbody.png"
 
+
+# RANDOM FILL IN FOR HIDORA SAN 
+image hidora_sensei:
+    "images/characters/misc/random3.png"
+
+image hidora_chan:
+    "images/characters/misc/random1.png"
+
+image hidora_san:
+    "images/characters/misc/random2.png"

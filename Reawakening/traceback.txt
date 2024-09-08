@@ -1,24 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/chapters/prologue2.rpy", line 2014, in script
-    matusko "... ..."
-Exception: Sayer 'matusko' is not defined.
+  File "game/chapters/prologue2.rpy", line 3200, in script
+    play sfx_channel feeback volume 0.85 noloop
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/chapters/prologue2.rpy", line 3200, in <module>
+    play sfx_channel feeback volume 0.85 noloop
+NameError: name 'feeback' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/chapters/prologue2.rpy", line 2014, in script
-    matusko "... ..."
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
-    Say.execute(self)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'matusko' is not defined.
+  File "game/chapters/prologue2.rpy", line 3200, in script
+    play sfx_channel feeback volume 0.85 noloop
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1971, in execute
+    self.call("execute")
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/chapters/prologue2.rpy", line 3200, in <module>
+    play sfx_channel feeback volume 0.85 noloop
+NameError: name 'feeback' is not defined
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.3.24061702
 Reawakening 1.0
-Tue Aug  6 20:54:32 2024
+Sat Sep  7 23:37:12 2024

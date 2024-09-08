@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapters/prologue2.rpy", line 2412: expected end of line
-    play sfx_channel scuttle_shuffle volume 1.30c noloop
-                                                ^
+File "game/chapters/prologue2.rpy", line 3516: Line is indented, but the preceding hide statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    with Dissolve(0.25)
+    ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Sun Aug 11 18:27:00 2024
+Sun Sep  8 01:09:32 2024

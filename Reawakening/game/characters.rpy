@@ -36,7 +36,7 @@ define nayoko = Character("Nayoko Morimoto", who_color = "#eda0bb", callback = t
 
 # HI-DORA SAN DUMB AND FRIENDLY 
 define hidora = Character("???", who_color = "#ff0000", callback = text_sfx)
-define dumbhead = Character("???", who_color = "#000000", callback = text_sfx)
+define dumbhead = Character("???", who_color = "#858585", callback = text_sfx)
 define friendlyhead = Character("???", who_color = "#FFFFFF", callback = text_sfx)
 # SFX CHAT LOG
 define sfxText = Character("", what_color = "#34f229", callback = text_sfx)
