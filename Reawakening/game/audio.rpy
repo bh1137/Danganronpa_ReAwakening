@@ -39,7 +39,7 @@ define small_town_pluto = "audio/music/small_town_pluto.mp3"
 define cubicat = "audio/music/cubicat.mp3"
 define hot_pursuit = "audio/music/hot_pursuit_percussionless.mp3"
 define boomerang = "audio/music/boomerang.mp3"
-
+define hope_vs_despair ="audio/music/hope_vs_despair.mp3"
 # SOUND EFFECTS 
 define dizzy_sfx = "audio/sfx/dizzy.ogg"
 define fireplace = "audio/sfx/crackle.ogg"

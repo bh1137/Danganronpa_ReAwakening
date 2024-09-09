@@ -893,7 +893,7 @@ label scene1_3:
     with Dissolve(1.00)
     show noburo_halfbody_neutral
     with Dissolve(0.75)
-    noburo "See you later, Aligators!"
+    noburo "See you later, Alligators!"
     play sfx_channel walking volume 0.85 noloop
     hide noburo_halfbody_neutral
     with Dissolve(1.00)

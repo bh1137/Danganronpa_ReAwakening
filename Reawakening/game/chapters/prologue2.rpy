@@ -3370,15 +3370,15 @@ label scene2_10:
     with Dissolve(0.15) # RINGING IN EARS    
     stop sfx_channel  fadeout 7.0 
     sfxText "{i}*slam*{/i}"     
-    show fading_out 
-    hide transition 
+    show fading_out  
     with Dissolve(0.25) 
+    hide transition 
+    with Dissolve(0.25)
     hk "...Get up...I can't get up..."
     hide fading_out
     with Dissolve(0.5)
     hk "Yukako...Yukako, please wake up..."
-    hk "Please forgive me...I'll be back soon..."
-    
+    hk "Please forgive me...I'll be back soon..."    
     hk "Come on...Come on..."
     hk "Please body! {i}*huff huff*{/i}"
     hk "I gotta keep moving..."
@@ -3429,7 +3429,7 @@ label scene2_10:
     hide fading_out
     with Dissolve(0.15)
     sfxText "{i}*thud*{/i}"
-    $ renpy.pause(0.75, hard=True)   
+    $ renpy.pause(2.00, hard=True)   
     # ENTER HI-DORA SAN 
     dumbhead "Alright, Boss, the last one is down for the count!"
     # HISAKO'S VISION STARTS TO FADE IN AND OUT HERE
@@ -3546,8 +3546,48 @@ label scene2_10:
     # GO TO END OF DEMO SCENE 
     jump end_of_demo_scene 
 
+# JUST SOME END OF DEMO INFORMATION [STARTED 9/8/24]
 label end_of_demo_scene:
-    sfxText "TEst TEst"
+    sfxText "... ..."
+    sfxText "... ..."
+    sfxText "... ..."
+    sfxText "Oh! You're still here?"
+    sfxText "Excellent!"
+    sfxText "Firstly: Thank you for playing the demo and Prologue chapter for Danganronpa - Reawakening!"
+    sfxText "We are so happy for the immense support from everyone who has been apart of lives and journey with this game!"
+    sfxText "So, I guess you're wondering what happens from here on out, right?"
+    sfxText "Well, you're in luck!"
+    sfxText "This fan-game is made entirely by a small team with a strong passion for the Danganronpa franchise."
+    sfxText "Because of that, all of our developers are volunteers who work to bring this story to life."
+    sfxText "We are currently on the lookout for several artists to join our team!"
+    sfxText "If you are interested in wanting to help out, whether it be by joining the team or by donations.."
+    sfxText "Feel free to contact us at --> drreawakening@gmail.com"
+    sfxText "We will continue to release each chapter as fast as we can!"
+    sfxText "... ..."
+    sfxText "... ..."
+    sfxText "... ..."
+    sfxText "Now then...With all of that information out of the way, let's wrap this up, shall we?"
+    play music hope_vs_despair volume 0.85 noloop
+    sfxText "... ..."
+    sfxText "All of the students of Hope's Peak University have been all been rendered unconscious by their spiked drinks."
+    sfxText "With their last hope of getting help extinguished, the Ultimates are at the mercy of their captors..."
+    sfxText "They don't realize it, but a brand new Killing Game is on the horizon..."
+    sfxText "Will Hisako and the other Ultimates find a way to escape?"
+    sfxText "Will they be able to vanquish their captors?"
+    sfxText "Or will they be doomed to kill the ones they call their friends?"
+    sfxText "All will be revealed in the next chapter of..."
+    show reawakening_logo
+    with squares
+    sfxText "Danganronpa: Reawakening"
+    hide reawakening_logo
+    with Dissolve(8.00)
+    stop music fadeout 8.0
+    sfxText ""
+
+
+    # [FINISHED 9/8/24 @ 9:36 PM]
+    
+    
 
 
 

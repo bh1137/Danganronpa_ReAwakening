@@ -59,6 +59,9 @@ image prologue_ending:
 image surviving_prologue:
     "images/backgrounds/surviving.png"
 
+image reawakening_logo:
+    "images/backgrounds/reawakeninglogo.png"
+
 # CHARACTER CARD INTRODUCTIONS 
 # KAZUHIKO
 image kazuhiko_card_background:

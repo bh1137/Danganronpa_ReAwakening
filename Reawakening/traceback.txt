@@ -1,40 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/chapters/prologue2.rpy", line 3200, in script
-    play sfx_channel feeback volume 0.85 noloop
-  File "renpy/common/000statements.rpy", line 124, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 33, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "game/chapters/prologue2.rpy", line 3200, in <module>
-    play sfx_channel feeback volume 0.85 noloop
-NameError: name 'feeback' is not defined
+  File "game/chapters/prologue2.rpy", line 3580, in script
+    with Squares(3.00)
+  File "game/chapters/prologue2.rpy", line 3580, in <module>
+    with Squares(3.00)
+NameError: name 'Squares' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/chapters/prologue2.rpy", line 3200, in script
-    play sfx_channel feeback volume 0.85 noloop
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1971, in execute
-    self.call("execute")
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1953, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\statements.py", line 349, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 124, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 33, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
+  File "game/chapters/prologue2.rpy", line 3580, in script
+    with Squares(3.00)
+  File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 1356, in execute
+    trans = renpy.python.py_eval(self.expr)
   File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
     return py_eval_bytecode(code, globals, locals)
   File "C:\Users\Brandon H\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/chapters/prologue2.rpy", line 3200, in <module>
-    play sfx_channel feeback volume 0.85 noloop
-NameError: name 'feeback' is not defined
+  File "game/chapters/prologue2.rpy", line 3580, in <module>
+    with Squares(3.00)
+NameError: name 'Squares' is not defined
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.3.24061702
 Reawakening 1.0
-Sat Sep  7 23:37:12 2024
+Sun Sep  8 21:31:20 2024
