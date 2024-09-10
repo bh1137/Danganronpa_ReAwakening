@@ -78,17 +78,17 @@ label scene1_1:
     $ hkmonologue.name = "Hisako Kawahara" # CHANGE NAME
     show hisako_halfbody_neutral 
     with fade 
-    play character_voice hisako_prologue_voice_1 volume 1.2 noloop
+    #play character_voice hisako_prologue_voice_1 volume 1.2 noloop
     hk "My name is {color=#efcc00}{b}Hisako Kawahara{/b}{/color}."
-    play character_voice hisako_prologue_voice_2 volume 1.2 noloop
+    #play character_voice hisako_prologue_voice_2 volume 1.2 noloop
     hk "I'm 22 years old, and I come from the Shibuya District."   
-    play character_voice hisako_prologue_voice_3 volume 1.35 noloop
+    #play character_voice hisako_prologue_voice_3 volume 1.35 noloop
     hk "Oh yeah! I'm also the {color=#efcc00}{b}Ultimate Lawyer{/b}{/color}!"
-    play character_voice hisako_prologue_voice_4 volume 1.2 noloop
+    #play character_voice hisako_prologue_voice_4 volume 1.2 noloop
     hk "Or well, at least I hope to be."
-    play character_voice hisako_prologue_voice_5 volume 1.2 noloop
+    #play character_voice hisako_prologue_voice_5 volume 1.2 noloop
     hk "My reason for coming to this University?"
-    play character_voice hisako_prologue_voice_6 volume 1.2 noloop
+    #play character_voice hisako_prologue_voice_6 volume 1.2 noloop
     hk "When I was a paralegal—"
 
     # ALARM GOES OFF AND SHE IS LATE
